@@ -1,0 +1,9 @@
+./Structure
+./Draft_version
+*.aux
+*.toc
+*.log
+*.bbl
+*.bcf
+*.run.xml
+*.blg

@@ -1,0 +1,33 @@
+%Command for instantly designing the letter
+%To be added: points and curves. White halos. This command should at one point give the letters their name. E.g.: \kut should be compiled as 'T' directly. 
+\def\DeclareExactLetter#1#2#3#4{%
+\def\corpsgrootte{8pt}
+    \resizebox{\corpsgrootte}{!}{
+        \begin{tikzpicture}
+            \pic{grid};
+%            \pic{gridsl};
+            \draw[line width = \thickness] (#1) -- (#2);
+	    \draw[line width = \thickness] (#3) -- (#4); 
+        \end{tikzpicture}
+    }
+}
+
+
+\DeclareExactLetter{UpperLeft}{UpperRight}{UpperLeft}{BottomLeft} %Gamma -name?
+
+\DeclareExactLetter{UpperLeft}{UpperRight}{UpperRight}{BottomRight} %Backwards Gamma - name?
+
+\DeclareExactLetter{BottomLeft}{BottomRight}{CenterCeiling}{CenterCellar} %Upside-down T - name?
+
+\DeclareExactLetter{BottomLeft}{BottomRight}{UpperRight}{BottomRight} %Backwards 'L' - name?
+
+\DeclareExactLetter{BottomLeft}{BottomRight}{UpperLeft}{BottomLeft} % 'L' - name?
+
+\DeclareExactLetter{CenterLeft}{CenterRight}{UpperLeft}{BottomLeft}
+%single turnstile, kinda, name?
+
+\DeclareExactLetter{CenterLeft}{CenterRight}{UpperRight}{BottomRight}
+%reverse single turnstile, name?
+
+\DeclareExactLetter{CenterLeft}{CenterRight}{CenterCeiling}{CenterCellar}
+%Cross, name?
