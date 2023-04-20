@@ -1,0 +1,77 @@
+\documentclass[twoside, openany, 12pt, a5paper]{book}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tipa}
+\usepackage{blindtext}
+\usepackage{fontspec}
+\usepackage[t,lf]{spectral}
+\usepackage{xpatch}
+\let\cleardoublepage=\clearpage
+
+\newlength{\chaptertopskip}
+\setlength{\chaptertopskip}{-50pt}
+\makeatletter
+\xpatchcmd{\@makechapterhead}{\vspace*{50\p@}}{\vspace*{\chaptertopskip}}{\typeout{Success}}{\typeout{Failure!!!}}
+\makeatother
+
+%%%%%%%%%%%Dependencies%%%%%%%%%%%%%%%
+%\input{./Dependencies/Cmd}
+%\input{./Dependencies/Grid}
+%\input{./Dependencies/numberlines}
+
+%%%%%%%%%%%Definitions%%%%%%%%%%%%%%%%
+\def\Section#1#2{\section{#1}  \vspace*{-0.5cm} {\small \bf #2}}
+
+
+%%%%%%%%%%%Dimensions%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\input{./Frontmatter/Voorblad.tex}
+
+\chapter{Preface}
+\input{./Frontmatter/Preface.tex}
+
+\chapter{Table of Contents}
+\input{./Frontmatter/TOC.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Mainmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+\chapter{Introduction}\input{./Mainmatter/GeneralIntroduction.tex}
+
+\chapter{Phonology}\input{./Mainmatter/Phonology.tex}
+
+\chapter{Writing Atlan}\input{./Mainmatter/WritingSystem.tex}
+
+\chapter{Morphosyntax}\input{./Mainmatter/Morphosyntax.tex}
+
+\chapter{Our Ontology}\input{./Mainmatter/Ontology.tex}
+
+\chapter{Lexicon}\input{./Mainmatter/Lexicon.tex}
+
+\chapter{Dictionary}\input{./Mainmatter/Dictionary.tex}
+
+\chapter{Pragmatics}\input{./Mainmatter/Pragmatics.tex}
+
+\chapter{Further suggestions}\input{./Mainmatter/Suggestions.tex}
+
+\chapter{Example texts}\input{./Mainmatter/Texts.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Endmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+\chapter{Epilogue}\input{./Endmatter/Epilogue.tex}
+
+\chapter{Bibliography}\input{./Endmatter/Sources.tex}
+
+\chapter{Index}\input{./Endmatter/Index.tex}
+
+\input{./Endmatter/Blurp.tex}
+
+
+\end{document}
