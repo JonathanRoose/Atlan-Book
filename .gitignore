@@ -1,5 +1,6 @@
 ./Structure
 ./Draft_version
+./Draft_version/*
 *.aux
 *.toc
 *.log
