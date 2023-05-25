@@ -1,0 +1,994 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Atlan}[2023/05/21]
+\RequirePackage{tikz}
+\RequirePackage{calculator}
+\usetikzlibrary{calc}
+
+\def\thickness{15pt}
+\def\corpsgrootte{20pt}
+
+
+%%%%%%%%%%CMD%%%%%%%%%%%%%%%
+\def\DeclareLetter#1#2{%
+		\resizebox{\corpsgrootte}{!}{
+        		\begin{tikzpicture}
+            			\pic{grid};
+				\def\LV{(BottomLeft) -- (UpperLeft)}
+				\def\CH{(CenterLeft) -- (CenterRight)}
+				\draw[line width = \thickness] #1;
+				\draw[line width = \thickness] #2;
+				
+        		\end{tikzpicture}
+		}
+}
+
+\def\DeclareStroke#1{%
+		\resizebox{\corpsgrootte}{!}{
+        		\begin{tikzpicture}
+            			\pic{grid};
+				\def\LV{(BottomLeft) -- (UpperLeft)}
+				\def\CH{(CenterLeft) -- (CenterRight)}
+				\draw[line width = \thickness] #1;
+        		\end{tikzpicture}
+		}
+}
+
+\def\DeclareChar#1#2#3{%
+		\resizebox{\corpsgrootte}{!}{
+			\begin{tikzpicture}
+            			\pic{grid};
+				\draw[line width = \thickness] #1;
+				\draw[line width = \thickness] #2;
+				\draw[line width = \thickness] #3;
+        		\end{tikzpicture}
+		}
+}
+\def\DeclareGlyph#1#2#3#4{%
+		\resizebox{\corpsgrootte}{!}{
+			\begin{tikzpicture}
+            			\pic{grid};
+				\draw[line width = \thickness] #1;
+				\draw[line width = \thickness] #2;
+				\draw[line width = \thickness] #3;
+				\draw[line width = \thickness] #4;
+        		\end{tikzpicture}
+		}
+}
+%%%%%%%%%%%%%%%%%%%%%Lines%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Command for naAtlanming strokes
+
+%Horizontal strokes
+	%Top
+\def\TopHorizontal{(UpperLeft) -- (UpperRight);}
+\def\LeftTopHorizontal{(OuterUpperLeft) -- (CenterCeiling);}
+\def\RightTopHorizontal{(OuterTopRight) -- (CenterCeiling);}
+\def\LeftRightTopHorizontal{(CenterCeiling) -- (UpperRight);}
+\def\RightLeftTopHorizontal{(CenterCeiling) -- UpperLeft);}	
+	%Upper
+\def\UpperHorizontal{(CenterUpperLeft) -- (CenterUpperRight);}
+\def\LeftUpperHorizontal{(CenterUpperLeft) -- (CenterUpper);}
+\def\RightUpperHorizontal{(CenterUpperRight) -- (CenterUpper);}
+\def\OuterRightUpperHorizontal{(CenterUpperRight) -- (OuterUpperRight);}
+\def\OuterLeftUpperHorizontal{(CenterUpperLeft)--(OuterUpperLeft);}
+\def\QRightUpperHorizontal{(QUpperLeft) -- (CenterUpperRight);}
+\def\QLeftUpperHorizontal{(QUpperRight) -- (CenterUpperLeft);}
+	%Center
+\def\CH{(CenterLeft) -- (CenterRight)}
+\def\CenterHorizontal{(CenterLeft) -- (CenterRight);}
+\def\LeftCenterHorizontal{(OuterCenterLeft) -- (CenterLeft);}
+\def\RightCenterHorizontal{(Center) -- (CenterRight);}
+%\def\RightCenterHorizontalRight{(}
+	%Lower
+\def\LowerHorizontal{(CenterBottomLeft) -- (CenterBottomRight);}
+\def\LeftLowerHorizontal{(CenterBottomLeft) -- (CenterBottom);}
+\def\RightLowerHorizontal{(CenterBottomRight) -- (CenterBottom);}
+	%Bottom
+\def\BottomHorizontal{(BottomLeft) -- (BottomRight);}
+\def\LeftBottomHorizontal{(OuterBottomLeft) -- (CenterCellar);}
+\def\RightLeftBottomHorizontal{(BottomLeft) -- (CenterCellar);}
+\def\RightBottomHorizontal{(OuterBottomRight) -- (CenterCellar);}
+\def\LeftRightBottomHorizontal{(BottomRight) -- (CenterCellar);}
+
+	%Hell
+	
+\def\HellHorizontal{(LeftHell) -- (RightHell);}
+
+%Vertical Strokes
+\def\LV{(BottomLeft) -- (UpperLeft)}
+\def\LeftVertical{(BottomLeft) -- (UpperLeft)}
+\def\CenterVertical{(CenterCellar) -- (CenterCeiling);}
+\def\RightVertical{(BottomRight) -- (UpperRight);}
+
+\def\CenterUpperVertical{(CenterCellar) -- (CenterUpper);}
+\def\CenterBottomVertical{(CenterCeiling) -- (CenterBottom);}
+
+%Diagonal strokes - adjusted thickness!!!!!
+\def\RightDiagonal{(BottomLeft) -- (UpperRight);}
+\def\LeftDiagonal{(BottomRight) -- (UpperLeft);}
+% - Diagonal strokes - hypothenuses; smaller diamond
+\def\HypoBottomLeft{(CenterLeft) -- (CenterCellar);}
+\def\HypoBottomRight{(CenterRight) -- (CenterCellar);}
+\def\HypoUpperLeft{(CenterLeft) -- (CenterCeiling);}
+\def\HypoUpperRight{(CenterRight) -- (CenterCeiling);}
+
+\def\BigHypoUpperLeft{(CenterLeft)--(UpperRight);}
+\def\BigHypoUpperRight{(CenterRight) -- (UpperLeft);}
+
+\def\LeftBigHypoUpperLeft{(CenterLeft) -- (CenterUpper);}
+\def\RightBigHypoUpperLeft{(CenterUpper) -- (UpperRight);}
+
+\def\RightBigHypoUpperRight{(CenterRight) -- (CenterUpper);}
+\def\LeftBigHypoUpperRight{(CenterUpper) -- (UpperLeft);}
+
+\def\BigHypoCenterLeft{(CenterBottomLeft) -- (CenterUpperRight);}
+
+\def\LeftBigHypoCenterLeft{(CenterBottomLeft) -- (Center);}
+\def\LeftBigHypoCenterLeft{(Center) -- (CenterUpperRight);}
+
+\def\BigHypoCenterRight{(CenterBottomRight) -- (CenterUpperLeft);}
+\def\LeftBigHypoCenterRight{(CenterBottomRight) -- (Center);}
+\def\RightBigHypoCenterRight{(Center) -- (CenterUpperLeft);}
+
+\def\BigHypoBottomLeft{(BottomLeft) -- (CenterRight);}
+\def\BigHypoBottomRight{(BottomRight) -- (CenterLeft);}
+
+\def\LeftBigHypoBottomLeft{(BottomLeft) -- (CenterBottom);}
+\def\RightBigHypoBottomLeft{(CenterBottom) -- (CenterRight);}
+
+\def\RightBigHypoBottomRight{(BottomRight) -- (CenterBottom);}
+\def\LeftBigHypoBottomRight{(CenterBottom) -- (CenterLeft);}
+
+
+\def\BigHypoCenterLeft{(CenterBottomLeft) -- (CenterUpperRight);}
+\def\BigHypoCenterRight{(CenterBottomRight) -- (CenterUpperLeft);}
+
+\def\LeftHypoHeaven{(CenterCeiling) -- (LeftHeaven);}
+\def\RightHypoHeaven{(CenterCeiling) -- (RightHeaven);}
+
+
+\def\BigHypoHellLeft{(HellLeft) -- (CenterBottomRight);}
+\def\LeftBigHypoHellLeft{(HellLeft) -- (CenterCellar);}
+\def\RightBigHypoHellLeft{(CenterCellar) -- (CenterBottomRight);}
+
+\def\BigHypoHellRight{(HellRight) -- (CenterBottomLeft);}
+\def\LeftBigHypoHellRight{(HellRight) -- (CenterCellar);}
+\def\RightBigHypoHellRight{(CenterCellar) -- (CenterBottomLeft);}
+
+\def\BigLowerHypoHellLeft{(CenterHell) -- (OuterLowerRight);}
+\def\LeftLowerHypoHellLeft{(BottomRight) -- (CenterHell);}
+\def\RightLowerHypoHellLeft{(CenterHell) -- (OuterLowerRight);}
+
+
+\def\RightUpperInnerDiagonal{(QUpperRight) -- (QCenterLeft);}
+\def\RightBottomInnerDiagonal{(QCenterRight) -- (QBottomLeft);}
+
+\def\LeftUpperInnerDiagonal{(QUpperLeft) -- (QCenterRight);}
+\def\LeftBottomInnerDiagonal{(QCenterLeft) -- (QBottomRight);}
+
+
+% - Diagonal strokes - From left to TopHorizontal
+\def\RightCenterDiagonal{(BottomLeft) -- (CenterCeiling);}
+\def\LeftCenterDiagonal{(BottomRight) -- (CenterCeiling);}
+
+\def\LeftCenterUpperDiagonal{(BottomRight) -- (CenterUpper);}
+\def\RightCenterUpperDiagonal{(BottomLeft) -- (CenterUpper);}
+
+
+% - Diagonal strokes - bottomleft to CUR and BR to CUL
+
+\def\BLCUR{(BottomLeft) -- (CenterUpperRight);}
+\def\BRCUL{(BottomRight) -- (CenterUpperLeft);}
+
+
+% - Arches
+\def\ArchBottomLeft{(CenterUpperLeft) .. controls (CenterUpper) .. (CenterCellar);}
+\def\ArchBottomRight{(CenterUpperRight) .. controls (CenterUpper) ..  (CenterCellar);}
+\def\ArchUpperLeft{(UpperLeft).. controls (CenterCeiling) .. (Center);}
+\def\ArchUpperRight{(UpperRight) .. controls (CenterCeiling) .. (Center);}
+% - Ramps
+\def\RampBottomLeft{(BottomLeft) .. controls (CenterCellar) ..  (CenterUpper);}
+\def\RampBottomRight{(BottomRight) .. controls (CenterCellar) ..   (CenterUpper);}
+\def\RampUpperLeft{(CenterLeft) .. controls (Center) ..   (CenterCeiling);}
+\def\RampUpperRight{(CenterRight) .. controls (Center) ..   (CenterCeiling);}
+
+% - Curves
+
+\def\BigCurveUpperLeft{(CenterLeft) .. controls (Center) .. (UpperRight);}
+\def\BigCurveUpperRight{(CenterRight) .. controls (Center) .. (UpperLeft);}
+
+
+\def\CurveUpperLeft{(CenterCeiling) .. controls (Center) .. (CenterLeft);}
+\def\CurveUpperRight{(CenterCeiling) .. controls (Center) .. (CenterRight);}
+\def\CurveBottomLeft{(CenterCellar) .. controls (Center) .. (CenterLeft);}
+\def\CurveUpperRight{(CenterCellar) .. controls (Center) .. (CenterRight);}
+
+\def\BigCurveBottomLeft{(BottomLeft) .. controls (BottomRight) .. (CenterRight);}
+\def\BigCurveBottomRight{(BottomRight) .. controls (BottomLeft) .. (CenterLeft);}
+
+\def\LeftCurveBottomLeft{(BottomLeft) .. controls (CenterCellar) .. (Center);}
+\def\LeftCurveBottomRight{(BottomRight) .. controls (CenterCellar) .. Center);}
+
+\def\RightCurveBottomLeft{(Center) .. controls (CenterBottomRight) .. (CenterRight);}
+\def\RightCurveBottomRight{(Center) .. controls (CenterBottomLeft) .. (CenterLeft);}
+
+
+\def\BigCurveUpperRight{(CenterUpperLeft) .. controls (CenterCeiling) .. (UpperRight);}
+\def\LeftCurveUpperRight{(CenterUpperLeft) .. controls (UpperLeft) .. (CenterUpper);}
+
+
+\def\CurveTemp{(UpperLeft) .. controls (CenterBottomLeft) .. (CenterBottomRight);}
+
+\def\CurveLR{(BottomLeft) .. controls (UpperLeft) .. (CenterUpperRight);}
+\def\CurveRL{(BottomRight) .. controls (UpperRight) .. (CenterUpperLeft);}
+
+
+%% Dot and Torus
+
+%Dot
+\def\Dot#1{(#1) circle (\thickness){};}
+
+%Torus
+
+\def\Torus#1{\draw[color=black, line width = 6 * \thickness] (#1) circle (\thickness){};}
+
+
+
+
+\def\BigCup#1{[black] ($(#1) + (-3, 0)$) to [bend left =-50] ($(#1) + (3,0)$);}
+\def\BigCupLeft#1{[black] ($(#1) + (-3, -0.5)$) to [bend left =-50] ($(#1) + (3,1.5)$);}
+\def\BigCupRight#1{[black] ($(#1) + (-3, 1.5)$) to [bend left =-50] ($(#1) + (3,-0.5)$);}
+
+\def\BigCap#1{[black] ($(#1) + (-3, 0)$) to [bend left =50] ($(#1) + (3,0)$);}
+\def\BigCapRight#1{[black] ($(#1) + (-3, -0.5)$) to [bend left =50] ($(#1) + (3,1.5)$);}
+\def\BigCapLeft#1{[black] ($(#1) + (-3, 1.5)$) to [bend left =50] ($(#1) + (3,-0.5)$);}
+
+\def\RightCap#1{[black] (#1)  to [bend left =50] ($(#1) + (3,0)$);}
+
+\def\LeftCap#1{[black] (#1)  to [bend left =-50] ($(#1) + (-3,0)$);}
+
+\def\RightCapLeft#1{[black] (#1)  to [bend left =50] ($(#1) + (3,-0.5)$);}
+\def\LeftCapLeft#1{[black] (#1)  to [bend left =-50] ($(#1) + (-3,1.5)$);}
+\def\LeftCapRight#1{[black] (#1)  to [bend left =-50] ($(#1) + (-3,-1.5)$);}
+\def\RightCapRight#1{[black] (#1)  to [bend left =50] ($(#1) + (3,0.5)$);}
+
+\def\RightCupLeft#1{[black] (#1)  to [bend left =-50] ($(#1) + (3,-0.5)$);}
+\def\LeftCupLeft#1{[black] (#1)  to [bend left =50] ($(#1) + (-3,1.5)$);}
+\def\LeftCupRight#1{[black] (#1)  to [bend left =50] ($(#1) + (-3,-1.5)$);}
+\def\RightCupRight#1{[black] (#1)  to [bend left =-50] ($(#1) + (3,0.5)$);}
+
+\def\RightCup#1{[black] (#1)  to [bend left =-50] ($(#1) + (3,0)$);}
+
+\def\LeftCup#1{[black] (#1)  to [bend left =50] ($(#1) + (-3,0)$);}
+
+
+\def\BigCircle{[black] (Center) circle (3){};}
+
+\def\VS#1{[black, line width = \thickness] ($(#1) + (0,1.5)$) to ($(#1) + (0,-1.5)$);}
+\def\HS#1{[black, line width = \thickness] ($(#1) + (1.5,0)$) to ($(#1) + (-1.5,0)$);}
+
+\def\MediumCircle#1{(#1) circle (1.75){};}
+
+
+
+\def\SEL#1{($(#1) + (0.25,0)$) to [bend left = 55] ($(#1) + (3,3)$)}
+\def\NWL#1{($(#1) + (0.25,0)$) to [bend left = -55] ($(#1) + (3,3)$)}
+\def\SWL#1{($(#1) + (0.25,0)$) to [bend left = 55] ($(#1) + (3,-3)$)}
+\def\NEL#1{($(#1) + (0.25,0)$) to [bend left = -55] ($(#1) + (3,-3)$)}
+\def\NER#1{($(#1) + (0.25,0)$) to [bend left = 55] ($(#1) + (-3,3)$)}
+\def\SER#1{($(#1) + (0.25,0)$) to [bend left = -55] ($(#1) + (-3,-3)$)}
+\def\SWR#1{($(#1) + (0.25,0)$) to [bend left = -55] ($(#1) + (-3,3)$)}
+\def\NWR#1{($(#1) + (0.25,0)$) to [bend left = 55] ($(#1) + (-3,-3)$)}
+\def\NEC#1{($($(#1) + (0.85,0.85)$) + (-1.5,1.5)$) to [bend left = -55] ($($(#1) + (0.85,0.85)$) + (1.5,-1.5)$)}
+\def\SEC#1{($($(#1) + (0.85,-0.85)$) + (-1.5,-1.5)$) to [bend left = 55] ($($(#1) + (0.85,-0.85)$) + (1.5,1.5)$)}
+\def\SWC#1{($($(#1) + (-0.6,-0.6)$) + (-1.5,1.5)$) to [bend left = 55] ($($(#1) + (-0.6,-0.6)$) + (1.5,-1.5)$)}
+\def\NWC#1{($($(#1) + (-0.6,0.6)$) + (-1.5,-1.5)$) to [bend left = -55] ($($(#1) + (-0.6,0.6)$) + (1.5,1.5)$)}
+
+\def\BigNE{(7.5,0) to [bend left = 55] (0,7.5)}
+\def\BigNW{(0,0) to [bend left = -55] (7.5,7.5)}
+\def\BigSE{(0,0) to [bend left = 55] (7.5,7.5)}
+\def\BigSW{(7.5,0) to [bend left = -55] (0,7.5)}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%Grid%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tikzset{grid/.pic={
+    \node(UpperLeft) at (0, 10){};
+    \node(UpperRight) at (7.5, 10){};
+    \node(BottomRight) at (7.5, 0){};
+    \node(BottomLeft) at (0,0){};
+    \node(Center) at (3.75,5){};
+    \node(CenterLeft) at (0,5){};
+    \node(CenterRight) at (7.5,5){};
+    \node(CenterUpper) at (3.75,7.5){};
+    \node(CenterBottom) at (3.75,2.5){};
+    \node(CenterCellar) at (3.75,0){};
+    \node(CenterCeiling) at (3.75,10){};
+    \node(CenterUpperLeft) at (0,7.5){};
+    \node(CenterUpperRight) at (7.5,7.5){};
+    \node(CenterBottomLeft) at (0,2.5){};
+    \node(CenterBottomRight) at (7.5, 2.5){};
+    
+    %Quarter-coordinates
+    \node(QUpperLeft) at (1.875,7.5 ){}; 
+    \node(QUpperRight) at (5.625, 7.5){};
+    \node(QCenterRight) at (5.625, 3.75){};
+    \node(QCenterLeft) at (1.875, 5){};
+    \node(QBottomLeft) at (1.875, 2.5){};
+    \node(QBottomRight) at (5.625,2.5){};
+    
+    %Left-outward nodes
+    \node(OuterTopLeft) at (-3.75, 10){};
+    \node(OuterUpperLeft) at (-3.75,7.5){};
+    \node(OuterCenterLeft) at (-3.75, 5){};
+    \node(OuterLowerLeft) at (-3.75,2.5){};
+    \node(OuterBottomLeft) at (-3.75, 0){};
+    %Right-outward nodes
+    \node(OuterTopRight) at (11.25,10){};
+    \node(OuterCenterRight) at (11.25,5){};
+    \node(OuterLowerRight) at (11.25, 2.5){};
+    \node(OuterBottomRight) at (11.25,0){};
+    \node(OuterUpperRight) at (11.25,7.5){};
+    %Upper-outward nodes
+    \node(RightHeaven) at (7.5, 12.5){};
+    \node(OuterRightHeaven) at (11.25, 12.5){};
+    \node(LeftHeaven) at (0, 12.5){};
+    \node(OuterLeftHeaven) at (-3.75, 12.5){};
+    \node(CenterHeaven) at (3.75, 12.5){};
+    %Down-outward nodes
+    \node(RightHell) at (7.5, -2.5){};
+    \node(CenterHell) at (3.75, -2.5){};
+    \node(LeftHell) at (0, -2.5){};
+	}
+}
+%%%%%%%%%%%%%%%%%%%%%%%DEFINELETTER%%%%%%%%%%%%%%%%%%%%%%
+
+%\def\DefineLetter#1#2{\def#1{\setbox0=\hbox{\lower.2em\hbox{#2}} \box0}}
+%\def\DefineLetter#1#2{\def#1{#2}}
+\def\DefineLetter#1#2{\def#1{\raisebox{-0.15em}{#2}}}
+
+%%%%%%%%%%%%%%%%%%%%%%Letters%%%%%%%%%%%%%%%%%%%%%%%%%%%351-1241
+
+\DefineLetter{\emty}{\def\emty{\DeclareLetter{\RightDiagonal}{\BigCircle}}}
+
+
+\DefineLetter{\Atlanu}{\setbox0=\hbox{\kern-0.1em \DeclareStroke{(CenterUpperLeft) .. controls (-3.75,-2.5) and (11.25,-2.5) .. (CenterUpperRight)}}\box0}
+\DefineLetter{\Atlani}{\setbox0=\hbox{\kern+0.5em\DeclareStroke{(-3.75,1.25) .. controls (6.25,-2.5) and (6.25,12.5) .. (-3.75,8.625)}}\box0}
+\DefineLetter{\Atlana}{\setbox0=\hbox{\kern-0.1em\DeclareStroke{(BottomLeft) .. controls (OuterTopLeft) and (OuterTopRight) .. (BottomRight)}}\box0}
+\DefineLetter{\Atlano}{\setbox0=\hbox{\kern-0.5em\DeclareStroke{(11.25,1.25) .. controls (1.25,-2.5) and (1.25,12.5) .. (11.25,8.625)}}\box0}
+\DefineLetter{\Atlane}{\setbox0=\hbox{\kern-0.05em\DeclareStroke{(Center) circle (3.25)}}\box0}
+
+
+\DefineLetter{\ut}{\DeclareLetter{\CenterVertical}{\MediumCircle{3.75,11.875}}}
+\DefineLetter{\Atlanit}{\DeclareLetter{\CenterVertical}{\MediumCircle{2.15,8.5}}}
+\DefineLetter{\at}{\DeclareLetter{\CenterVertical}{\MediumCircle{2.15,5}}}
+\DefineLetter{\ot}{\DeclareLetter{\CenterVertical}{\MediumCircle{2.15,1.875}}}
+\DefineLetter{\et}{\DeclareChar{\MediumCircle{Center}}{(CenterHell) -- (CenterBottom)}{(CenterHeaven) -- (CenterUpper)}}
+
+\DefineLetter{\tu}{\DeclareLetter{(CenterCeiling) -- (3.75,1.875)}{\MediumCircle{CenterCellar}}}
+\DefineLetter{\ti}{\DeclareLetter{\CenterVertical}{\MediumCircle{5.35,9.5}}}
+\DefineLetter{\ta}{\DeclareLetter{\CenterVertical}{\MediumCircle{5.35,5}}}
+\DefineLetter{\Atlanto}{\DeclareLetter{\CenterVertical}{\MediumCircle{5.35,1.875}}}
+\DefineLetter{\te}{\DeclareLetter{\CenterVertical}{\MediumCircle{Center}}}
+%tt
+\DefineLetter{\tut}{\DeclareLetter{(CenterCeiling) -- (3.75,5.5)}{(3.75,4.5) -- (CenterCellar)}}
+\DefineLetter{\tit}{\DeclareLetter{\CenterVertical}{\VS{2.25,7.5}}}
+\DefineLetter{\tat}{\DeclareLetter{\CenterVertical}{\VS{2.25,5}}}
+\DefineLetter{\tot}{\DeclareLetter{\CenterVertical}{\VS{2.25,1.5}}}
+\DefineLetter{\tet}{\DeclareChar{(CenterCellar) -- (3.75,2.68)}{(3.75,3.33) -- (3.75,6)}{(3.75,6.6) -- (3.75,10)}}
+
+\DefineLetter{\tuk}{\DeclareLetter{\BottomHorizontal}{\CenterVertical}}
+\DefineLetter{\tik}{\DeclareLetter{\LeftVertical}{\TopHorizontal}}
+\DefineLetter{\tak}{\DeclareLetter{\LeftVertical}{\CenterHorizontal}}
+\DefineLetter{\tok}{\DeclareLetter{\BottomHorizontal}{\LeftVertical}}
+\DefineLetter{\tek}{\DeclareChar{\CenterVertical}{(CenterLeft) -- (2.75,5)}{(CenterRight) -- (4.75, 5)}}
+
+\DefineLetter{\kut}{\DeclareLetter{\CenterVertical}{\TopHorizontal}}
+\DefineLetter{\kit}{\DeclareLetter{\CenterVertical}{(CenterCeiling) -- (UpperLeft)}}
+\DefineLetter{\kat}{\DeclareLetter{\CenterVertical}{(Center) -- (CenterLeft)}}
+\DefineLetter{\kot}{\DeclareLetter{\CenterVertical}{\LeftBottomHorizontal}}
+\DefineLetter{\ket}{\DeclareChar{\CenterHorizontal}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}}
+
+
+\DefineLetter{\tun}{\DeclareLetter{\CenterBottomVertical}{\BigHypoBottomLeft}}
+\DefineLetter{\tin}{\DeclareLetter{\CenterVertical}{(CenterCeiling) -- (RightHeaven)}}
+\DefineLetter{\Atlantan}{\DeclareLetter{\CenterVertical}{(Center) -- (CenterUpperRight)}}
+\DefineLetter{\ton}{\DeclareLetter{\CenterVertical}{(CenterCellar) -- (CenterBottomRight)}}
+\DefineLetter{\ten}{\DeclareChar{\CenterVertical}{(CenterBottomLeft) -- (2.75,4.33)}{(CenterUpperRight) -- (4.75, 5.666)}}
+
+\DefineLetter{\nut}{\DeclareLetter{\CenterUpperVertical}{\BigHypoUpperLeft}}
+\DefineLetter{\nit}{\DeclareLetter{\CenterVertical}{\HypoUpperLeft}}
+\DefineLetter{\nat}{\DeclareLetter{\CenterVertical}{(3.75,5) -- (CenterBottomLeft)}}
+\DefineLetter{\Atlannot}{\DeclareLetter{\CenterBottomVertical}{\LeftBigHypoBottomLeft}}
+\DefineLetter{\net}{\DeclareChar{(CenterBottomLeft) -- (CenterUpperRight)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}}
+
+\DefineLetter{\tum}{\DeclareLetter{\CenterBottomVertical}{\BigHypoBottomRight}}
+\DefineLetter{\tim}{\DeclareLetter{\CenterVertical}{(CenterCeiling) -- (CenterUpperRight)}}
+\DefineLetter{\tam}{\DeclareLetter{\CenterVertical}{(Center) -- (CenterBottomRight)}}
+\DefineLetter{\tom}{\DeclareLetter{\CenterVertical}{(CenterCellar) -- (RightHell)}}
+\DefineLetter{\tem}{\DeclareChar{(CenterBottomRight) -- (2.75, 5.666)}{(CenterUpperLeft) -- (4.75,4.33)}{\CenterVertical}}
+
+\DefineLetter{\mut}{\DeclareLetter{\CenterUpperVertical}{\BigHypoUpperRight}}
+\DefineLetter{\Atlanmit}{\DeclareLetter{\CenterVertical}{\HypoUpperRight}}
+\DefineLetter{\mat}{\DeclareLetter{\CenterVertical}{(Center) -- (CenterUpperLeft)}}
+\DefineLetter{\mot}{\DeclareLetter{\CenterVertical}{(CenterCellar) -- (CenterBottomLeft)}}
+\DefineLetter{\met}{\DeclareChar{(CenterBottomRight) -- (CenterUpperLeft)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}}
+
+\DefineLetter{\tuf}{\DeclareLetter{\CenterBottomVertical}{\BigCapRight{CenterCellar}}}
+\DefineLetter{\tif}{\DeclareLetter{\CenterVertical}{\RightCapRight{CenterCeiling}}}
+\DefineLetter{\taf}{\DeclareLetter{\CenterVertical}{\RightCapRight{Center}}}
+\DefineLetter{\tof}{\DeclareLetter{\CenterVertical}{\RightCapRight{CenterCellar}}}
+\DefineLetter{\tef}{\DeclareChar{\CenterVertical}{(CenterBottomLeft) to [bend left = 55] (2.75,4.333)}{(CenterUpperRight) to [bend left = -55] (4.75,5.666)}}
+
+\DefineLetter{\fut}{\DeclareLetter{\CenterVertical}{\BigCapRight{CenterUpper}}}
+\DefineLetter{\fit}{\DeclareLetter{\CenterVertical}{\LeftCapRight{CenterCeiling}}}
+\DefineLetter{\fat}{\DeclareLetter{\CenterVertical}{\LeftCapRight{3.75, 5}}}
+\DefineLetter{\fot}{\DeclareLetter{\CenterVertical}{\LeftCapRight{CenterBottom}}}
+\DefineLetter{\fet}{\DeclareChar{((0,1.5) to [bend left = 55] (7.5,4.5)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}}
+	
+
+\DefineLetter{\tus}{\DeclareLetter{\CenterVertical}{\BigCapLeft{3.75,-1.25}}}
+\DefineLetter{\tis}{\DeclareLetter{\CenterVertical}{\RightCapLeft{CenterCeiling}}}
+\DefineLetter{\tas}{\DeclareLetter{\CenterVertical}{\RightCapLeft{Center}}}
+\DefineLetter{\tos}{\DeclareLetter{\CenterVertical}{\RightCapLeft{CenterCellar}}}
+\DefineLetter{\tes}{\DeclareChar{(CenterUpperLeft) to [bend left = 55] (2.75,5.666)}{(CenterBottomRight) to [bend left = -55] (4.75,4.333)}{\CenterVertical}}
+
+\DefineLetter{\sut}{\DeclareLetter{\CenterBottomVertical}{\BigCapLeft{CenterUpper}}}
+\DefineLetter{\sit}{\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{CenterCeiling}}}
+\DefineLetter{\sat}{\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{Center}}}
+\DefineLetter{\sot}{\DeclareLetter{\CenterBottomVertical}{\LeftCapLeft{CenterBottom}}}
+\DefineLetter{\set}{\DeclareChar{(0,4.5) to [bend left = 55] (7.5,1.5)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}}
+
+\DefineLetter{\tul}{\DeclareLetter{\CenterVertical}{\BigCapRight{3.75,-1.25}}}
+\DefineLetter{\til}{\DeclareLetter{\CenterVertical}{\NEL{3.75,9.5}}}
+\DefineLetter{\tal}{\DeclareLetter{\CenterVertical}{\NEL{3.5,6.125}}}
+\DefineLetter{\tol}{\DeclareLetter{\CenterVertical}{\NEL{3.5,3.75}}}
+\DefineLetter{\tel}{\DeclareChar{(CenterUpperLeft) to [bend left = -55] (2.75,5.666)}{(CenterBottomRight) to [bend left = 55] (4.75,4.333)}{\CenterVertical}}
+
+\DefineLetter{\lut}{\DeclareLetter{\CenterBottomVertical}{\BigCupRight{3.75,11.125}}}
+\DefineLetter{\lit}{\DeclareLetter{\CenterVertical}{\NER{CenterCeiling}}}
+\DefineLetter{\lat}{\DeclareLetter{\CenterVertical}{\NER{3.75,5}}}
+\DefineLetter{\lot}{\DeclareLetter{\CenterVertical}{\NER{CenterCellar}}}
+\DefineLetter{\Atlanlet}{\DeclareChar{(0,8.5) to [bend left = -55] (7.5,5.5)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}}
+
+
+\DefineLetter{\tuj}{\DeclareLetter{\CenterBottomVertical}{\BigCupLeft{3.75,3.75}}}
+\DefineLetter{\tij}{\DeclareLetter{\CenterVertical}{\RightCupRight{3.75,6.125}}}
+\DefineLetter{\taj}{\DeclareLetter{\CenterVertical}{\RightCupRight{CenterCeiling}}}
+\DefineLetter{\toj}{\DeclareLetter{\CenterVertical}{\RightCupRight{CenterBottom}}}
+\DefineLetter{\tej}{\DeclareChar{\CenterVertical}{(CenterBottomLeft) to [bend left = -55] (2.75,4.333)}{(CenterUpperRight) to [bend left = 55] (4.75,5.666)}}
+
+\DefineLetter{\jut}{\DeclareLetter{\CenterUpperVertical}{\BigCupLeft{3.5,8.25}}}
+\DefineLetter{\jit}{\DeclareLetter{\CenterUpperVertical}{\LeftCupRight{3.75,6.125}}}
+\DefineLetter{\jat}{\DeclareLetter{\CenterUpperVertical}{\LeftCupRight{Center}}}
+\DefineLetter{\Atlanjot}{\DeclareLetter{\CenterUpperVertical}{\LeftCupRight{3.75,1}}}
+\DefineLetter{\jet}{\DeclareChar{((0,4.5) to [bend left = -55] (7.5,8.5)}{(CenterCeiling) -- (3.75,6)}{(CenterCellar) -- (3.75,4)}}
+
+\DefineLetter{\tup}{\DeclareLetter{\CenterVertical}{\Dot{CenterHell}}} 
+\DefineLetter{\tip}{\DeclareLetter{\CenterVertical}{\Dot{UpperRight}}}
+\DefineLetter{\tap}{\DeclareLetter{\CenterVertical}{\Dot{CenterRight}}}
+\DefineLetter{\Atlantop}{\DeclareLetter{\CenterVertical}{\Dot{BottomRight}}}
+\DefineLetter{\tep}{\DeclareLetter{\CenterVertical}{\Dot{Center}}}
+
+\DefineLetter{\Atlanput}{\DeclareLetter{\CenterVertical}{\Dot{CenterHeaven}}}
+\DefineLetter{\pit}{\DeclareLetter{\CenterVertical}{\Dot{UpperLeft}}}
+\DefineLetter{\pat}{\DeclareLetter{\CenterVertical}{\Dot{CenterBottomLeft}}}
+\DefineLetter{\pot}{\DeclareLetter{\CenterVertical}{\Dot{BottomLeft}}}
+\DefineLetter{\pet}{\DeclareChar{\Dot{Center}}{(CenterCeiling) -- (3.75,6.5)}{(CenterCellar) -- (3.75,3.5)}}
+
+\def\broad{(OuterCenterLeft) -- (OuterCenterRight)}
+\DefineLetter{\uk}{\DeclareLetter{(OuterCenterRight) -- (CenterLeft)}{\MediumCircle{OuterCenterLeft}}}
+\DefineLetter{\ik}{\DeclareLetter{\broad}{\MediumCircle{-0.5,6.5}}}
+\DefineLetter{\ak}{\DeclareLetter{\broad}{\MediumCircle{3.75,6.5}}}
+\DefineLetter{\ok}{\DeclareLetter{\broad}{\MediumCircle{8,5.5}}}
+\DefineLetter{\ek}{\DeclareChar{\MediumCircle{Center}}{(OuterCenterLeft) -- (2,5)}{(OuterCenterRight) -- (5.5,5)}}
+
+\DefineLetter{\ku}{\DeclareLetter{(OuterCenterLeft) -- (CenterRight)}{\MediumCircle{OuterCenterRight}}}
+\DefineLetter{\ki}{\DeclareLetter{\broad}{\MediumCircle{-0.5,3.5}}}
+\DefineLetter{\ka}{\DeclareLetter{\broad}{\MediumCircle{3.75,3.5}}}
+\DefineLetter{\ko}{\DeclareLetter{\broad}{\MediumCircle{8,4.5}}}
+\DefineLetter{\ke}{\DeclareLetter{\broad}{\MediumCircle{Center}}}
+
+\DefineLetter{\kuk}{\DeclareLetter{(OuterCenterLeft) -- (2.75,5)}{(OuterCenterRight) -- (5,5)}}
+\DefineLetter{\kik}{\DeclareLetter{\broad}{\HS{-2.25,6.5}}}
+\DefineLetter{\kak}{\DeclareLetter{\broad}{\HS{3.75,6.5}}}
+\DefineLetter{\kok}{\DeclareLetter{\broad}{\HS{8.625, 6.5}}}
+\DefineLetter{\kek}{\DeclareChar{(-3.75,5) -- (0.25,5)}{(1.75,5) -- (5.75,5)}{(7.25,5) -- (11.25,5)}}
+
+
+\def\RSD{(BottomLeft) -- (5.625,10)}
+\DefineLetter{\kun}{\DeclareLetter{\RSD}{\TopHorizontal}}
+\DefineLetter{\kin}{\DeclareLetter{\RSD}{(5.625,10) -- (1.875,10)}}
+\DefineLetter{\kan}{\DeclareLetter{\RSD}{(2.8,5) -- (-0.95,5)}}
+\DefineLetter{\kon}{\DeclareLetter{\RSD}{(0,0) -- (-3.75,0)}}
+\DefineLetter{\ken}{\DeclareChar{(0.75,5) -- (6.375,5)}{(5.625,10) -- (3.375,6)}{(BottomLeft) -- (2.25,4)}}
+
+\DefineLetter{\nuk}{\DeclareLetter{\RSD}{\BottomHorizontal}}
+\DefineLetter{\nik}{\DeclareLetter{\RSD}{(5.625,10) -- (9.375,10)}}
+\DefineLetter{\nak}{\DeclareLetter{\RSD}{(2.8,5) -- (6.56,5)}}
+\DefineLetter{\nok}{\DeclareLetter{\RSD}{(0,0) -- (3.75,0)}}
+\DefineLetter{\nek}{\DeclareChar{\RSD}{(CenterLeft) -- (1.75,5)}{(4.25,5) -- (6.5,5)}}
+
+
+\def\LCD{(BottomRight) -- (1.875,10)}
+\DefineLetter{\kum}{\DeclareLetter{\LCD}{\TopHorizontal}}
+\DefineLetter{\kim}{\DeclareLetter{\LCD}{(1.875,10) -- (-1.875,10)}}
+\DefineLetter{\kam}{\DeclareLetter{\LCD}{(4.7,5) -- (0.95,5)}}
+\DefineLetter{\kom}{\DeclareLetter{\LCD}{(7.5,0) -- (3.75,0)}}
+\DefineLetter{\kem}{\DeclareChar{(BottomRight) -- (5.25,4)}{(4.125,6) -- (1.875,10)}{(CenterLeft) -- (7.25,5)}}
+
+\DefineLetter{\muk}{\DeclareLetter{\LCD}{\BottomHorizontal}}
+\DefineLetter{\mik}{\DeclareLetter{\LCD}{(1.875,10) -- (5.625,10)}}
+\DefineLetter{\mak}{\DeclareLetter{\LCD}{(4.7,5) -- (8.44,5)}}
+\DefineLetter{\mok}{\DeclareLetter{\LCD}{(7.5,0) -- (11.25,0)}}
+\DefineLetter{\mek}{\DeclareChar{\LCD}{(CenterRight) -- (5.75,5)}{(1.5,5) -- (3.25,5)}}
+
+
+\def\CurfLR{(BottomLeft) to [bend left = 70] (CenterUpperRight)}
+\DefineLetter{\kuf}{\DeclareLetter{\CurfLR}{\TopHorizontal}}
+\DefineLetter{\kif}{\DeclareLetter{\CurfLR}{(0,8) -- (7.5,8)}}
+\DefineLetter{\kaf}{\DeclareLetter{\CurfLR}{(1,5.5) -- (-2.75,5.5)}}
+\DefineLetter{\kof}{\DeclareLetter{\CurfLR}{(BottomLeft) -- (OuterBottomLeft)}}
+\DefineLetter{\kef}{\DeclareChar{(BottomLeft) to [bend left = 25] (3,3)}{(4.5,4.5) to [bend left = 25] (CenterUpperRight)}{(0,3.75) -- (7.5,3.75)}}
+
+\DefineLetter{\fuk}{\DeclareLetter{\BottomHorizontal}{(CenterCellar) to [bend left = 70] (OuterUpperRight)}}
+\DefineLetter{\fik}{\DeclareLetter{(3.25,2.5) -- (OuterLowerRight)}{(BottomLeft) .. controls (CenterBottomLeft) .. (CenterBottom)}}
+\DefineLetter{\fak}{\DeclareLetter{\CurfLR}{(1,5.5) -- (5.25,5.5)}}
+\DefineLetter{\fok}{\DeclareLetter{\CurfLR}{(BottomLeft) -- (BottomRight)}}
+\DefineLetter{\fek}{\DeclareChar{\CurfLR}{(OuterCenterLeft) -- (0,5)}{(2,5) -- (5.75,5)}}
+
+
+%Duplicate mirror
+
+\def\CurfRL{(BottomRight) to [bend left = -70] (CenterUpperLeft)}
+\DefineLetter{\kus}{\DeclareLetter{\CurfRL}{\TopHorizontal}}
+\DefineLetter{\kis}{\DeclareLetter{(BottomRight) .. controls (CenterBottomRight) .. (CenterBottom)}{(4.25,2.5) -- (OuterLowerLeft)}}
+\DefineLetter{\kas}{\DeclareLetter{\CurfRL}{(5.625,5) -- (1.875,5)}}
+\DefineLetter{\kos}{\DeclareLetter{\CurfRL}{(BottomRight) -- (BottomLeft)}}
+\DefineLetter{\kes}{\DeclareChar{(BottomRight) to [bend left = -25] (4.5,3)}{(3,4.5) to [bend left = -25] (CenterUpperLeft)}{(0,3.75) -- (7.5,3.75)}}
+
+\DefineLetter{\suk}{\DeclareLetter{\BottomHorizontal}{(CenterCellar) to [bend left = -70] (OuterUpperLeft)}}
+\DefineLetter{\sik}{\DeclareLetter{\CurfRL}{(0,8) -- (7.5,8)}}
+\DefineLetter{\sak}{\DeclareLetter{\CurfRL}{(1,5.5) -- (5.25,5.5)}}
+\DefineLetter{\sok}{\DeclareLetter{\CurfRL}{(BottomRight) -- (OuterBottomRight)}}
+\DefineLetter{\sek}{\DeclareChar{\CurfRL}{(OuterCenterRight) -- (7.5,5)}{(5.5,5) -- (1.75,5)}}
+
+\def\RampLR{(CenterUpperLeft) to [bend left = -70] (BottomRight)}
+\DefineLetter{\kul}{\DeclareLetter{\RampLR}{(OuterUpperLeft) -- (CenterUpper)}}
+\DefineLetter{\kil}{\DeclareLetter{\RampLR}{(CenterUpperLeft) -- (OuterUpperLeft)}}
+\DefineLetter{\kal}{\DeclareLetter{\RampLR}{(0.5,4) -- (-3.25, 4)}}
+\DefineLetter{\kol}{\DeclareLetter{\RampLR}{(0,-0.5) -- (7.5,-0.5)}}
+\DefineLetter{\kel}{\DeclareChar{(BottomRight) to [bend left = 25] (4.5,3)}{(3,4.5) to [bend left = 25] (CenterUpperLeft)}{(0,3.75) -- (7.5,3.75)}}
+
+\DefineLetter{\luk}{\DeclareLetter{(UpperLeft) to [bend left = -70] (CenterBottomRight)}{\BottomHorizontal}}
+\DefineLetter{\lik}{\DeclareLetter{\RampLR}{\UpperHorizontal}}
+\DefineLetter{\lak}{\DeclareLetter{\RampLR}{(0.5,5) -- (4.25,5)}}
+\DefineLetter{\lok}{\DeclareLetter{(CenterUpperLeft) .. controls (CenterLeft) .. (Center)}{(3.25,5) -- (OuterCenterRight)}}
+\DefineLetter{\lek}{\DeclareChar{\RampLR}{(-3.75,3.5) -- (-1,3.5)}{(1,3.5) -- (3.75,3.5)}}
+
+
+
+\def\RampRL{(CenterUpperRight) to [bend left = 70] (BottomLeft)}
+\DefineLetter{\kuj}{\DeclareLetter{\RampRL}{(OuterUpperRight) -- (CenterUpper)}}
+\DefineLetter{\kij}{\DeclareLetter{\RampRL}{(CenterUpperRight) -- (CenterUpperLeft)}}
+\DefineLetter{\kaj}{\DeclareLetter{\RampRL}{(2.5,4) -- (6.25, 4)}}
+\DefineLetter{\koj}{\DeclareLetter{(OuterCenterLeft) -- (4.25,5)}{(Center) .. controls (CenterRight) .. (CenterUpperRight)}}
+\DefineLetter{\kej}{\DeclareChar{(BottomLeft) to [bend left = -25] (3,3)}{(4.5,4.5) to [bend left = -25] (CenterUpperRight)}{(0,3.75) -- (7.5,3.75)}}
+
+\DefineLetter{\juk}{\DeclareLetter{(UpperRight) to [bend left = 70] (CenterBottomLeft)}{\BottomHorizontal}}
+\DefineLetter{\jik}{\DeclareLetter{\RampRL}{(CenterUpperRight) -- (OuterUpperRight)}}
+\DefineLetter{\jak}{\DeclareLetter{\RampRL}{(6.5,4) -- (10.25,4)}}
+\DefineLetter{\jok}{\DeclareLetter{\RampRL}{(0,-0.5) -- (7.5,-0.5)}}
+\DefineLetter{\jek}{\DeclareChar{\RampRL}{(11.25,3.5) -- (8.5,3.5)}{(5.5,3.5) -- (2.75,3.5)}}
+
+\DefineLetter{\kup}{\DeclareLetter{\CenterHorizontal}{\Dot{OuterCenterRight}}}
+\DefineLetter{\kip}{\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottomLeft}}}
+\DefineLetter{\kap}{\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottom}}}
+\DefineLetter{\kop}{\DeclareLetter{\CenterHorizontal}{\Dot{CenterBottomRight}}}
+\DefineLetter{\kep}{\DeclareLetter{\CenterHorizontal}{\Dot{Center}}}
+
+\DefineLetter{\puk}{\DeclareLetter{\CenterHorizontal}{\Dot{OuterCenterLeft}}}
+\DefineLetter{\pik}{\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpperLeft}}}
+\DefineLetter{\pak}{\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpper}}}
+\DefineLetter{\pok}{\DeclareLetter{\CenterHorizontal}{\Dot{CenterUpperRight}}}
+\DefineLetter{\pek}{\DeclareChar{\Dot{Center}}{(2.75,5) -- (CenterLeft)}{(CenterRight) -- (4.75,5)}}
+
+\def\RSDC{(BottomLeft) -- (5.625,7.5)}
+\DefineLetter{\un}{\DeclareLetter{\RSDC}{\MediumCircle{7.10,8.85}}}
+\DefineLetter{\Atlanin}{\DeclareLetter{\RSDC}{\MediumCircle{3.75,8.17}}}
+\DefineLetter{\an}{\DeclareLetter{\RSDC}{\MediumCircle{1,4.5}}}
+\DefineLetter{\on}{\DeclareLetter{\RSDC}{\MediumCircle{-1.5,1}}}
+\DefineLetter{\en}{\DeclareChar{(-1.125, -1.5) -- (0.75,1)}{\MediumCircle{3,4}}{(5.25,7) -- (7.125,9.5)}}
+
+\DefineLetter{\Atlannu}{\DeclareLetter{\RSDC}{\MediumCircle{-0.5, -0.66}}}
+\DefineLetter{\Atlanni}{\DeclareLetter{\RSDC}{\MediumCircle{CenterUpperRight}}}
+\DefineLetter{\na}{\DeclareLetter{\RSDC}{\MediumCircle{4.5,3.5}}}
+\DefineLetter{\no}{\DeclareLetter{\RSDC}{\MediumCircle{2.25,0.5}}}
+\DefineLetter{\Atlanne}{\DeclareLetter{\RSDC}{\MediumCircle{2.8125,3.75}}}
+
+\DefineLetter{\nun}{\DeclareLetter{(BottomLeft) -- (2.621, 3.5)}{(5.625,7.5) -- (3.38, 4.51)}}
+\DefineLetter{\nin}{\DeclareLetter{\RightDiagonal}{(2.0625,8.5) -- (4.3125,11.5)}}
+\DefineLetter{\nan}{\DeclareLetter{\RightDiagonal}{(-0.5475,5) -- (1.6825,8)}}
+\DefineLetter{\non}{\DeclareLetter{\RightDiagonal}{(-3.1875,1.5) -- (-0.9375,4.5)}}
+\DefineLetter{\nen}{\DeclareChar{(BottomLeft) -- (1.9375, 2.58333)}{(2.615,3.4875) -- (4.5531,6.07)}{(5.2656 ,7.0208) -- (7.203 ,9.6041)}}
+
+
+\def\BRCU{(BottomRight) -- (CenterUpper)}
+\DefineLetter{\num}{\DeclareLetter{\BRCU}{(CenterLeft) -- (UpperRight)}}
+\DefineLetter{\nim}{\DeclareLetter{\BRCU}{(CenterLeft) -- (CenterUpper)}}
+\DefineLetter{\nam}{\DeclareLetter{\BRCU}{(5.5,4) -- (1.76,1.48)}}
+\DefineLetter{\nom}{\DeclareLetter{\BRCU}{(BottomRight) -- (3.75,-2.5)}}
+\DefineLetter{\nem}{\DeclareChar{(BottomRight) -- (6,3) }{(CenterUpper) -- (5,5) }{(3.5,3) -- (7.5,5)}}
+
+\DefineLetter{\mun}{\DeclareLetter{(UpperLeft) -- (CenterBottom)}{(BottomLeft) -- (CenterRight)}}
+\def\URCB{(CenterUpper) -- (BottomLeft)}
+\DefineLetter{\Atlanmin}{\DeclareLetter{\URCB}{(CenterUpper) -- (UpperLeft)}}
+\DefineLetter{\man}{\DeclareLetter{\URCB}{(-1.75,6.5) -- (2,4)}}
+\DefineLetter{\mon}{\DeclareLetter{\URCB}{(BottomLeft) -- (-3.75,2.5)}}
+\DefineLetter{\men}{\DeclareChar{(1.875,0) -- (4.25,3.17)}{(6,5.5) -- (CenterUpperRight)}{(3,5.73) -- (7,2.75)}}
+
+\DefineLetter{\nuf}{\DeclareLetter{(UpperRight) -- (CenterBottom)}{\BigCapRight{4.5,1.25}}}
+\def\cappy#1{($(#1) + (-1.2,-1.48)$) to [bend left =90] ($(#1) + (1.2,1.6)$)}
+\DefineLetter{\nif}{\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\SEL{QUpperRight}}}
+\DefineLetter{\naf}{\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\SEC{2.5,3.5}}}
+\DefineLetter{\nof}{\DeclareLetter{(BottomLeft) -- (QUpperRight)}{\SEC{1,0.5}}}
+\DefineLetter{\nef}{\DeclareChar{(BottomLeft) -- (QUpperRight)}{(0,4) to [bend left = 25] (2.5,5)}{(5.5,5.5) to [bend left = 25] (8.5,5.5)}}
+
+\DefineLetter{\fun}{\DeclareLetter{(CenterUpper) -- (BottomLeft)}{\BigCapRight{3.75,6}}}
+\DefineLetter{\fin}{\DeclareLetter{\RightDiagonal}{(CenterCeiling) to [bend left = 55] (UpperRight)}}
+\DefineLetter{\fan}{\DeclareLetter{\RightDiagonal}{(CenterLeft) to [bend left = 55] (Center)}}
+\DefineLetter{\fon}{\DeclareLetter{\RightDiagonal}{\SER{BottomLeft}}}
+\DefineLetter{\fen}{\DeclareChar{(CenterBottomLeft) to [bend left = 55] (CenterRight)}{(BottomLeft) -- (QBottomLeft)}{(QUpperRight) -- (UpperRight)}}
+
+%\pagebreak
+
+\DefineLetter{\nus}{\DeclareLetter{\BLCUR}{\BigCapLeft{0.25, -1.5}}}
+\DefineLetter{\nis}{\DeclareLetter{\BLCUR}{\RightCapLeft{7,7}}}
+\DefineLetter{\nas}{\DeclareLetter{\BLCUR}{\RightCapLeft{3.5,3.5}}}
+\DefineLetter{\nos}{\DeclareLetter{\BLCUR}{\RightCapLeft{BottomLeft}}}
+\DefineLetter{\nes}{\DeclareChar{\BLCUR}{(0,6) to [bend left = 25] (4,6)}{(7,5) to [bend left = 25] (10,3)}}
+
+\DefineLetter{\sun}{\DeclareLetter{\BLCUR}{\BigCapLeft{6.5, 5.65}}}
+\DefineLetter{\Atlansin}{\DeclareLetter{\BLCUR}{\LeftCapLeft{7.1, 6.65}}}
+\DefineLetter{\san}{\DeclareLetter{\BLCUR}{\LeftCapLeft{4.3,4.5}}}
+\DefineLetter{\son}{\DeclareLetter{\BLCUR}{\LeftCapLeft{0.5, 0}}}
+\DefineLetter{\sen}{\DeclareChar{(0,0) -- (2,2)}{(CenterLeft) to [bend left = 55] (BottomRight)}{(5.5,5.5) -- (7.5,7.5)}}
+
+\DefineLetter{\nul}{\DeclareLetter{\RightDiagonal}{\BigCupLeft{BottomLeft}}}
+\DefineLetter{\nil}{\DeclareLetter{\RightDiagonal}{\NEL{UpperRight}}}
+\DefineLetter{\nal}{\DeclareLetter{\RightDiagonal}{\NEL{Center}}}
+\DefineLetter{\nol}{\DeclareLetter{\RightDiagonal}{\NEL{BottomLeft}}}
+\DefineLetter{\nel}{\DeclareChar{\BLCUR}{(0,6) to [bend left = -25] (2,3)}{(4.5,2.5) to [bend left = -25] (8,4)}}
+
+\DefineLetter{\lun}{\DeclareLetter{(BottomLeft) -- (CenterUpper)}{\BigCupRight{CenterUpper}}}
+\DefineLetter{\lin}{\DeclareLetter{\RightDiagonal}{\NER{UpperRight}}}
+\DefineLetter{\lan}{\DeclareLetter{\RightDiagonal}{\NER{Center}}}
+\DefineLetter{\lon}{\DeclareLetter{\RightDiagonal}{\NER{BottomLeft}}}
+\DefineLetter{\len}{\DeclareChar{(0,0) -- (2,2)}{(0,8.625) to [bend left = -55] (7.5,3.75)}{(5.5,5.5) -- (7.5,7.5)}}
+
+\DefineLetter{\nuj}{\DeclareLetter{\RightDiagonal}{\NWC{BottomLeft}}}
+\DefineLetter{\nij}{\DeclareLetter{\RightDiagonal}{\NWL{UpperRight}}}
+\DefineLetter{\naj}{\DeclareLetter{\RightDiagonal}{(Center) to [bend left = -55] (CenterRight)}}
+\DefineLetter{\noj}{\DeclareLetter{\RightDiagonal}{(BottomLeft) to [bend left = = -55] (CenterCellar)}}
+\DefineLetter{\nej}{\DeclareChar{\RightDiagonal}{(7,7) to [bend left = 25] (4,4)}{(2,4) to [bend left = 25] (-1,5)}}
+
+\DefineLetter{\jun}{\DeclareLetter{\RightDiagonal}{\BigCupLeft{UpperRight}}}
+\DefineLetter{\jin}{\DeclareLetter{\RightDiagonal}{(UpperRight) to [bend left = 55] (CenterCeiling)}}
+\DefineLetter{\jan}{\DeclareLetter{\RightDiagonal}{\NWC{(3.25,5.65}}}
+\DefineLetter{\jon}{\DeclareLetter{\RightDiagonal}{\NWC{0,1.25}}}
+\DefineLetter{\jen}{\DeclareChar{(0,0) -- (2,2)}{(7.5,3) to [bend left = -55] (0,1.5)}{(5.5,5.5) -- (7.5,7.5)}}
+
+\DefineLetter{\nup}{\DeclareLetter{\RightDiagonal}{\Dot{-3.75,-2.5}}}
+\DefineLetter{\nip}{\DeclareLetter{\RightDiagonal}{\Dot{8.625,9}}}
+\DefineLetter{\nap}{\DeclareLetter{\RightDiagonal}{\Dot{4.75,4.25}}}
+\DefineLetter{\nop}{\DeclareLetter{\RightDiagonal}{\Dot{1.5,0}}}
+\DefineLetter{\nep}{\DeclareLetter{\RightDiagonal}{\Dot{Center}}}
+
+\DefineLetter{\pun}{\DeclareLetter{\RightDiagonal}{\Dot{11.25,12.5}}}
+\DefineLetter{\pin}{\DeclareLetter{\RightDiagonal}{\Dot{4.75,9.65}}}
+\DefineLetter{\pan}{\DeclareLetter{\RightDiagonal}{\Dot{3.25,6.25}}}
+\DefineLetter{\pon}{\DeclareLetter{\RightDiagonal}{\Dot{-1.5,1.35}}}
+\DefineLetter{\pen}{\DeclareChar{(0,0) -- (2.625,3.5)}{(7.5,10) -- (4.875,6.5)}{\Dot{Center}}}
+
+\DefineLetter{\um}{\DeclareLetter{\LeftDiagonal}{\MediumCircle{-1.875,12.5}}}
+\DefineLetter{\im}{\DeclareLetter{\LeftDiagonal}{\MediumCircle{-1.5,9}}}
+\DefineLetter{\am}{\DeclareLetter{\LeftDiagonal}{\MediumCircle{1.5,4.5}}}
+\DefineLetter{\om}{\DeclareLetter{\LeftDiagonal}{\MediumCircle{4.65,0}}}
+\DefineLetter{\Atlanem}{\DeclareChar{(8,0) -- (6.125,2.5)}{\MediumCircle{Center}}{(0,10) -- (1.875,7.5)}}
+
+\DefineLetter{\Atlanmu}{\DeclareLetter{\LeftDiagonal}{\MediumCircle{9.375,-2.5}}}
+\DefineLetter{\mi}{\DeclareLetter{\LeftDiagonal}{\MediumCircle{3.5,9}}}
+\DefineLetter{\ma}{\DeclareLetter{\LeftDiagonal}{\MediumCircle{6.25,4.5}}}
+\DefineLetter{\mo}{\DeclareLetter{\LeftDiagonal}{\MediumCircle{9,0.5}}}
+\DefineLetter{\me}{\DeclareLetter{\LeftDiagonal}{\MediumCircle{Center}}}
+
+\DefineLetter{\mum}{\DeclareLetter{(UpperLeft) -- (3,6)}{(BottomRight) -- (4.5,4)}}
+\DefineLetter{\mim}{\DeclareLetter{\LeftDiagonal}{(-1.5,9) -- (0.85,5.65)}}
+\DefineLetter{\mam}{\DeclareLetter{\LeftDiagonal}{(0.85,5.65) -- (3.25,2.25)}}
+\DefineLetter{\mom}{\DeclareLetter{\LeftDiagonal}{(3.25,2.25) -- (5.65,-1.15)}}
+\DefineLetter{\mem}{\DeclareChar{(BottomRight) -- (5.5625, 2.58333)}{(4.885,3.4875) -- (2.95,6.07)}{(1.875,7.0208) -- (0 ,9.6041)}}
+
+
+\DefineLetter{\muf}{\DeclareLetter{(UpperLeft) -- (CenterBottom)}{\BigCapRight{3.25, 1.25}}}
+\DefineLetter{\mif}{\DeclareLetter{\LeftDiagonal}{\SEL{UpperLeft}}}
+\DefineLetter{\maf}{\DeclareLetter{\LeftDiagonal}{\SEL{Center}}}
+\DefineLetter{\mof}{\DeclareLetter{\LeftDiagonal}{\SEL{BottomRight}}}
+\DefineLetter{\mef}{\DeclareChar{\LeftDiagonal}{(0,2) to [bend left = 25] (2,5)}{(4,6.5) to [bend left = 25] (7,8)}}
+
+\DefineLetter{\fum}{\DeclareLetter{\LeftDiagonal}{\SEC{UpperLeft}}}
+\DefineLetter{\fim}{\DeclareLetter{\LeftDiagonal}{\SER{UpperLeft}}}
+\DefineLetter{\Atlanfam}{\DeclareLetter{\LeftDiagonal}{\SER{Center}}}
+\DefineLetter{\fom}{\DeclareLetter{\LeftDiagonal}{\SER{BottomRight}}}
+\DefineLetter{\fem}{\DeclareChar{(0,0) to [bend left = 55] (7.5,6.125)}{(7.5,0) -- (4.875,3.5)}{(0,10) -- (1.875 ,7.5)}}
+
+\DefineLetter{\mus}{\DeclareLetter{(UpperLeft) -- (CenterBottom)}{\BigCapLeft{3.25,1.25}}}
+\DefineLetter{\mis}{\DeclareLetter{\LeftDiagonal}{\SWR{UpperLeft}}}
+\DefineLetter{\mas}{\DeclareLetter{\LeftDiagonal}{(Center) to [bend left = 55] (CenterRight)}}
+\DefineLetter{\mos}{\DeclareLetter{\LeftDiagonal}{\SWL{BottomRight}}}
+\DefineLetter{\mes}{\DeclareChar{\LeftDiagonal}{(-1,6) to [bend left =25] (1.5,7)}{(4,7) to [bend left =25] (7,5)}}
+
+\DefineLetter{\Atlansum}{\DeclareLetter{\LeftDiagonal}{\BigCapLeft{UpperLeft}}}
+\DefineLetter{\Atlansim}{\DeclareLetter{\LeftDiagonal}{\SWC{-0.5,10}}}
+\DefineLetter{\sam}{\DeclareLetter{\LeftDiagonal}{\SWC{3,5.5}}}
+\DefineLetter{\som}{\DeclareLetter{\LeftDiagonal}{\SWC{5, 2.25}}}
+\DefineLetter{\sem}{\DeclareChar{(0,4.5) to [bend left = 55] (7.5,3.5)}{(7.5,0) -- (4.875,3.5)}{(0,10) -- (1.875 ,7.5)}}
+
+
+\DefineLetter{\mul}{\DeclareLetter{(UpperLeft) -- (CenterBottom)}{\BigCapRight{3.75,1.5}}}
+\DefineLetter{\mil}{\DeclareLetter{\LeftDiagonal}{\NEC{QUpperLeft}}}
+\DefineLetter{\mal}{\DeclareLetter{\LeftDiagonal}{\NEC{Center}}}
+\DefineLetter{\mol}{\DeclareLetter{\LeftDiagonal}{\NEC{7,2}}}
+\DefineLetter{\mel}{\DeclareChar{\LeftDiagonal}{(-1,8) to [bend left=-25](2,5)}{(6,4) to [bend left=-25] (9,4)}}
+%HIERNAAR KIJKEN 
+\DefineLetter{\lum}{\DeclareLetter{\LeftDiagonal}{(LeftHeaven) to [bend left =-55] (5.625,7.5)}}
+\DefineLetter{\Atlanlim}{\DeclareLetter{\LeftDiagonal}{(UpperLeft) to [bend left = -55] (1.875, 5)}}
+\DefineLetter{\lam}{\DeclareLetter{\LeftDiagonal}{(Center) to [bend left = -55] (CenterCellar)}}
+\DefineLetter{\lom}{\DeclareLetter{\LeftDiagonal}{\NEL{BottomRight}}}
+\DefineLetter{\lem}{\DeclareChar{(0,7.5) to [bend left = -55] (7.5,6.5)}{(7.5,0) -- (4.875,3.5)}{(0,10) -- (1.875 ,7.5)}}
+
+\DefineLetter{\muj}{\DeclareLetter{\LeftDiagonal}{\BigCupLeft{7,1}}}
+\DefineLetter{\mij}{\DeclareLetter{\LeftDiagonal}{\NWL{UpperLeft}}}
+\DefineLetter{\maj}{\DeclareLetter{\LeftDiagonal}{\NWL{Center}}}
+\DefineLetter{\moj}{\DeclareLetter{\LeftDiagonal}{\NWL{BottomRight}}}
+\DefineLetter{\mej}{\DeclareChar{\LeftDiagonal}{(3,4) to [bend left = 25] (0,4)}{(5,5) to [bend left = -25] (6,7.5)}}
+
+\DefineLetter{\jum}{\DeclareLetter{\LeftDiagonal}{\BigCupLeft{UpperLeft}}}
+\DefineLetter{\jim}{\DeclareLetter{\LeftDiagonal}{\NWR{UpperLeft}}}
+\DefineLetter{\jam}{\DeclareLetter{\LeftDiagonal}{\NWR{Center}}}
+\DefineLetter{\jom}{\DeclareLetter{\LeftDiagonal}{\NWR{BottomRight}}}
+\DefineLetter{\jem}{\DeclareChar{(CenterLeft) to [bend left = -55] (UpperRight)}{(7.5,0) -- (4.875,3.5)}{(0,10) -- (1.875 ,7.5)}}
+
+
+\DefineLetter{\mup}{\DeclareLetter{\LeftDiagonal}{\Dot{9.375,-2.5}}}
+\DefineLetter{\mip}{\DeclareLetter{\LeftDiagonal}{\Dot{3.5,9}}}
+\DefineLetter{\map}{\DeclareLetter{\LeftDiagonal}{\Dot{6,5.5}}}
+\DefineLetter{\mop}{\DeclareLetter{\LeftDiagonal}{\Dot{9.5,1.75}}}
+\DefineLetter{\mep}{\DeclareLetter{\LeftDiagonal}{\Dot{Center}}}
+
+\DefineLetter{\pum}{\DeclareLetter{\LeftDiagonal}{\Dot{-1.875, 12.5}}}
+\DefineLetter{\pim}{\DeclareLetter{\LeftDiagonal}{\Dot{-1.5,9}}}
+\DefineLetter{\pam}{\DeclareLetter{\LeftDiagonal}{\Dot{1.5,4.5}}}
+\DefineLetter{\pom}{\DeclareLetter{\LeftDiagonal}{\Dot{4.65,0}}}
+\DefineLetter{\pem}{\DeclareChar{\Dot{Center}}{(7.5,0) -- (5.625,2.5)}{(0,10) -- (1.875 ,7.5)}}
+
+\DefineLetter{\uf}{\DeclareLetter{\BigSE}{\MediumCircle{CenterCeiling}}}
+\DefineLetter{\Atlanif}{\DeclareLetter{\BigSE}{\MediumCircle{OuterUpperRight}}}
+\DefineLetter{\af}{\DeclareLetter{\BigSE}{\MediumCircle{2,9}}}
+\DefineLetter{\of}{\DeclareLetter{\BigSE}{\MediumCircle{-1.875,2}}}
+\DefineLetter{\ef}{\DeclareChar{\MediumCircle{Center}}{(0,0) to [bend left =45] (1.875, 2.5)}{(5.625,7.5) to [bend left = 45] (7.5,10)}}
+
+\DefineLetter{\fu}{\DeclareLetter{\BigSE}{\MediumCircle{0,-1.875}}}
+\DefineLetter{\Atlanfi}{\DeclareLetter{\BigSE}{\MediumCircle{6.5,5.75}}}
+\DefineLetter{\fa}{\DeclareLetter{\BigSE}{\MediumCircle{Center}}}
+\DefineLetter{\fo}{\DeclareLetter{\BigSE}{\MediumCircle{1.875,1.25}}}
+\DefineLetter{\fe}{\DeclareLetter{\BigSE}{\MediumCircle{2.25,5.75}}}
+
+\DefineLetter{\fuf}{\DeclareLetter{(0,0) to [bend left = 45] (3,4)}{(4,6) to [bend left = 45] (7.5,10)}}
+\DefineLetter{\fif}{\DeclareLetter{\BigSE}{\SER{CenterUpperRight}}}
+\DefineLetter{\faf}{\DeclareLetter{\BigSE}{\SEC{Center}}}
+\DefineLetter{\fof}{\DeclareLetter{\BigSE}{\SEL{1.875,0}}}
+\DefineLetter{\fef}{\DeclareLetter{(0,0) to [bend left = 45] (5.625,5)}{(7.5,10) to [bend left =-45] (3.75,2.5)}}
+
+
+\DefineLetter{\fus}{\DeclareLetter{\BigSE}{(CenterCeiling) to [bend left = 55] (CenterBottomRight)}}
+\DefineLetter{\fis}{\DeclareLetter{\BigSE}{\SWL{CenterUpperRight}}}
+\DefineLetter{\fas}{\DeclareLetter{\BigSE}{\SWL{2.25,5.75}}}
+\DefineLetter{\fos}{\DeclareLetter{\BigSE}{\SWL{BottomLeft}}}
+\DefineLetter{\fes}{\DeclareChar{\BigSE}{(1.5,8) to [bend left = -25] (-2,10.75)}{(3.75,5) to [bend left = 25] (5.823 ,2.25)}}
+
+\DefineLetter{\suf}{\DeclareLetter{\BigSW}{\BigCapRight{(7.5, -2}}}
+\DefineLetter{\sif}{\DeclareLetter{\BigSW}{\SEL{CenterUpperLeft}}}
+\DefineLetter{\saf}{\DeclareLetter{\BigSW}{\SEL{5,5}}}
+\DefineLetter{\sof}{\DeclareLetter{\BigSW}{\SEL{BottomRight}}}
+\DefineLetter{\sef}{\DeclareChar{\BigSW}{(1,1) to [bend left = 25] (4,4)}{(7,7) to [bend left = 25] (10,9)}}
+%
+
+\DefineLetter{\ful}{\DeclareLetter{\BigNE}{\BigCapRight{0,6}}}
+\DefineLetter{\fil}{\DeclareLetter{\BigSE}{\NEL{CenterUpperRight}}}
+\DefineLetter{\fal}{\DeclareLetter{\BigSE}{\NEL{2.25,5.75}}}
+\DefineLetter{\fol}{\DeclareLetter{\BigSE}{\NEL{BottomLeft}}}
+\DefineLetter{\fel}{\DeclareChar{\BigSE}{(0,8.5) to [bend left = -25] (1.15,5.5)}{(2.5,3.75) to [bend left = -25] (5,1.75)}}
+
+\DefineLetter{\luf}{\DeclareLetter{\BigNE}{\SEC{BottomLeft}}}
+\DefineLetter{\lif}{\DeclareLetter{\BigNE}{\SEL{CenterUpperLeft}}}
+\DefineLetter{\laf}{\DeclareLetter{\BigNE}{\SEL{2,2}}}
+\DefineLetter{\lof}{\DeclareLetter{\BigNE}{\SEL{BottomRight}}}
+\DefineLetter{\lef}{\DeclareChar{\BigNE}{(-1,-1) to [bend left = 25] (1.5,1.5)}{(3,3) to [bend left =25] (6,6)}}
+
+\DefineLetter{\fuj}{\DeclareLetter{\BigNW}{\BigCapRight{7.5,6}}}
+\DefineLetter{\fij}{\DeclareLetter{\BigSE}{\NWR{CenterUpperRight}}}
+\DefineLetter{\faj}{\DeclareLetter{\BigSE}{\NWR{(4.25,5.5}}}
+\DefineLetter{\foj}{\DeclareLetter{\BigSE}{\NWR{BottomLeft}}}
+\DefineLetter{\fej}{\DeclareGlyph{\BigSE}{(-2,4) to [bend left = -25] (0,4)}{(2,4) to [bend left = -25] (4.5,6.5)}{(5,8) to [bend left =-25] (5,10)}}
+
+\DefineLetter{\juf}{\DeclareLetter{\BigNW}{\SEC{BottomLeft}}}
+\DefineLetter{\jif}{\DeclareLetter{\BigNW}{\SEL{CenterUpperRight}}}
+\DefineLetter{\jaf}{\DeclareLetter{\BigNW}{\SEC{5.5,2}}}
+\DefineLetter{\jof}{\DeclareLetter{\BigNW}{\SER{BottomLeft}}}
+\DefineLetter{\jef}{\DeclareGlyph{\BigNW}{(2,-2) to [bend left = 25] (2,-0.5)}{(2,1) to [bend left =25] (6,4)}{(8,4) to [bend left = 25] (10,4)}}
+
+\DefineLetter{\fup}{\DeclareLetter{\BigSE}{\Dot{0,-2}}}
+\DefineLetter{\fip}{\DeclareLetter{\BigSE}{\Dot{6.5,5}}}
+\DefineLetter{\fap}{\DeclareLetter{\BigSE}{\Dot{3,5}}}
+\DefineLetter{\fop}{\DeclareLetter{\BigSE}{\Dot{2.5,1}}}
+\DefineLetter{\fep}{\DeclareLetter{\BigSE}{\Dot{2.25,5.75}}}
+
+\DefineLetter{\puf}{\DeclareLetter{\BigSE}{\Dot{9.5,7.5}}}
+\DefineLetter{\pif}{\DeclareLetter{\BigSE}{\Dot{6.5,9.5}}}
+\DefineLetter{\paf}{\DeclareLetter{\BigSE}{\Dot{0.5,7.75}}}
+\DefineLetter{\pof}{\DeclareLetter{\BigSE}{\Dot{-2.5,1}}}
+\DefineLetter{\pef}{\DeclareChar{\Dot{3.75,3.75}}{(0,7.5) to [bend left = 25] (3,5)}{(5, 3) to [bend left = 25] (6.5,0)}} 
+
+\DefineLetter{\us}{\DeclareLetter{\BigSW}{\MediumCircle{5.5,10}}}
+\DefineLetter{\is}{\DeclareLetter{\BigSW}{\MediumCircle{1.5,5.25}}}
+\DefineLetter{\as}{\DeclareLetter{\BigSW}{\MediumCircle{3.5,4.5}}}
+\DefineLetter{\os}{\DeclareLetter{\BigSW}{\MediumCircle{5.5,2}}}
+\DefineLetter{\es}{\DeclareChar{\MediumCircle{Center}}{(7.5,0) to [bend left =-45] (5.625, 2.5)}{(1.875,7.5) to [bend left = -45] (0,10)}}
+	
+\DefineLetter{\su}{\DeclareLetter{\BigSW}{\MediumCircle{7.5,-1.875}}}
+\DefineLetter{\sa}{\DeclareLetter{\BigSW}{\MediumCircle{1.5,9.375}}}
+\DefineLetter{\si}{\DeclareLetter{\BigSW}{\MediumCircle{8,6}}}
+\DefineLetter{\so}{\DeclareLetter{\BigSW}{\MediumCircle{9.375,2}}}
+\DefineLetter{\se}{\DeclareLetter{\BigSW}{\MediumCircle{5,6}}}
+
+
+\DefineLetter{\sus}{\DeclareLetter{(0,7.5) to [bend left = 35] (3 ,4.5)}{(7.5,0) to [bend left =-35] (4.5,3)}}
+\DefineLetter{\sis}{\DeclareLetter{\BigSW}{\SWC{2,6}}}
+\DefineLetter{\sas}{\DeclareLetter{\BigSW}{\SWC{4,5}}}
+\DefineLetter{\sos}{\DeclareLetter{\BigSW}{\SWC{6,2}}}
+\DefineLetter{\ses}{\DeclareLetter{(0,7.5) to [bend left = 55] (CenterBottom)}{(7.5,0) to [bend left = -55] (1.875,5)}}	
+
+
+%NEXT PAGE
+\DefineLetter{\sul}{\DeclareLetter{\BigSW}{\BigCupRight{BottomRight}}}
+\DefineLetter{\sil}{\DeclareLetter{\BigSW}{\NEC{(1.25, 8.5}}}
+\DefineLetter{\sal}{\DeclareLetter{\BigSW}{\NEC{6,6}}}
+\DefineLetter{\sol}{\DeclareLetter{\BigSW}{\NEL{BottomRight}}}
+\DefineLetter{\sel}{\DeclareChar{\BigSW}{(3,4) to [bend left =-25] (6,4)}{(8,5) to [bend left=-25] (9,7.5)}}
+%\DefineLetter{\sul}{\DeclareChar{\BigNE}{(-3,2) to [bend left = -25] (0,2)}{(3,3) to [bend left = -25] (5,6)}}
+
+\DefineLetter{\lus}{\DeclareLetter{\BigSW}{\NEC{0,7.5}}}
+\DefineLetter{\lis}{\DeclareLetter{\BigSW}{\NEL{0,7.5}}}
+\DefineLetter{\las}{\DeclareLetter{\BigSW}{(6.5,3) to [bend left = 55] (0,6)}}
+\DefineLetter{\los}{\DeclareLetter{\BigSW}{\NER{BottomRight}}}
+\DefineLetter{\les}{\DeclareChar{(2.5,8) to [bend left = 25] (4.25,6.5)}{(7.5,0) to [bend left =-25] (6.5, 2.5)}{(0,8) to [bend left = -55] (CenterRight)}}
+
+
+\DefineLetter{\suj}{\DeclareLetter{\BigSW}{\BigCupLeft{BottomRight}}}
+\DefineLetter{\sij}{\DeclareLetter{\BigSW}{\NWL{2,7.5}}}
+\DefineLetter{\saj}{\DeclareLetter{\BigSW}{\NWL{6,5}}}
+\DefineLetter{\soj}{\DeclareLetter{\BigSW}{\NWL{BottomRight}}}
+\DefineLetter{\sej}{\DeclareChar{\BigSW}{(8,8) to [bend left = 55] (8,6)}{(6,4) to [bend left = 55] (3,3)}}
+
+\DefineLetter{\jus}{\DeclareLetter{\BigSW}{(LeftHeaven) to [bend left = 55] (-2.5, 5)}}
+\DefineLetter{\jis}{\DeclareLetter{\BigSW}{\NWR{CenterUpperLeft}}}
+\DefineLetter{\jas}{\DeclareLetter{\BigSW}{\NWR{6.75,4}}}
+\DefineLetter{\jos}{\DeclareLetter{\BigSW}{\NWR{BottomRight}}}
+\DefineLetter{\jes}{\DeclareChar{(2.5,8) to [bend left = 25] (4.25,6.5)}{(7.5,0) to [bend left =-25] (6.5, 2.5)}{(CenterLeft) to [bend left = -55] (7.5,8)}}
+
+\DefineLetter{\Atlansup}{\DeclareLetter{\BigSW}{\Dot{7.5,-1.875}}}
+\DefineLetter{\sip}{\DeclareLetter{\BigSW}{\Dot{2,9}}}
+\DefineLetter{\sap}{\DeclareLetter{\BigSW}{\Dot{6.5,7.5}}}
+\DefineLetter{\sop}{\DeclareLetter{\BigSW}{\Dot{9.375,1.25}}}
+\DefineLetter{\sep}{\DeclareLetter{\BigSW}{\Dot{5,6}}}
+
+\DefineLetter{\pus}{\DeclareLetter{\BigSW}{\Dot{9.375,0}}}
+\DefineLetter{\pis}{\DeclareLetter{\BigSW}{\Dot{1.875,6}}}
+\DefineLetter{\pas}{\DeclareLetter{\BigSW}{\Dot{4,5}}}
+\DefineLetter{\pos}{\DeclareLetter{\BigSW}{\Dot{6,1.25}}}
+\DefineLetter{\pes}{\DeclareChar{\Dot{Center}}{(7.5,0) to [bend left =-45] (5.625, 2.5)}{(1.875,7.5) to [bend left = -45] (0,10)}}
+
+\DefineLetter{\ul}{\DeclareLetter{\BigNE}{\MediumCircle{0,9.375}}}
+\DefineLetter{\il}{\DeclareLetter{\BigNE}{\MediumCircle{-1.875,7.5}}}
+\DefineLetter{\al}{\DeclareLetter{\BigNE}{\MediumCircle{0.75,0.75}}}
+\DefineLetter{\ol}{\DeclareLetter{\BigNE}{\MediumCircle{7.5,-1.875}}}
+\DefineLetter{\el}{\DeclareChar{\MediumCircle{Center}}{(7.5,0) to [bend left =45] (5.625, 2.5)}{(1.875,7.5) to [bend left = 45] (0,10)}}
+
+\DefineLetter{\lu}{\DeclareLetter{(UpperLeft) to [bend left = -55] (CenterBottomRight)}{\MediumCircle{4,0}}}
+\DefineLetter{\li}{\DeclareLetter{\BigNE}{\MediumCircle{1.875,7}}}
+\DefineLetter{\la}{\DeclareLetter{\BigNE}{\MediumCircle{3.25,3.25}}}
+\DefineLetter{\lo}{\DeclareLetter{\BigNE}{\MediumCircle{7,1.875}}}
+\DefineLetter{\Atlanle}{\DeclareLetter{\BigNE}{\MediumCircle{2,2}}}
+
+\DefineLetter{\lul}{\DeclareLetter{(0,7.5) to [bend left = -35] (3 ,4.5)}{(7.5,0) to [bend left =35] (4.5,3)}}
+\DefineLetter{\lil}{\DeclareLetter{\BigNE}{\NEC{2,6}}}
+\DefineLetter{\lal}{\DeclareLetter{\BigNE}{\NEC{3,3}}}
+\DefineLetter{\lol}{\DeclareLetter{\BigNE}{\NEC{5,2}}}
+\DefineLetter{\lel}{\DeclareLetter{(7.5,0) to [bend left =45] (3.75,7.5)}{(0,10) to [bend left = -45] (5.625,5)}}
+
+
+%\pagebreak
+
+\DefineLetter{\luj}{\DeclareLetter{\BigNW}{(5.625,2) to [bend left = 45] (0,8.625)}}
+\DefineLetter{\lij}{\DeclareLetter{\BigNW}{\NER{CenterUpperRight}}}
+\DefineLetter{\laj}{\DeclareLetter{\BigNW}{\NER{5.625,2}}}
+\DefineLetter{\loj}{\DeclareLetter{\BigNW}{\NER{BottomLeft}}}
+\DefineLetter{\lej}{\DeclareChar{\BigNE}{(-1.5,2) to [bend left = -25] (1,2)}{(3,3) to [bend left =-25 ] (4,5.5)}}
+
+\DefineLetter{\jul}{\DeclareLetter{\BigNE}{\BigCupLeft{CenterUpperLeft}}}
+\DefineLetter{\jil}{\DeclareLetter{\BigNW}{\NEL{CenterUpperRight}}}
+\DefineLetter{\jal}{\DeclareLetter{\BigNW}{\NEL{6.5,1}}}
+\DefineLetter{\jol}{\DeclareLetter{\BigNW}{\NEL{BottomLeft}}}
+\DefineLetter{\jel}{\DeclareChar{\BigNW}{(4,6) to [bend left = -25] (5,3)}{(8,2) to [bend left = -25] (10.5,2)}}
+
+\DefineLetter{\lup}{\DeclareLetter{\BigNE}{\Dot{9.375, 0}}}
+\DefineLetter{\lip}{\DeclareLetter{\BigNE}{\Dot{2,7}}}
+\DefineLetter{\lap}{\DeclareLetter{\BigNE}{\Dot{3.25,3.25}}}
+\DefineLetter{\lop}{\DeclareLetter{\BigNE}{\Dot{7,2}}}
+\DefineLetter{\lep}{\DeclareLetter{\BigNE}{\Dot{2,2}}}
+
+\DefineLetter{\pul}{\DeclareLetter{\BigNE}{\Dot{0,9.375}}}
+\DefineLetter{\pil}{\DeclareLetter{\BigNE}{\Dot{-2,7}}}
+\DefineLetter{\pal}{\DeclareLetter{\BigNE}{\Dot{1,1}}}
+\DefineLetter{\pol}{\DeclareLetter{\BigNE}{\Dot{7, -2}}}
+\DefineLetter{\pel}{\DeclareChar{\Dot{3,3}}{(0,7.5) to [bend left = -45] (2,4)}{(4,2) to [bend left = -45] (7.5,0)}}
+
+
+\DefineLetter{\uj}{\DeclareLetter{\BigNW}{\MediumCircle{7.5,9.375}}}
+\DefineLetter{\Atlanij}{\DeclareLetter{\BigNW}{\MediumCircle{6, 6.5}}}
+\DefineLetter{\aj}{\DeclareLetter{\BigNW}{\MediumCircle{4.25,3.75}}}
+\DefineLetter{\oj}{\DeclareLetter{\BigNW}{\MediumCircle{1.875,1.5}}}
+\DefineLetter{\ej}{\DeclareChar{\MediumCircle{4.5,3.5}}{(0,0) to [bend left = -45] (2.5,1.5)}{(6,5.5) to [bend left = -45] (7.5,7.5)}}
+
+\DefineLetter{\ju}{\DeclareLetter{(CenterBottomLeft) to [bend left = -55] (UpperRight)}{\MediumCircle{3.5,0}}}
+\DefineLetter{\ji}{\DeclareLetter{\BigNW}{\MediumCircle{9.375,7}}}
+\DefineLetter{\ja}{\DeclareLetter{\BigNW}{\MediumCircle{6.75,0.75}}}
+\DefineLetter{\jo}{\DeclareLetter{\BigNW}{\MediumCircle{1,-1.875}}}
+\DefineLetter{\je}{\DeclareLetter{\BigNW}{\MediumCircle{5.75,2}}}
+
+\DefineLetter{\juj}{\DeclareLetter{(0,0) to [bend left =-45] (4,3)}{(5,4) to [bend left = -45] (7.5,7.5)}}
+\DefineLetter{\jij}{\DeclareLetter{\BigNW}{\NWC{6,6}}}
+\DefineLetter{\jaj}{\DeclareLetter{\BigNW}{\NWC{5,3}}}
+\DefineLetter{\joj}{\DeclareLetter{\BigNW}{\NWC{2,2}}}
+\DefineLetter{\jej}{\DeclareLetter{(0,0) to [bend left =-45] (3.75,7.5)}{(7.5,10) to [bend left =45] (1.875, 5)}}
+
+\DefineLetter{\jup}{\DeclareLetter{\BigNW}{\Dot{-1.25,0}}}
+\DefineLetter{\jip}{\DeclareLetter{\BigNW}{\Dot{-1.25,7}}}
+\DefineLetter{\jap}{\DeclareLetter{\BigNW}{\Dot{4.75,3}}}
+\DefineLetter{\jop}{\DeclareLetter{\BigNW}{\Dot{0.5,1.25}}}
+\DefineLetter{\jep}{\DeclareLetter{\BigNW}{\Dot{5.75,2}}}
+
+\DefineLetter{\puj}{\DeclareLetter{\BigNW}{\Dot{9.375, 7.5}}}
+\DefineLetter{\pij}{\DeclareLetter{\BigNW}{\Dot{9.375,7}}}
+\DefineLetter{\paj}{\DeclareLetter{\BigNW}{\Dot{6.75, 1}}}
+\DefineLetter{\poj}{\DeclareLetter{\BigNW}{\Dot{0.5,-1.25}}}
+\DefineLetter{\pej}{\DeclareChar{(0,0) to [bend left = -45] (4,2)}{(6,4) to [bend left =-45] (7.5,7.5)}{\Dot{5,3}}}
+
+\DefineLetter{\up}{\DeclareLetter{(CenterCellar) -- (CenterLeft) -- (CenterRight) -- (CenterCellar)}{\MediumCircle{CenterUpper}}}
+\DefineLetter{\ip}{\DeclareLetter{(BottomLeft) -- (BottomRight) -- (Center) -- (BottomLeft)}{\MediumCircle{CenterUpper}}}
+\DefineLetter{\ap}{\DeclareLetter{(8,1) -- (8,9) -- (3,5) -- (8,1)}{\MediumCircle{CenterLeft}}}
+\DefineLetter{\op}{\DeclareLetter{(0,1) -- (0,9) -- (5,5) -- (0,1)}{\MediumCircle{8,5}}}
+\DefineLetter{\ep}{\DeclareLetter{(0,2) -- (7.5,2) -- (3.75,9) -- (0,2)}{(Center) circle (4.35)}}
+
+\DefineLetter{\pu}{\DeclareLetter{(0,2) -- (7.5,2) -- (3.75,7) -- (0,2)}{\MediumCircle{CenterCellar}}}
+\DefineLetter{\Atlanpi}{\DeclareLetter{(0,9) -- (7.5,9) -- (3.75,2) -- (0,9)}{\MediumCircle{CenterCellar}}}
+\DefineLetter{\pa}{\DeclareLetter{(8,5) -- (3,1.5) -- (3,8.5) -- (8,5)}{\MediumCircle{CenterLeft}}}
+\DefineLetter{\po}{\DeclareLetter{(CenterLeft) -- (5,1.5) -- (5,8.5) -- (CenterLeft)}{\MediumCircle{8,5}}}
+\DefineLetter{\pe}{\DeclareLetter{(0,2) -- (7.5,2) -- (3.75, 9) -- (0,2)}{(3.75,4) circle (1.95)}}
+
+\DefineLetter{\pup}{\DeclareLetter{(CenterCellar) -- (CenterLeft) -- (CenterRight) -- (CenterCellar)}{\Dot{CenterUpper}}}
+\DefineLetter{\pip}{\DeclareLetter{(BottomLeft) -- (BottomRight) -- (Center) -- (BottomLeft)}{\Dot{CenterUpper}}}
+\DefineLetter{\pap}{\DeclareLetter{(8,1) -- (8,9) -- (3,5) -- (8,1)}{\Dot{CenterLeft}}}
+\DefineLetter{\pop}{\DeclareLetter{(0,1) -- (0,9) -- (5,5) -- (0,1)}{\Dot{8,5}}}
+\DefineLetter{\pep}{\DeclareLetter{(0,2) -- (7.5,2) -- (3.75,9) -- (0,2)}{\Dot{3.75,4}}}

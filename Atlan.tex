@@ -1,11 +1,22 @@
-\documentclass[twoside, openany, 12pt, a5paper]{book}
+\documentclass[ twoside, openany, 12pt, a5paper]{book}
 \usepackage{tikz}
+\usepackage{Atlan}
 \usepackage{multicol}
 \usepackage{geometry}
+%\usepackage{ctex}
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \usepackage{tipa}
 \usepackage{blindtext}
 \usepackage{fontspec}
+\usepackage{tabularx}
+\usepackage{tipa}
+\usepackage[english]{babel}
+\usepackage{lettrine}
+\usepackage{wrapfig}
+\usepackage{forest}
+\usepackage{setspace}
+\usepackage{multicol}
 \usepackage[t,lf]{spectral}
 \usepackage{xpatch}
 \let\cleardoublepage=\clearpage
@@ -16,17 +27,18 @@
 \xpatchcmd{\@makechapterhead}{\vspace*{50\p@}}{\vspace*{\chaptertopskip}}{\typeout{Success}}{\typeout{Failure!!!}}
 \makeatother
 
+\pagestyle{plain}
 %%%%%%%%%%%Dependencies%%%%%%%%%%%%%%%
 %\input{./Dependencies/Cmd}
 %\input{./Dependencies/Grid}
 %\input{./Dependencies/numberlines}
 
 %%%%%%%%%%%Definitions%%%%%%%%%%%%%%%%
-\def\Section#1#2{\section{#1}  \vspace*{-0.5cm} {\small \bf #2}}
+\def\Section#1#2{\section{#1}  \vspace*{-0.5cm} {\small \bf \begin{center} #2\end{center}}}
 
 
 %%%%%%%%%%%Dimensions%%%%%%%%%%%%%%%%%%
-
+\setlength{\footskip}{60pt}
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
