@@ -24,7 +24,18 @@ do
 		echo "\%nocite{$titleshort}" >> nocite
 		echo " " >> nocite
 		echo " " >> Atlan.bib
-		printf "\n@article{$titleshort,\n author = {$authorart},\n year={$yearart},\n title={$titleart},\n journal = {$journal},\n volume={$volume},\n pages = {$pages}}\n" >> Atlan.bib 
+		printf "\n@article{$titleshort,\n author = {$authorart},\n year={$yearart},\n title={$titleart},\n journal = {$journal},\n volume={$volume},\n number = {$number},\n pages = {$pages}}\n" >> Atlan.bib 
+	elif [[ "$type" == "website" ]] ; then
+		read -p "URL: " url
+		read -p "Title: " titlesite
+		read -p "Retrieved: " retrieved
+		read -p "Author: " authorsite
+		read -p "Year: " yearsite
+		titleshort=$(echo "$titlesite" | tr -d ' ') 
+		echo "\%nocite{$titleshort}" >> nocite
+		echo " " >> nocite
+		echo " " >> Atlan.bib
+		printf "\n @article{$titleshort, \n author = {$authorsite}, \n year ={$yearsite}, \n url = {'\\'url{$url}}, \n note = {Retrieved: $retrieved}, \n title = {$titlesite}}\n" >> Atlan.bib 
 	elif [[ "$type" == "quit" ]] ; then 
 		break
 	fi

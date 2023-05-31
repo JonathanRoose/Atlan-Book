@@ -2,13 +2,13 @@
  
 \nocite{Medicine:useofEnglish}
  
-\%nocite{Theusefulnessofmetricsinthequantificationofspeechrhythm}
+\nocite{Theusefulnessofmetricsinthequantificationofspeechrhythm}
  
 \nocite{ModernCantonesePhonology}
  
-\%nocite{Theconnectivityofthesuperiorlongitudinalfasciculus:atractographyDTIstudy}
+\nocite{Theconnectivityofthesuperiorlongitudinalfasciculus:atractographyDTIstudy}
  
-\%nocite{ThespecialnatureofAustralianphonologies:whyauditoryconstraintsonhumanlanguagesoundsystemsarenotuniversal}
+\nocite{ThespecialnatureofAustralianphonologies:whyauditoryconstraintsonhumanlanguagesoundsystemsarenotuniversal}
  
 \nocite{SyntacticStructures}
  
@@ -16,45 +16,277 @@
  
 \nocite{Linguisticsforeveryone:Anintroduction}
  
-\%nocite{Themythoflanguageuniversals:Languagediversityanditsimportanceforcognitivescience}
+\nocite{Themythoflanguageuniversals:Languagediversityanditsimportanceforcognitivescience}
  
-\%nocite{Theevolutionofthelanguagefaculty:Clarificationsandimplications}
+\nocite{Theevolutionofthelanguagefaculty:Clarificationsandimplications}
  
-\%nocite{RedefiningtheroleofBroca'sareainspeech}
+\nocite{RedefiningtheroleofBroca'sareainspeech}
  
-\%nocite{Languageandthebrain}
+\nocite{Languageandthebrain}
  
-\%nocite{Dutch}
+\nocite{Dutch}
  
-\%nocite{Englishaslinguafranca:Athreattomultilingualism?}
+\nocite{Englishaslinguafranca:Athreattomultilingualism?}
  
-\%nocite{Tamil}
+\nocite{Tamil}
  
-\%nocite{Subjacencyasaprocessingphenomenon}
+\nocite{Subjacencyasaprocessingphenomenon}
  
 \nocite{LinguaFrancaCommunication}
  
-\%nocite{LanguageandCulture}
+\nocite{LanguageandCulture}
  
 \nocite{AmericanEnglish:HandbookoftheInternationalPhoneticAssociaton}
  
 \nocite{TheSoundsoftheWorld'sLanguages}
  
-\%nocite{TonePerceptioninCantoneseandMandarin:Across-linguisticcomparison}
+\nocite{TonePerceptioninCantoneseandMandarin:Across-linguisticcomparison}
  
-\%nocite{Perceptionofthespeechcode}
+\nocite{Perceptionofthespeechcode}
  
-\%nocite{Specializationofleftauditorycortexforspeechperceptioninmandependsontemporalcoding}
+\nocite{Specializationofleftauditorycortexforspeechperceptioninmandependsontemporalcoding}
  
 \nocite{NaturalLanguageandUniversalGrammar:Volume1:EssaysinLinguisticTheory}
  
-\%nocite{TheCorpusofEnglishasLinguaFrancainAcademicSettings}
+\nocite{TheCorpusofEnglishasLinguaFrancainAcademicSettings}
  
-\%nocite{Pattern}
+\nocite{Pattern}
  
 \nocite{Patternsofsounds}
  
-\%nocite{PhonemeRepresentationandclassificationinprimaryauditorycortex}
+\nocite{PhonemeRepresentationandclassificationinprimaryauditorycortex}
  
 \nocite{p}
+ 
+\nocite{LanguageChange:ProgressorDecay?}
+ 
+\nocite{LanguageChange:ProgressorDecay?}
+ 
+\nocite{Rituals,MantrasandScience:AnIntegralPerspective}
+ 
+\nocite{LanguageChange}
+ 
+\nocite{TheHandbookofLanguageVariationandChange}
+ 
+\nocite{TheCambridgeEncyclopediaoftheEnglishLanguage}
+ 
+\nocite{'Hark,hark,thelark':Socialmotivationsforphonologicalstyle-shifting}
+ 
+\nocite{OvertandCovertTranslation}
+ 
+\nocite{Languagechangeandsocialnetworks}
+ 
+\nocite{Children,adolescents,andlanguagechange}
+ 
+\nocite{Theintersectionofsexandsocialclassinthecourseoflinguisticchange}
+ 
+\nocite{PrinciplesofLinguisticChange,InternalFactors}
+ 
+\nocite{IntroductiontoTheoreticalLinguistics}
+ 
+\nocite{ABiographyoftheEnglishLanguage}
+ 
+\nocite{TheOxfordHandbookoftheHistoryofEnglish}
+ 
+\nocite{ContemporaryLinguistics:AnIntroduction}
+ 
+\nocite{}
+ 
+\nocite{WhoarethespeakersofEsperanto}
+ 
+\nocite{VariationinEsperanto}
+ 
+\nocite{Neutralization}
+ 
+\nocite{Long-termcrosslinguistictransferofskillsfromL1toL2}
+ 
+\nocite{BelgianversusNetherlandicDutch:Newpatternsofdivergence?Onpronounsofaddressanddiminutives}
+ 
+\nocite{BelgianStandardDutch}
+ 
+\nocite{awful}
+
+\nocite{Gay}
+
+\nocite{LIB}
+
+\nocite{LIS}
+
+\nocite{WSE}
+
+\nocite{BRL}
+
+\nocite{NCL}
+
+\nocite{LCW}
+\nocite{ThePolysynthesisParameter}
+ 
+\nocite{TheGrammarofWords:AnIntroductiontoLinguisticMorphology}
+ 
+\nocite{LanguageUniversalsandLinguisticTypology:SyntaxandMorphology}
+ 
+\nocite{JournaloftheInternationalPhoneticAssociation}
+ 
+\nocite{Tamil}
+ 
+\nocite{Tamil}
+ 
+\nocite{TurkishGrammar}
+ 
+\nocite{MulticulturalismpermittedinEnglishonly}
+ 
+\nocite{Morphology}
+ 
+\nocite{PHOIBLE2.0.}
+ 
+\nocite{PHOIBLE2.0.}
+ 
+\nocite{Language,IdentityandtheOwnershipofEnglish}
+ 
+\nocite{TheLanguageInstinct:Howthemindcreateslanguage}
+ 
+\nocite{Inandontheirownterms:the"habitatfactor"inEnglishasalinguafrancainteractions}
+ 
+\nocite{BritishEnglish:ReceivedPronunciation}
+ 
+\nocite{LanguageDeathinCentralMexico:TheDeclineofNahuatlandtheNewBilingualMaintenancePrograms}
+ 
+\nocite{TheMesoamericanIndianlanguages}
+ 
+\nocite{DiglossicVariationinTamilfilmandfiction}
+ 
+\nocite{Indonesian}
+ 
+\nocite{TheLimitsofextendednaturalisticexposureontheperceptualmasteryofEnglish/r/and/l/byadultJapaneselearnersofEnglish}
+ 
+\nocite{ArabicLanguage}
+ 
+\nocite{AnIntroductiontoPhoneticsandPhonology}
+ 
+\nocite{Tone}
+ 
+\nocite{TheCompleteLojbanLanguage}
+ 
+\nocite{SpeechandLanguageProcessing:3rdedition}
+ 
+\nocite{Indo-EuropeanLanguageandCulture:AnIntroduction}
+ 
+\nocite{ClassificationoftheSino-Tibetanlanguages}
+ 
+\nocite{AfricanLanguages:AnIntroduction}
+ 
+\nocite{Proto-AustronesianandthemajorAustronesiansubgroups}
+
+\nocite{Tryon}
+\nocite{Howmanylanguagefamiliesarethereintheworld?}
+\nocite{Trans}
+ 
+\nocite{TheContributionoflinguisticfactorstotheintelligibilityofcloselyrelatedlanguages}
+ 
+\nocite{GeneticheritageoftheBalto-Slavicspeakingpopulations:asynthesisofautosomal,mitochondrialandY-chromosomaldata}
+ 
+\nocite{Themoresimilarthebetter?Factorsinlearningcognates,falsecognatesandnon-cognatewords}
+ 
+\nocite{Languageisolatesandtheirhistory,or,what'sweird,anyway?}
+ 
+\nocite{Introducingsecondlanguageacquisition}
+ 
+\nocite{Savinglanguages:Anintroductiontolanguagerevitalization}
+ 
+\nocite{ATajik-Persianreferencegrammar}
+ 
+\nocite{Sino-Tibetanlinguistics:presentstateandfutureprospects}
+ 
+\nocite{EFEPI:EFEnglishProficiencyIndex:ARankingof111CountriesandRegionsbyEnglishSkills}
+ 
+\nocite{Candide,oul'Optimisme}
+ 
+\nocite{Basiccolourterms:Theiruniversalityandevolution}
+ 
+\nocite{AComparativeGrammarofSouthAfricanLanguages}
+
+\nocite{Boucon2019-BOUTPO-37}
+\nocite{sep-reduction-biology}
+\nocite{Cartouche}
+
+\nocite{Goddard2012SemanticPS}
+\nocite{Arssignorum}
+ 
+\nocite{AThousandPlateaus:CapitalismandSchizophrenia}
+ 
+\nocite{Encyclopédie,oudictionnaireraisonnédessciences,desartsetdesmétiers.}
+ 
+\nocite{TheSearchforthePerfectLanguage}
+ 
+\nocite{TheOrderofThings:AnArchaeologyoftheHumanSciences}
+ 
+\nocite{AristotleonSpeciesVariation}
+ 
+\nocite{Plotinus:TheEnneads}
+ 
+
+\nocite{MeaningandUniversalGrammar:TheoryandEmpiricalFindings}
+ 
+\nocite{DancingforHathor:WomeninAncientEgypt}
+ 
+\nocite{Thereniformbody:AnintegrativelateralprotocerebralneuropilcomplexofEumalacostracaidentifiedinStomatopodaandBrachyura}
+ 
+\nocite{WissenschaftderLogik}
+ 
+\nocite{BeingandTime}
+ 
+\nocite{LogischeUntersuchungen}
+ 
+\nocite{EpiphenomenalQualia}
+ 
+\nocite{KritikderReinenVernunft}
+ 
+\nocite{Towardsafunctionalneuroanatomyofpleasureandhappiness}
+ 
+\nocite{Women,Fire,andDangerousThings:WhatCategoriesRevealAbouttheMind}
+ 
+\nocite{2016}
+ 
+\nocite{CulturalKeywordsinDiscourse}
+ 
+\nocite{Metaphysics:AnIntroduction}
+ 
+\nocite{ilingualMinds:EmotionalExperience,Expression,andRepresentation}
+ 
+\nocite{Taxonomy-definition,classification\&example}
+ 
+\nocite{}
+ 
+\nocite{Taxonomy{-}definition,classification\&example}
+ 
+\nocite{test}
+ 
+\nocite{test}
+ 
+\nocite{TheAnalyticalLanguageofJohnWilkins}
+ 
+\nocite{DefinitionsandthetreeofPorphyry}
+ 
+\nocite{TheFiveBasicTastes}
+ 
+\nocite{Amplitude,wavelength,andfrequency}
+ 
+\nocite{Commonscaletypes}
+ 
+\nocite{ArsSignorum}
+ 
+\nocite{Oligosyntheticlanguage}
+ 
+\nocite{SemanticMolecules}
+ 
+\nocite{ThehistoryofGottfriedLeibniz}
+ 
+\nocite{Nomenclature{-}IUPAC:InternationalUnionofPureandAppliedChemistry}
+ 
+\nocite{Whatisdespeciation?}
+ 
+\nocite{Do'PrimaryColorsExist?}
+ 
+\nocite{NaturalLanguageOntology}
+\%nocite{Naturenews-species}
  
