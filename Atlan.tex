@@ -32,7 +32,7 @@
 \makeatother
 
 \addbibresource{./Bronnen/Atlan.bib}
-
+\newcommand{\restorecorps}{\renewcommand{\corpsgrootte}{20pt}}
 
 
 \pagestyle{fancy}
@@ -52,13 +52,12 @@
 
 %%%%%%%%%%%Dimensions%%%%%%%%%%%%%%%%%%
 \setlength{\footskip}{60pt}
-
+\onehalfspacing
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
 \input{./Frontmatter/Voorblad.tex}
 
-\chapter{Preface}
 \input{./Frontmatter/Preface.tex}
 
 \input{./Frontmatter/TOC.tex}
@@ -93,7 +92,7 @@
 
 \chapter{Bibliography}\input{./Endmatter/Sources.tex}
 
-\chapter{Index}\input{./Endmatter/Index.tex}
+%\chapter{Index}\input{./Endmatter/Index.tex}
 
 \input{./Endmatter/Blurp.tex}
 
