@@ -20,7 +20,7 @@
  
 \nocite{Theevolutionofthelanguagefaculty:Clarificationsandimplications}
  
-\nocite{RedefiningtheroleofBroca'sareainspeech}
+\nocite{RedefiningtheroleofBrocasareainspeech}
  
 \nocite{Languageandthebrain}
  
@@ -38,7 +38,7 @@
  
 \nocite{AmericanEnglish:HandbookoftheInternationalPhoneticAssociaton}
  
-\nocite{TheSoundsoftheWorld'sLanguages}
+\nocite{TheSoundsoftheWorldsLanguages}
  
 \nocite{TonePerceptioninCantoneseandMandarin:Across-linguisticcomparison}
  
@@ -62,7 +62,7 @@
  
 \nocite{LanguageChange:ProgressorDecay?}
  
-\nocite{Rituals,MantrasandScience:AnIntegralPerspective}
+\nocite{RitualsMantrasandScience:AnIntegralPerspective}
  
 \nocite{LanguageChange}
  
@@ -70,17 +70,17 @@
  
 \nocite{TheCambridgeEncyclopediaoftheEnglishLanguage}
  
-\nocite{'Hark,hark,thelark':Socialmotivationsforphonologicalstyle-shifting}
+\nocite{Harkharkthelark:Socialmotivationsforphonologicalstyle-shifting}
  
 \nocite{OvertandCovertTranslation}
  
 \nocite{Languagechangeandsocialnetworks}
  
-\nocite{Children,adolescents,andlanguagechange}
+\nocite{Childrenadolescentsandlanguagechange}
  
 \nocite{Theintersectionofsexandsocialclassinthecourseoflinguisticchange}
  
-\nocite{PrinciplesofLinguisticChange,InternalFactors}
+\nocite{PrinciplesofLinguisticChangeInternalFactors}
  
 \nocite{IntroductiontoTheoreticalLinguistics}
  
@@ -141,11 +141,11 @@
  
 \nocite{PHOIBLE2.0.}
  
-\nocite{Language,IdentityandtheOwnershipofEnglish}
+\nocite{LanguageIdentityandtheOwnershipofEnglish}
  
 \nocite{TheLanguageInstinct:Howthemindcreateslanguage}
  
-\nocite{Inandontheirownterms:the"habitatfactor"inEnglishasalinguafrancainteractions}
+\nocite{Inandontheirownterms:thehabitatfactorinEnglishasalinguafrancainteractions}
  
 \nocite{BritishEnglish:ReceivedPronunciation}
  
@@ -183,11 +183,11 @@
  
 \nocite{TheContributionoflinguisticfactorstotheintelligibilityofcloselyrelatedlanguages}
  
-\nocite{GeneticheritageoftheBalto-Slavicspeakingpopulations:asynthesisofautosomal,mitochondrialandY-chromosomaldata}
+\nocite{GeneticheritageoftheBalto-Slavicspeakingpopulations:asynthesisofautosomalmitochondrialandY-chromosomaldata}
  
-\nocite{Themoresimilarthebetter?Factorsinlearningcognates,falsecognatesandnon-cognatewords}
+\nocite{Themoresimilarthebetter?Factorsinlearningcognatesfalsecognatesandnon-cognatewords}
  
-\nocite{Languageisolatesandtheirhistory,or,what'sweird,anyway?}
+\nocite{Languageisolatesandtheirhistoryorwhatsweirdanyway?}
  
 \nocite{Introducingsecondlanguageacquisition}
  
@@ -199,7 +199,7 @@
  
 \nocite{EFEPI:EFEnglishProficiencyIndex:ARankingof111CountriesandRegionsbyEnglishSkills}
  
-\nocite{Candide,oul'Optimisme}
+\nocite{CandideoulOptimisme}
  
 \nocite{Basiccolourterms:Theiruniversalityandevolution}
  
@@ -214,7 +214,7 @@
  
 \nocite{AThousandPlateaus:CapitalismandSchizophrenia}
  
-\nocite{Encyclopédie,oudictionnaireraisonnédessciences,desartsetdesmétiers.}
+\nocite{Encyclopédieoudictionnaireraisonnédessciencesdesartsetdesmétiers}
  
 \nocite{TheSearchforthePerfectLanguage}
  
@@ -243,7 +243,7 @@
  
 \nocite{Towardsafunctionalneuroanatomyofpleasureandhappiness}
  
-\nocite{Women,Fire,andDangerousThings:WhatCategoriesRevealAbouttheMind}
+\nocite{WomenFireandDangerousThings:WhatCategoriesRevealAbouttheMind}
  
 \nocite{2016}
  
@@ -251,13 +251,9 @@
  
 \nocite{Metaphysics:AnIntroduction}
  
-\nocite{ilingualMinds:EmotionalExperience,Expression,andRepresentation}
+\nocite{ilingualMinds:EmotionalExperienceExpressionandRepresentation}
  
-\nocite{Taxonomy-definition,classification\&example}
- 
-\nocite{}
- 
-\nocite{Taxonomy{-}definition,classification\&example}
+\nocite{Taxonomy{-}definitionclassificationexample}
  
 \nocite{test}
  
@@ -269,7 +265,7 @@
  
 \nocite{TheFiveBasicTastes}
  
-\nocite{Amplitude,wavelength,andfrequency}
+\nocite{Amplitudewavelengthandfrequency}
  
 \nocite{Commonscaletypes}
  
@@ -281,12 +277,136 @@
  
 \nocite{ThehistoryofGottfriedLeibniz}
  
-\nocite{Nomenclature{-}IUPAC:InternationalUnionofPureandAppliedChemistry}
+\nocite{Nomenclature-IUPAC:InternationalUnionofPureandAppliedChemistry}
  
 \nocite{Whatisdespeciation?}
  
-\nocite{Do'PrimaryColorsExist?}
+\nocite{DoPrimaryColorsExist?}
  
 \nocite{NaturalLanguageOntology}
-\%nocite{Naturenews-species}
+\nocite{Naturenews-species}
+ 
+\nocite{sep-qualia-knowledge}
+\nocite{Statesofconsciousness}
+\nocite{sep-ehrenfels}
+
+\nocite{sep-early-modern-india}
+ 
+\nocite{JohnWilkinscreatesauniversallanguagebasedonaclassificationschemeorontologyandauniversalsystemofmeasurement}
+ 
+\nocite{TheMoleculesProject:TheBuildingBlocksofMeaning}
+ 
+\nocite{Alanguagewhichdefiesdescriptionbyordinarymeans}
+ 
+\nocite{Emotion:Theoryresearchandexperience}
+ 
+\nocite{TheoriesofEmotion}
+ 
+\nocite{Isagoge}
+ 
+\nocite{WhatisUNL}
+ 
+\nocite{AnIntroductiontoNon-ClassicalLogic:Fromiftois}
+ 
+\nocite{TheProprioceptiveSenses:TheirRolesinSignalingBodyShapeBodyPositionandMovementandMuscleForce}
+ 
+\nocite{TheSightsandSoundsofLife:WhatareSensoryNeurons?}
+ 
+\nocite{LostLanguages:theenigmaoftheworldsundecipheredscripts}
+ 
+\nocite{Critical/SensitivePeriods}
+ 
+\nocite{Thesaurus}
+ 
+\nocite{SimplifyingTheory}
+ 
+\nocite{sep-analysis}
+\nocite{Speakingaboutsounds:atoolforcommunicationonsoundfeatures}
+ 
+\nocite{Lexico-StatisticalDatingofPrehistoricEthnicContacts}
+ 
+\nocite{sep-qualia}
+\nocite{Relations}
+ 
+\nocite{YgydeLanguage-Comparisonofphilosophicallanguages}
+ 
+\nocite{EverydayLifeinAncientEgypt}
+ 
+\nocite{ProcessandReality}
+ 
+\nocite{ChromaticCircle}
+ 
+\nocite{EssayTowardsaRealCharacterandaPhilosophicalLanguage}
+ 
+\nocite{PhilosophicalInvestigations}
+ 
+\nocite{EEEEE}
+ 
+\nocite{AnAccountofSomeRecentDiscoveriesinHieroglyphicalLiteratureandEgyptianAntiquities}
+ 
+\nocite{HowtoDoThingsWithWords:TheWilliamJamesLecturesdeliveredatHarvardUniversityin1955}
+ 
+\nocite{Thegrammaticalviewofscalarimplicaturesandtherelationshipbetweensemanticsandpragmatics}
+ 
+\nocite{Implicature}
+ 
+\nocite{TheSearchforthePerfectLanguage}
+ 
+\nocite{Language;Anessentialcomponentofinterculturalcommunicativecompetence}
+ 
+\nocite{TheLanguageMachine}
+ 
+\nocite{BasicBooksInc}
+ 
+\nocite{FromLinguisticsandPoetics}
+ 
+\nocite{JournalofPragmatics}
+ 
+\nocite{AgainstTheory}
+ 
+\nocite{Agreek-englishlexicon}
+ 
+\nocite{Whereprosodymeetspragmatics}
+ 
+\nocite{CourseinGeneralLinguistics}
+ 
+\nocite{Theanthropologyoflanguage:anintroductiontolinguisticanthropology}
+ 
+\nocite{ForandAgainstLinguisticRelativity}
+ 
+\nocite{HowrelativisticareHumboldtsWeltansichten?}
+ 
+\nocite{LanguageandColonialism}
+ 
+\nocite{LinguisticRelativities:languagediversityandmodernthought}
+ 
+\nocite{Thestatusoflinguisticsasscience}
+ 
+\nocite{Thestatusoflinguisticsasascience}
+ 
+\nocite{TheGreatEskimoVocabularyHoaxandotherIrreverentEssaysontheStudyofLanguage}
+ 
+\nocite{TheWhorfTheoryComplex:ACriticalReconstruction}
+ 
+\nocite{TheLinguisticsofColour}
+ 
+\nocite{Astudyinlanguageandcognition}
+ 
+\nocite{StudyingSpatialConceptualizationacrossCultures:AnthropologyandCognitiveScience}
+ 
+\nocite{TheDevelopmentofCognitiveAnthropology}
+ 
+\nocite{BasicColorTerms:TheirUniversalityandEvolution}
+ 
+\nocite{RethinkingLinguisticRelativity}
+ 
+\nocite{GrammaticalCategoriesandCognition:ACaseStudyoftheLinguisticRelativityHypothesis}
+ 
+\nocite{Metaphorsweliveby}
+ 
+\nocite{CriticalEssaysTheMeaningandImportanceofI"inAnthem"}
+ 
+\nocite{1988[1836]}
+ 
+\nocite{AboutKhlebnikov}
  

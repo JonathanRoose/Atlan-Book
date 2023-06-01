@@ -2,16 +2,17 @@
 while true
 do
 	read -p "Type:" type
-	if [[ "$type" == Book ]] ; then 
+	if [[ "$type" == book ]] ; then 
 		read -p "Author: " authorbook
 		read -p "Year: " yearbook
 		read -p "Title: " titlebook
 		read -p "Publisher:" publisherbook
+		read -p "Pages: " pagebook
 		titleshort=$(echo "$titlebook" | tr -d ' ') 
 		echo "\nocite{$titleshort}" >> nocite
 		echo " " >> nocite
 		echo " " >> Atlan.bib
-		printf "\n@book{$titleshort,\n author = {$authorbook},\n year={$yearbook},\n title={$titlebook},\n publisher={$publisherbook}}" >> Atlan.bib 
+		printf "\n@book{$titleshort,\n author = {$authorbook},\n year={$yearbook},\n title={$titlebook},\n publisher={$publisherbook}, \n pages = {$pagebook}}" >> Atlan.bib 
 	elif [[ "$type" == "article" ]] ; then
 		read -p "Author: " authorart
 		read -p "Year: "  yearart
@@ -35,7 +36,7 @@ do
 		echo "\%nocite{$titleshort}" >> nocite
 		echo " " >> nocite
 		echo " " >> Atlan.bib
-		printf "\n @article{$titleshort, \n author = {$authorsite}, \n year ={$yearsite}, \n url = {'\\'url{$url}}, \n note = {Retrieved: $retrieved}, \n title = {$titlesite}}\n" >> Atlan.bib 
+		printf "\n @misc{$titleshort, \n author = {$authorsite}, \n year ={$yearsite}, \n url = {'\\'url{$url}}, \n note = {Retrieved: $retrieved}, \n title = {$titlesite}}\n" >> Atlan.bib 
 	elif [[ "$type" == "quit" ]] ; then 
 		break
 	fi

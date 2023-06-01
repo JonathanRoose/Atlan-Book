@@ -11,19 +11,21 @@ My aim in this essay is twofold. First, I want to show why syntactic ambiguity i
 \section*{What is syntactic ambiguity?}
 
 Syntactic ambiguity occurs when word-order gives rise to multiple interpretations (Oaks,2012, p.16) . The sentence \lq\lq I see the man with binoculars\rq\rq \phantom{} could be parsed (split into grammatical parts) in two ways:
-\begin{multicols}{2} \footnotesize
+\begin{center}
 \begin{forest}
 	for tree = {s sep = 0.5mm}
 	[I see the man with binoculars[I see][the man with binoculars[the man][with binoculars]]]
 \end{forest}
 
-\columnbreak
+	\vspace{0.5cm}
 
 	\begin{forest}
 	[I see the man with binoculars[I][see the man with binoculars[see the man[see][the man]][with binoculars]]]
 \end{forest}
-\end{multicols}
+\end{center}
+
 \noindent {\footnotesize\it Figure 1: different syntax trees for \lq\lq I see the man with binoculars\rq\rq}
+\vspace{0.1cm}
 
 \noindent As we see in the above syntax trees, the difference in interpretation hinges on the (de)coupling of the words {\it man } and {\it with binoculars}. You could make {\it with binoculars} modify {\it man}. One could also modify {\it see} via {\it with binoculars}. The structure of the sentence doesn't give preference to one over the other.
 
@@ -162,9 +164,9 @@ Ithkuil specifies the exact case of every noun. Due to that, it is clear which w
 
 We have seen how Ithkuil and Lojban deal with syntactic ambiguity. Taking this in account, how will Atlan deal with it?
 
-A feature of Lojban was the explicit word-coupling with the structure word \bo. The word directly made clear what words formed a separate noun-phrase. However, it is an extra word to remember. I believe it is a better idea to couple words in the most direct sense of the word: literally connect them to each other. This is a familiar feature of, for example, Dutch: {\it grijze hondentemmer} (grey hound-tamer) versus {\it grijze-honden temmer}. Both in English and Dutch, the words \lq\lq dog \rq\rq and \lq\lq tamer \rq\rq are joined to indicate that they belong together. In speech, words that should be separated, are separated by a pause. 
+A feature of Lojban was the explicit word-coupling with the structure word \bo. The word directly made clear what words formed a separate noun-phrase. However, it is an extra word to remember. We believe it is a better idea to couple words in the most direct sense of the word: literally connect them to each other. This is a familiar feature of, for example, Dutch: {\it grijze hondentemmer} (grey hound-tamer) versus {\it grijze-honden temmer}. Both in English and Dutch, the words \lq\lq dog \rq\rq and \lq\lq tamer \rq\rq are joined to indicate that they belong together. In speech, words that should be separated, are separated by a pause. 
 
-Now, what about scope ambiguity? For negation, for example, we will include two types: sentential and predicate negation. Sentential negation is a form of negation that spans over a whole sentence. E.g. {\it I have {\bf not} been to school today}. Predicate negation on the other hand, only spans over a predicate. For example, {\it I'm very {\bf un}happy at the moment.} This would fix negation scope ambiguity. Take the aforementioned example {\it my cat is not grey or black}. The two readings can be separated using the distinction between types of negation:
+Now, what about scope ambiguity? For negation, for example, we will include two types: sentential and predicate negation. Sentential negation is a form of negation that spans over a whole sentence. For this we put NE in front of the sentence. E.g. {\it I have {\bf not} been to school today}. Predicate negation on the other hand, only spans over a predicate. For this we put NE in front of the predicate (or noun). For example, {\it I'm very {\bf un}happy at the moment.} This would fix negation scope ambiguity. Take the aforementioned example {\it my cat is not grey or black}. The two readings can be separated using the distinction between types of negation:
 
 \begin{center}
 	{\it (8) My cat is ungrey or black\\ it is not the case that my cat is grey or black}
