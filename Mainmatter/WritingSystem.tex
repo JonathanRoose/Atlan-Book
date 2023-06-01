@@ -178,7 +178,18 @@ We hope the examples have made clear how our writing system works. This conclude
 
 Again, on the next page is a table containing all our glyphs. The left two columns contain the base lines, placed in order of combination. If you've forgot which base line stands for which consonant, return to the table at the begin of the chapter. And, the $\empty$ means that the other line combines with nothing. 
 
-\input{./Mainmatter/table.tex}
+%\input{./Mainmatter/table.tex}
+\pagebreak
+\fancyhead{}
+\fancyfoot{}
+
+\includepdf[pages=1, pagecommand={}, width = \pagewidth, angle=90]{./TABEL.pdf}
+\pagebreak
+
+\includepdf[pages=2, pagecommand={}, width = \pagewidth, angle=-90]{./TABEL.pdf}
+\pagebreak
+
+\includepdf[pages=3, pagecommand={}, width = \pagewidth, angle=90]{./TABEL.pdf}
 
 
 \Section{Numerals and Mathematics}{}
