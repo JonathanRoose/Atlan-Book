@@ -10,7 +10,7 @@
 \usepackage{wrapfig}
 \usepackage{tipa}
 \usepackage{blindtext}
-\usepackage{fontspec}
+\usepackage{fontspec, newunicodechar}
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{tipa}
@@ -22,8 +22,25 @@
 \usepackage[style=authoryear]{biblatex}
 \usepackage{multicol}
 \usepackage[t,lf]{spectral}
+\usepackage{titlesec}
+\setmainfont{spectral}
+\newfontfamily{\fallbackfont}{EBGaramond}[Scale=MatchLowercase]
+\DeclareTextFontCommand{\textfallback}{\fallbackfont}
+\newunicodechar{ⱱ}{\textfallback{ⱱ}}
+\newunicodechar{ə}{\textfallback{ə}}
+\newunicodechar{ɑ}{\textfallback{ɑ}}
+\newunicodechar{ɪ}{\textfallback{ɪ}}
+\newunicodechar{ʊ}{\textfallback{ʊ}}
 \usepackage{xpatch}
 \let\cleardoublepage=\clearpage
+
+\directlua{require("Numeric.lua")}
+\def\numbr#1{\raisebox{-0.5em}{\directlua{
+       % while string.find(#1, '.-%p') then..w. 
+
+        %end
+
+	tex.print(Cisterian(#1))}}}
 
 \newlength{\chaptertopskip}
 \setlength{\chaptertopskip}{-50pt}
@@ -34,6 +51,8 @@
 \addbibresource{./Bronnen/Atlan.bib}
 \newcommand{\restorecorps}{\renewcommand{\corpsgrootte}{20pt}}
 
+
+\titleformat*{\section}{\bf \fontsize{13}{17}\selectfont}
 
 \pagestyle{fancy}
 \fancyhead{}
@@ -67,7 +86,7 @@
 
 \chapter{Introduction}\input{./Mainmatter/GeneralIntroduction.tex}
 
-\chapter{Phonology}\input{./Mainmatter/Phonology.tex}
+\chapter{Phonology -- {\small Niek Elsinga}}\input{./Mainmatter/Phonology.tex}
 
 \chapter{Writing Atlan}\input{./Mainmatter/WritingSystem.tex}
 

@@ -54,6 +54,21 @@
         		\end{tikzpicture}
 		}
 }
+
+\def\DeclareNumber#1#2#3#4{%
+		\resizebox{\corpsgrootte}{!}{
+			\begin{tikzpicture}
+            			\pic{grid};
+				\draw[line width = \thickness] \broad;
+				\draw[line width = \thickness] #1;
+				\draw[line width = \thickness] #2;
+				\draw[line width = \thickness] #3;
+				\draw[line width = \thickness] #4;
+        		\end{tikzpicture}
+		}
+	}
+
+
 %%%%%%%%%%%%%%%%%%%%%Lines%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Command for naAtlanming strokes
@@ -992,3 +1007,87 @@
 \DefineLetter{\pap}{\DeclareLetter{(8,1) -- (8,9) -- (3,5) -- (8,1)}{\Dot{CenterLeft}}}
 \DefineLetter{\pop}{\DeclareLetter{(0,1) -- (0,9) -- (5,5) -- (0,1)}{\Dot{8,5}}}
 \DefineLetter{\pep}{\DeclareLetter{(0,2) -- (7.5,2) -- (3.75,9) -- (0,2)}{\Dot{3.75,4}}}
+
+%%%%%%%%%%%%%%NUMBERLINES%%%%%%%%%%%%
+
+%grid: 7.5-10 rechts 
+%-2.5 - 0 links 
+
+\def\nil{}
+
+
+
+\def\single{(7.5,1.125)}
+\def\singleright{(10,1.125)}
+\def\singleup{(7.5, 5)}
+\def\singlerightup{(10,5)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\singleone{\singleright -- \singlerightup;}
+\def\singletwo{\single -- \singleup;}
+\def\singlethree{\single -- \singlerightup;}
+\def\singlefour{\singleup-- \singleright;}
+\def\singlefive{\singleup-- \single -- \singlerightup;}
+\def\singlesix{\single -- \singleright;}
+\def\singleseven{\single -- \singleright -- \singlerightup;}
+\def\singleeight{\singleup-- \single -- \singleright;}
+\def\singlenine{\singleup-- \single -- \singleright -- \singlerightup;}
+
+
+\def\double{(7.5,8.625)}
+\def\doubleright{(10,8.625)}
+\def\doubleup{(7.5,5)}
+\def\doublerightup{(10,5)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\doubleone{\doubleright -- \doublerightup;}
+\def\doubletwo{\double -- \doubleup;}
+\def\doublethree{\double -- \doublerightup;}
+\def\doublefour{\doubleup-- \doubleright;}
+\def\doublefive{\doubleup-- \double -- \doublerightup;}
+\def\doublesix{\double -- \doubleright;}
+\def\doubleseven{\double -- \doubleright -- \doublerightup;}
+\def\doubleeight{\doubleup-- \double -- \doubleright;}
+\def\doublenine{\doubleup-- \double -- \doubleright -- \doublerightup;}
+
+
+
+\def\triple{(0,1.125)}
+\def\tripleright{(-2.5,1.125)}
+\def\tripleup{(0,5)}
+\def\triplerightup{(-2.5,5)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\tripleone{\tripleright -- \triplerightup;}
+\def\tripletwo{\triple -- \tripleup;}
+\def\triplethree{\triple -- \triplerightup;}
+\def\triplefour{\tripleup-- \tripleright;}
+\def\triplefive{\tripleup-- \triple -- \triplerightup;}
+\def\triplesix{\triple -- \tripleright;}
+\def\tripleseven{\triple -- \tripleright -- \triplerightup;}
+\def\tripleeight{\tripleup-- \triple -- \tripleright;}
+\def\triplenine{\tripleup-- \triple -- \tripleright -- \triplerightup;}
+
+
+
+\def\quadruple{(0,8.625)}
+\def\quadrupleright{(-2.5,8.625)}
+\def\quadrupleup{(0,5)}
+\def\quadruplerightup{(-2.5,5)}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\quadrupleone{\quadrupleright -- \quadruplerightup;}
+\def\quadrupletwo{\quadruple --\quadrupleup;}
+\def\quadruplethree{\quadruple --\quadruplerightup;}
+\def\quadruplefour{\quadrupleup--\quadrupleright;}
+\def\quadruplefive{\quadrupleup--\quadruple --\quadruplerightup;}
+\def\quadruplesix{\quadruple --\quadrupleright;}
+\def\quadrupleseven{\quadruple --\quadrupleright --\quadruplerightup;}
+\def\quadrupleeight{\quadrupleup--\quadruple --\quadrupleright;}
+\def\quadruplenine{\quadrupleup--\quadruple --\quadrupleright --\quadruplerightup;}
+
+%%%%%%%%%NUMERIC CMD%%%%%%%%%%%%%%%%%%
+
+
+%\def\numbr#1{\directlua{
+%	while string.find(#1, '.-%p') then..w. 
+%
+%	end
+%
+%	tex.print(Cisterian(#1))}}
