@@ -341,10 +341,23 @@ Just as with punctuation, mathematical symbols can be approximated by semantic a
 
 
 
-\Section{Font in \TeX}{Jarno Smets}
+\section{\TeX\ and Atlan -- {\small Jarno Smets}}
+Atlan is precise when needed, but not forcingly rigid. Being all nitty-gritty is possible, but not demanded. Hence, the typesetting language \TeX\\footnote{Or its modern forms \LaTeX\ and Lua\LaTeX, as used here.} is a great fit for this book, and for Atlan's writing system. Here I will quickly guide the reader through the uses of \TeX\ in this book.
+
+First, there are our glyphs. They are hand-programmed in \TeX\ using Tikz. It was a strenuous effort, but worthwile. The glyphs are high-resolution, scaleable, and they also look the part. The usage is straightforward as well. 
+
+To print any of the Atlan glyphs in \TeX\, you load in the package {\tt Atlan.sty}. Most glyphs are simply transliterations of syllables, with a backslash in front. E.g. \texttt{\symbol{92}mum} prints \mum. Some commands were already occupied, hence some of the commands are named differently, e.g. \texttt{\symbol{92}Atlanpi}, since simply \texttt{\symbol{92}pi} would print $\pi$. Next up, I plan to make a font that is available on other typesetting platforms. 
+
+Then, our numeral glyphs rely on Lua\LaTeX\, a more potent version of \TeX. The command, again, is straightforward. You simply state \texttt{\\numbr\{<number>\footnotemark\}}. \footnotetext{Due to the nature of our numeric system, the biggest number you can fill in, is 9999.}  An example of the command: \texttt{\symbol{92}numbr\{321\}} produces \numbr{321}.  
+
+Then, of course, this book is typeset in \TeX\. We could have made it easier for ourselves. But, typesetting with \TeX\ was worth the effort. We are proud of what we have made; both content- and appearance-wise.    
 
 
 \Section{On Dyslexia}{Stijn Janssens and Jonathan Roose}
+
+
+
+
 
 \Section{Cartouche}{}
 
