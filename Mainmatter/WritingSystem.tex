@@ -329,6 +329,13 @@ Atlan’s numeral system also allows for a duodecimal base notation, with the ad
 
 The added benefit of a duodecimal system is that certain fractions divisible by 2, 3, 4 and 6 are more straightforward to calculate by heart, whereas 10 can only be divided easily by 2 and 5. Another benefit is that it is more suited for many numerical systems, such as time divided into 60 seconds per 60 minutes per 24 hours, the twelve months and zodiac signs, as well as rotation being divided into 360 degrees.  
 
+\pagebreak
+\begin{wrapfigure}{r}{0.4\textwidth}
+\includegraphics[scale=0.4]{./Images/Hand.jpeg}
+
+	{\it \footnotesize Image taken from West (2015). }
+\end{wrapfigure}
+
 The duodecimal system can also be easily counted on a single hand, by using the thumb of the same hand as a pointer to count off the 3 finger segments in the 4 remaining fingers (see figure). Atlans number syllables fit this system as well: 1, 2 and 3 are ´IP´ \ip ´OP´ \op ´UP´ \up, since these all end in P they are grouped together on the first finger. 4, 5 and 6 are ´IK´ \raisebox{-0.5em}{\ik} , ´OK´ \raisebox{-0.5em}{\ok}, ´UK´ \raisebox{-0.5em}{\uk}, following again the same vowel pattern, but with K, grouping them on the second finger. Similarly, 6, 7, and 8 are ´UK´ \uk ´IM´ \im ´OM´ \om, and 9, 10, 11 are ´JI´ \ji ´JO´ \jo ´JU´ \ju. 
 
 Currently, Atlan does not have a standardised system to clarify beforehand whether decimal or duodecimal numerals are used, other than to spot the usage of the numerals \numbr{10} and \numbr{11}. Frankly, current duodecimal systems in Arabic notation don´t have this either, but it could be easily stated verbally beforehand.  
@@ -341,8 +348,56 @@ Just as with punctuation, mathematical symbols can be approximated by semantic a
 
 
 
+
+\section{Typography}
+
+\begin{center}
+\includegraphics[scale=0.15]{./Images/Atlogos.jpeg}
+\end{center}
+
+
+\noindent Since Atlan’s writing system is comprised of a set of basic lines, a great degree of artistic freedom is possible in creating different fonts and calligraphy styles to write the language. Atlan typography should make sure to remain faithful to the specific orientations of the different lines as to not cause confusion between them. Since any glyph contains a minimal amount of lines, usually two, typographic ornamentation can be added to glyphs without causing much confusion. Here we provide four examples of typographic variations on the word ‘Atlan’: a Times New Roman font, a {\it Comic Sans}-style font, Asian-style calligraphy and Arabic-style calligraphy.
+
+
+\section{Names, loanwords, and cartouches}
+
+Words that denote certain names, such as personal names, placenames, names for institutions, as well as loanwords denoting certain culture-specific objects or concepts, like certain meals, for example, are incorporated into Atlan as phonetic approximations of these words in their source language. Because every possible syllable in Atlan already has its own designated semantic value, this could cause confusion, if the syllables are interpreted as Atlan words instead of loanwords. For this reason, names and loanwords always follow the following structure: 
+
+\textbf{denoting category (e.g.: person \ej (EJ), place \lu (LU), town \tos (TOS), food \maj \kos (MAJ.KOS)) + NA \na (name) + phonetic approximation} 
+
+Using this formula, ‘Paris’ would become: ‘TOS.NA.PA.LI’ \cartouche{\tos \na \pa \li}, and ‘curry’ would become ‘MAJ.KOS.NA.KA.LI’ \cartouche{\maj \kos \na \ka \li}. If the conversational context makes it explicit enough that the subject matter concerns a loanword, and not a literal Atlan word, the markers denoting category + NA may be omitted for the sake of fluent speech.  
+
+In (formal) typography, a cartouche may be employed to encircle the phonetic approximation in order to enhance intelligibility. Cartouches originate from Ancient Egyptian hieroglyphic orthography, where they were used to encircle the names of pharaohs (see Fig. 1) (Chrisholm, 1911).  
+
+\includegraphics[scale=0.3]{./Images/Cartouche.jpeg}
+Fig.1 Cartouche of Hapshepsut, one of the few female pharaohs in Egyptian history. She was often referred to androgynously because of a lack of feminine royal nomenclature (Graves-Brown, 2010). 
+
+ 
+
+The cartouche originates from the hieroglyphic ‘shen’, a stylised loop of a rope, which literally means ‘to encircle’, but had come to symbolise eternal protection. Therefore, it was also believed to have apotropaic powers (warding off evil). The word ‘cartouche’ comes from the French word for ‘paper bullet cartridge’, first applied when Napoleon’s soldiers encountered the frequently occurring glyph and noticed its resemblance to such cartridges (White, 2002). Interestingly, cartouches played an important role in deciphering Egyptian hieroglyphics. The early Egyptologist Thomas Young, following a suggestion from the decipherment scholar Jean-Jacques Barthélemy, compared the cartouches that appeared on the Rosetta Stone to the proper names that appeared in the Greek text (Robinson, 2009). This way, he was able to decipher the name ‘Ptolomy’ (Young, 1823). If Atlan were ever to become widely used, and inscriptions were made employing cartouches, perhaps the archaeologists of some distant future might employ them to decipher the script in the same manner that Young did. 
+
+The 2001 conlang Toki Pona by the Canadian linguist Sonja Lang also employs cartouches in these contexts, for the same reason that Atlan does so (Lang, 2016). Just like in Toki Pona, Atlan’s cartouche shall be a simple oval circumscribing the name or loanword, without the additional straight line as used in Egyptian cartouches. One could object that employing a typographic element that derives from a specific cultural tradition, namely that of ancient Egypt, is in conflict with Atlan’s constraint of cultural neutrality. To this we object with the following justifications: the cartouche serves a practical function in preventing orthographic ambiguity; the Ancient Egyptian culture is currently extinct and thus does not advantage current day Egyptians over any other culture; the historical origin adds an extra layer of symbolism and cultural depth which in no way interferes with practical use; and frankly, we are of the opinion that it looks quite cool. 
+
+As we will see in the next part, the glyphs can be made on the computer using \TeX. This also is true of cartouches. A cartouche can be made by simply saying \cartouche{name}. For example, the \TeX code \cartouche{Utrecht} produces: 
+
+ 
+
+[SAMPLE CODE: \cartouche{Utrecht} ] 
+
+Utrecht = UT-LEK-T 
+
+ 
+
+We will talk more of TeX in the next subchapter. 
+
+
+
+\Section{On Dyslexia}{Stijn Janssens and Jonathan Roose}
+
+
+
 \section{\TeX\ and Atlan -- {\small Jarno Smets}}
-Atlan is precise when needed, but not forcingly rigid. Being all nitty-gritty is possible, but not demanded. Hence, the typesetting language \TeX\\footnote{Or its modern forms \LaTeX\ and Lua\LaTeX, as used here.} is a great fit for this book, and for Atlan's writing system. Here I will quickly guide the reader through the uses of \TeX\ in this book.
+Atlan is precise when needed, but not forcingly rigid. Being all nitty-gritty is possible, but not demanded. Hence, the typesetting language \TeX\ \footnote{Or its modern forms \LaTeX\ and Lua\LaTeX, as used here.} is a great fit for this book, and for Atlan's writing system. Here I will quickly guide the reader through the uses of \TeX\ in this book.
 
 First, there are our glyphs. They are hand-programmed in \TeX\ using Tikz. It was a strenuous effort, but worthwile. The glyphs are high-resolution, scaleable, and they also look the part. The usage is straightforward as well. 
 
@@ -353,12 +408,6 @@ Then, our numeral glyphs rely on Lua\LaTeX\, a more potent version of \TeX. The 
 Then, of course, this book is typeset in \TeX\. We could have made it easier for ourselves. But, typesetting with \TeX\ was worth the effort. We are proud of what we have made; both content- and appearance-wise.    
 
 
-\Section{On Dyslexia}{Stijn Janssens and Jonathan Roose}
 
-
-
-
-
-\Section{Cartouche}{}
 
 

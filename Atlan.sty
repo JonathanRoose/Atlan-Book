@@ -2,6 +2,7 @@
 \ProvidesPackage{Atlan}[2023/05/21]
 \RequirePackage{tikz}
 \RequirePackage{calculator}
+\RequirePackage{tcolorbox}
 \usetikzlibrary{calc}
 
 \def\thickness{15pt}
@@ -67,6 +68,11 @@
         		\end{tikzpicture}
 		}
 	}
+
+\newtcbox{\cartouche}{on line,
+arc=3pt,colback=white,colframe=black,
+before upper={\rule[-3pt]{0pt}{10pt}},boxrule=2pt,
+boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=.5pt}
 
 
 %%%%%%%%%%%%%%%%%%%%%Lines%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
