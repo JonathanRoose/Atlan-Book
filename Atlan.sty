@@ -664,29 +664,55 @@ boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=.5pt}
 
 %\pagebreak
 
-\DefineLetter{\nus}{\DeclareLetter{\BLCUR}{\BigCapLeft{0.25, -1.5}}}
-\DefineLetter{\nis}{\DeclareLetter{\BLCUR}{\RightCapLeft{7,7}}}
-\DefineLetter{\nas}{\DeclareLetter{\BLCUR}{\RightCapLeft{3.5,3.5}}}
-\DefineLetter{\nos}{\DeclareLetter{\BLCUR}{\RightCapLeft{BottomLeft}}}
+\DefineLetter{\nus}{\DeclareLetter{\BigSW}{(-2.5, 5) -- (2.5,10)}}
+\DefineLetter{\nis}{\DeclareLetter{\BigSW}{(-2.5,5) -- (0,7.5)}}
+\DefineLetter{\nas}{\DeclareLetter{\BigSW}{(3.5,3.5) -- (5.5,5.5)}}
+\DefineLetter{\nos}{\DeclareLetter{\BigSW}{(7.5,0) -- (5,-2.5)}}
 \DefineLetter{\nes}{\DeclareChar{\BLCUR}{(0,6) to [bend left = 25] (4,6)}{(7,5) to [bend left = 25] (10,3)}}
 
-\DefineLetter{\sun}{\DeclareLetter{\BLCUR}{\BigCapLeft{6.5, 5.65}}}
-\DefineLetter{\Atlansin}{\DeclareLetter{\BLCUR}{\LeftCapLeft{7.1, 6.65}}}
-\DefineLetter{\san}{\DeclareLetter{\BLCUR}{\LeftCapLeft{4.3,4.5}}}
-\DefineLetter{\son}{\DeclareLetter{\BLCUR}{\LeftCapLeft{0.5, 0}}}
+%Verkeerd
+%\DefineLetter{\nus}{\DeclareLetter{\BLCUR}{\BigCapLeft{0.25, -1.5}}}
+%\DefineLetter{\nis}{\DeclareLetter{\BLCUR}{\RightCapLeft{7,7}}}
+%\DefineLetter{\nas}{\DeclareLetter{\BLCUR}{\RightCapLeft{3.5,3.5}}}
+%\DefineLetter{\nos}{\DeclareLetter{\BLCUR}{\RightCapLeft{BottomLeft}}}
+%\DefineLetter{\nes}{\DeclareChar{\BLCUR}{(0,6) to [bend left = 25] (4,6)}{(7,5) to [bend left = 25] (10,3)}}
+
+\DefineLetter{\sun}{\DeclareLetter{\BigSW}{(5,-2.5) -- (10,2.5)}}
+\DefineLetter{\Atlansin}{\DeclareLetter{\BigSW}{(0,7.5) -- (2.5,10)}}
+\DefineLetter{\san}{\DeclareLetter{\BigSW}{(5.5,5.5) -- (8.5,8.5)}}
+\DefineLetter{\son}{\DeclareLetter{\BigSW}{(7.5,0) -- (10,2.5)}}
 \DefineLetter{\sen}{\DeclareChar{(0,0) -- (2,2)}{(CenterLeft) to [bend left = 55] (BottomRight)}{(5.5,5.5) -- (7.5,7.5)}}
 
-\DefineLetter{\nul}{\DeclareLetter{\RightDiagonal}{\BigCupLeft{BottomLeft}}}
-\DefineLetter{\nil}{\DeclareLetter{\RightDiagonal}{\NEL{UpperRight}}}
-\DefineLetter{\nal}{\DeclareLetter{\RightDiagonal}{\NEL{Center}}}
-\DefineLetter{\nol}{\DeclareLetter{\RightDiagonal}{\NEL{BottomLeft}}}
+%Verkeerd
+%\DefineLetter{\sun}{\DeclareLetter{\BLCUR}{\BigCapLeft{6.5, 5.65}}}
+%\DefineLetter{\Atlansin}{\DeclareLetter{\BLCUR}{\LeftCapLeft{7.1, 6.65}}}
+%\DefineLetter{\san}{\DeclareLetter{\BLCUR}{\LeftCapLeft{4.3,4.5}}}
+%\DefineLetter{\son}{\DeclareLetter{\BLCUR}{\LeftCapLeft{0.5, 0}}}
+%\DefineLetter{\sen}{\DeclareChar{(0,0) -- (2,2)}{(CenterLeft) to [bend left = 55] (BottomRight)}{(5.5,5.5) -- (7.5,7.5)}}
+
+\DefineLetter{\nul}{\DeclareLetter{\BigNE}{(-2.5,5) -- (2.5,10)}}
+\DefineLetter{\Atlannil}{\DeclareLetter{\BigNE}{(0,7.5) -- (-2.5,5)}}
+\DefineLetter{\nal}{\DeclareLetter{\BigNE}{(2,2) -- (-0.5,-0.5)}}
+\DefineLetter{\nol}{\DeclareLetter{\BigNE}{(7.5,0) -- (5,-2.5)}}
 \DefineLetter{\nel}{\DeclareChar{\BLCUR}{(0,6) to [bend left = -25] (2,3)}{(4.5,2.5) to [bend left = -25] (8,4)}}
 
-\DefineLetter{\lun}{\DeclareLetter{(BottomLeft) -- (CenterUpper)}{\BigCupRight{CenterUpper}}}
-\DefineLetter{\lin}{\DeclareLetter{\RightDiagonal}{\NER{UpperRight}}}
-\DefineLetter{\lan}{\DeclareLetter{\RightDiagonal}{\NER{Center}}}
-\DefineLetter{\lon}{\DeclareLetter{\RightDiagonal}{\NER{BottomLeft}}}
+%\DefineLetter{\nul}{\DeclareLetter{\RightDiagonal}{\BigCupLeft{BottomLeft}}}
+%\DefineLetter{\nil}{\DeclareLetter{\RightDiagonal}{\NEL{UpperRight}}}
+%\DefineLetter{\nal}{\DeclareLetter{\RightDiagonal}{\NEL{Center}}}
+%\DefineLetter{\nol}{\DeclareLetter{\RightDiagonal}{\NEL{BottomLeft}}}
+%\DefineLetter{\nel}{\DeclareChar{\BLCUR}{(0,6) to [bend left = -25] (2,3)}{(4.5,2.5) to [bend left = -25] (8,4)}}
+
+\DefineLetter{\lun}{\DeclareLetter{\BigNE}{(5,-2.5) -- (10,2.5)}}
+\DefineLetter{\lin}{\DeclareLetter{\BigNE}{(0,7.5)--(2.5,10)}}
+\DefineLetter{\lan}{\DeclareLetter{\BigNE}{(2,2) -- (4.5,4.5)}}
+\DefineLetter{\lon}{\DeclareLetter{\BigNE}{(7.5,0) -- (10,2.5)}}
 \DefineLetter{\len}{\DeclareChar{(0,0) -- (2,2)}{(0,8.625) to [bend left = -55] (7.5,3.75)}{(5.5,5.5) -- (7.5,7.5)}}
+
+%\DefineLetter{\lun}{\DeclareLetter{(BottomLeft) -- (CenterUpper)}{\BigCupRight{CenterUpper}}}
+%\DefineLetter{\lin}{\DeclareLetter{\RightDiagonal}{\NER{UpperRight}}}
+%\DefineLetter{\lan}{\DeclareLetter{\RightDiagonal}{\NER{Center}}}
+%\DefineLetter{\lon}{\DeclareLetter{\RightDiagonal}{\NER{BottomLeft}}}
+%\DefineLetter{\len}{\DeclareChar{(0,0) -- (2,2)}{(0,8.625) to [bend left = -55] (7.5,3.75)}{(5.5,5.5) -- (7.5,7.5)}}
 
 \DefineLetter{\nuj}{\DeclareLetter{\RightDiagonal}{\NWC{BottomLeft}}}
 \DefineLetter{\nij}{\DeclareLetter{\RightDiagonal}{\NWL{UpperRight}}}
@@ -1044,15 +1070,15 @@ boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=.5pt}
 \def\doubleup{(7.5,5)}
 \def\doublerightup{(10,5)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\doubleone{\doubleright -- \doublerightup;}
-\def\doubletwo{\double -- \doubleup;}
-\def\doublethree{\double -- \doublerightup;}
-\def\doublefour{\doubleup-- \doubleright;}
-\def\doublefive{\doubleup-- \double -- \doublerightup;}
-\def\doublesix{\double -- \doubleright;}
-\def\doubleseven{\double -- \doubleright -- \doublerightup;}
-\def\doubleeight{\doubleup-- \double -- \doubleright;}
-\def\doublenine{\doubleup-- \double -- \doubleright -- \doublerightup;}
+\def\tripleone{\doubleright -- \doublerightup;}
+\def\tripletwo{\double -- \doubleup;}
+\def\triplethree{\double -- \doublerightup;}
+\def\triplefour{\doubleup-- \doubleright;}
+\def\triplefive{\doubleup-- \double -- \doublerightup;}
+\def\triplesix{\double -- \doubleright;}
+\def\tripleseven{\double -- \doubleright -- \doublerightup;}
+\def\tripleeight{\doubleup-- \double -- \doubleright;}
+\def\triplenine{\doubleup-- \double -- \doubleright -- \doublerightup;}
 
 
 
@@ -1061,15 +1087,15 @@ boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=.5pt}
 \def\tripleup{(0,5)}
 \def\triplerightup{(-2.5,5)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\def\tripleone{\tripleright -- \triplerightup;}
-\def\tripletwo{\triple -- \tripleup;}
-\def\triplethree{\triple -- \triplerightup;}
-\def\triplefour{\tripleup-- \tripleright;}
-\def\triplefive{\tripleup-- \triple -- \triplerightup;}
-\def\triplesix{\triple -- \tripleright;}
-\def\tripleseven{\triple -- \tripleright -- \triplerightup;}
-\def\tripleeight{\tripleup-- \triple -- \tripleright;}
-\def\triplenine{\tripleup-- \triple -- \tripleright -- \triplerightup;}
+\def\doubleone{\tripleright -- \triplerightup;}
+\def\doubletwo{\triple -- \tripleup;}
+\def\doublethree{\triple -- \triplerightup;}
+\def\doublefour{\tripleup-- \tripleright;}
+\def\doublefive{\tripleup-- \triple -- \triplerightup;}
+\def\doublesix{\triple -- \tripleright;}
+\def\doubleseven{\triple -- \tripleright -- \triplerightup;}
+\def\doubleeight{\tripleup-- \triple -- \tripleright;}
+\def\doublenine{\tripleup-- \triple -- \tripleright -- \triplerightup;}
 
 
 
