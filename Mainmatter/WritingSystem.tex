@@ -1,6 +1,7 @@
-\Section{Typography and direction of reading}{Jarno Smets}
+\setcounter{section}{-1}
+\Section{Writing system}{Jarno Smets}
 
-\lettrine{A}{tlan's} writing system is a natural application of our philosophy: start with elementary parts, and every complexity will be a mere combination of those parts. Our glyphs (as we shall call them) each denote one syllable. They always do so; they always will stand for the {\it same} syllable. Unlike English: in the words \lq\lq tone\rq\rq and  \lq\lq to\rq\rq, the \lq\lq to\rq\rq is pronounced respectively [t\textturnm] and [t\textbaro]. 
+\lettrine{A}{tlan's} writing system is a natural application of our philosophy: start with elementary parts, and  then every complexity shall be a mere combination of those parts. Our glyphs (as we shall call them) each denote one syllable. This is always the case: they will always stand for the {\it same} syllable. Unlike English: in the words \lq\lq tone\rq\rq and  \lq\lq to\rq\rq, the \lq\lq to\rq\rq is pronounced respectively [t\textturnm] and [t\textbaro]. 
 
 That is the rationale behind our writing system; let us dive into the details. As told, Atlan has a set of basic lines. They are:
 
@@ -11,23 +12,24 @@ That is the rationale behind our writing system; let us dive into the details. A
 \multicolumn{2}{c}{Consonants} & \multicolumn{2}{c}{Vowels} \\ 
 \hline
 {\bf Line} & {\bf In I.P.A.} & {\bf Line} & {\bf In I.P.A.} \\
-\DeclareStroke{\CenterVertical} & /t/ & \Atlanu & /u/ \\  
-\hline
+	\DeclareStroke{\CenterVertical} & /t/ & \Atlanu & /u/ \\  
 \DeclareStroke{\CenterHorizontal} & /k/ &  \Atlani & /i/ \\ 
-\DeclareStroke{\BigNW} & /j/ & \Atlana & /a/ \\ 
-\DeclareStroke{\BigSW} & /s/ & \Atlano & /o/ \\ 
-\DeclareStroke{\BigSE} & /f/ & \Atlane & /e/ \\
-\DeclareStroke{\BigNE} & /l\~ r/ & & \\
+\DeclareStroke{\RightDiagonal} & /n/ & \Atlana & /a/ \\ 
+\DeclareStroke{\LeftDiagonal} & /m/ & \Atlano & /o/ \\ 
+\DeclareStroke{\BigNW} & /j/ & \Atlane & /e/ \\ 
+\DeclareStroke{\BigSW} & /s/ &  & \\ 
+\DeclareStroke{\BigSE} & /f/ & & \\
+\DeclareStroke{\BigNE} & /l\~{}r/ & & \\
 \DeclareStroke{\Dot{Center}} & /p/ & &\\
 \DeclareStroke{\MediumCircle{Center}} & <nil\footnotemark> & & \\
 \end{tabular}
 
 \end{center}
-{\it Figure 1: The basic lines of Atlan's writing system.} \footnotetext{When you see this hollow cirlce, the other line is combined with nothing. Don't panic if you don't yet understand this; it will be explained shortly.}
+{\it Figure 1: The basic lines of Atlan's writing system.} \footnotetext{When you see this hollow circle, the other line is combined with nothing. Don't panic if you don't yet understand this; it will be explained shortly.}
 
 These lines all represent a single vowel ({\it V}), or a single consonant ({\it C}). We can combine them to make syllables. By combining two consonant lines, you get a CVC-syllable, such as {\it loj}, {\it pas} or {\it mup}. You can also make a VC-syllable, such as {\it mu}, {\it po}, or {\it ji}. The vowels don't have separate lines in a CVC or VC-syllable; instead, the vowel is determined by the position of the two consonant-lines. We will go deeper into that below. First, we give the rules for the order of the consonants and vowels: what determines whether two lines make e.g. {\it poj} or {\it jop}, {\it mu} or {\it um}? 
 
-This order is determined by the manner in which the lines combine. There is always a \lq\lq bigger \rq\rq line, and a smaller one. These lines fit inside an imaginary box. The position of the smaller line relative to the bigger line, determines the order of consonants. A general rule of thumb is best given with the help of a box:
+This order is determined by the manner in which the lines combine. There is always a \lq\lq bigger \rq\rq line, and a smaller one. Rule of thumb: the bigger line usually is the most vertical of the two. These lines fit inside an imaginary box. The position of the smaller line relative to the bigger line, determines the order of consonants. A visual of this rule helps:
 
 \begin{center}
 
@@ -41,7 +43,7 @@ This order is determined by the manner in which the lines combine. There is alwa
 {\it \footnotesize Figure 2: Box for determining consonant order.}
 \end{center}
 
-\noindent If the smaller line is in the upper-left triangle (UL), it the consonant it designates comes first. If it is in the bottom-right one, it comes second. For the rest of the explanation, it is advised to keep this box in the back of your head. An example:
+\noindent If the smaller line is in the upper-left triangle (UL), the consonant it designates comes first. If it is in the bottom-right one, it comes second. For the rest of the explanation, it is advised to keep this box in the back of your head. An example:
 
 \def\restorecorps{\renewcommand{\corpsgrootte}{20pt}}
 \begin{wrapfigure}[7]{l}{0.4\textwidth}
@@ -83,7 +85,7 @@ As you see here, the smaller line is found on top. Hence, it is placed inside th
 \node at (2.25,1){o};
 \node at (1.5,0.25){u};
 \node at (1.5,2){e};
-\node at (-0.375, 2){\footnotesize u};
+\node at (-0.125, 2){\footnotesize u};
 \node at (3.125, 2){\footnotesize u};
 \end{tikzpicture}
 \end{center}
@@ -105,9 +107,42 @@ The vowel is...
 \item{\it e\ } if the smaller line is placed in the middle. Or, if the small line intersects with the main line at the middle. In some instances, the small line is then split up by the main line.  
 \end{itemize}
 
-Then we have three exceptions to these rules. The first: you can combine two equivalent lines, to make syllables such as {\it pop}, {\it mum}, or {\it lol}. The order of these lines doesn't matter; hence we choose place the smaller line to the upper-left of the main line in such cases. For the vowel {\it u}, there are two small lines, split at the center. For {\it e}, there are either two or three small lines. At least one of those lines crosses through the center of the imaginary box.
+Then we have three exceptions to these rules. The first: you can combine two of the same letter-lines, to make syllables such as {\it pop}, {\it mum}, or {\it lol}. The order of these lines doesn't matter; hence we choose place the smaller line to the upper-left of the main line in such cases. For the vowel {\it u}, there are two small lines, split at the center. For {\it e}, there are either two or three small lines. At least one of those lines crosses through the center of the imaginary box.
 
-The second exception has to do with the k (/k/). That letter had the base line -- , right? It's a horizontal line. Because of that, we have to think of a different box from figure 2 to figure out the consonant-order. The solution is simple: we flip the box. It then looks like this:
+The second exception has to do with the k (/k/). That letter had the base line -- , right? It's a horizontal line. Because of that, we have to think of a different box than figure 2 and 3  to figure out the consonant-order and the vowel. The solution is simple: we flip the box. It then looks like this:
+
+\begin{center}
+\definecolor{melon}{RGB}{255,179,179}
+\definecolor{caian}{RGB}{204,255,247}
+\definecolor{lavender}{RGB}{242,179,255}
+\definecolor{jasmine}{RGB}{255,212,128}
+\definecolor{lemon}{RGB}{255,247,204}
+\begin{tikzpicture}[rotate=90]
+\draw[black] (0,0) rectangle (3,4);
+\draw[fill = melon] (0,4) rectangle (3,3.5);
+\draw[fill = melon] (0,0.5) rectangle (3,0);
+\draw[fill = melon] (-0.25, 0) rectangle (0,4);
+\draw[fill = melon] (3.25, 0) rectangle (3,4);
+\draw[fill = caian] (1.5,2.5) rectangle (0,3.5);
+\draw[fill = caian] (1.5,2.5) rectangle (3,3.5);
+\draw[fill = jasmine] (1.5,1.5) rectangle (0,0.5);
+\draw[fill = jasmine] (1.5,1.5) rectangle (3,0.5);
+\draw[fill = lemon] (1.5,1.5) rectangle (0,2.5);
+\draw[fill = lemon] (1.5,1.5) rectangle (3,2.5);
+\draw[fill = lavender] (1.5,2) circle (0.5);
+\node at (1.5,3.75){u};
+\node at (0.75,3){i};
+\node at (2.25,3){i};
+\node at (0.75,2){a};
+\node at (2.25,2){a};
+\node at (0.75,1){o};
+\node at (2.25,1){o};
+\node at (1.5,0.25){u};
+\node at (1.5,2){e};
+\node at (-0.125, 2){\footnotesize u};
+\node at (3.125, 2){\footnotesize u};
+\end{tikzpicture}
+\end{center}
 
 \vspace{0.5cm}
 \begin{center}
@@ -205,11 +240,14 @@ Again, on the next page is a table containing all our glyphs. The left two colum
 \includepdf[pages=3, pagecommand={}, width = 0.8\pagewidth, angle=90]{./TABEL.pdf}%LE-crop.pdf}
 
 \restoregeometry
-\Section{Numerals and Mathematics}{}
+\section{Direction of reading -- {\small Stijn Janssens}}
 
+Out of the roughly 6.500 languages worldwide, only 12 languages read right to left. The biggest among these is Arabic, with about 1,7 billion speakers. Preferred reading direction has to do with the materials on which the language was historically written, correlating with the technique used to write or carve letters. However, since LtR languages form the majority, and writing materials don’t form an obstacle anymore in our modern world, Atlan will use this reading direction as well. Nearly all human languages on earth are written in rows, stacked from top to bottom, and thus Atlan will do the same. This will also make it hospitable to digital environments and graphic design. Because the syllable glyphs can be read all at once, they could also be stacked in vertical columns, reading from top to bottom, for example when employed in calligraphy, or writing along pillars or vertical ridges. 
 
 \section{Punctuation}
-Atlan has minimal punctuation, only having dedicated symbols for a comma and a full stop, and spaces are the same as in any other orthography. A comma is notated as a small half circle which is open at the top: \DeclareStroke{(3.5, -2.5) to [bend left = -50] (4, -2.5)} symbolizing an ‘open’ continuation of the sentence, and the full stop is notated at as a half circle which is open at the bottom: \DeclareStroke{(3.5, -2.5) to [bend left = 50] (4, -2.5)}, symbolizing a closed sentence. 
+Atlan has minimal punctuation, only having dedicated symbols for a comma and a full stop, and spaces are the same as in any other orthography. A comma is notated as a small half circle which is open at the top:\comma symbolizing an ‘open’ continuation of the sentence, and the full stop is notated at as a half circle which is open at the bottom: \period , symbolizing a closed sentence. 
+%Punt \DeclareStroke{(1.75, -2.5) to [bend left = 50] (5.75, -2.5)}
+%Komma  \DeclareStroke{(1.75, -2.5) to [bend left = -50] (5.75, -2.5)}
 
 Other punctuation will be marked by Atlan’s semantic atoms: question sentences start with the interrogative particle E, and so this eliminates the need for a question mark. Exclamative sentences start with the particle O, eliminating the need for an exclamation mark. Other examples would be ‘\&’ being ‘AN’ (‘and’), ‘\%’ being ‘EP.NO’ (‘per hundred’), ‘:’ being ‘I’ (‘relative clause’) etc. 
 
@@ -228,7 +266,7 @@ Atlan also has a numeric system distinct from the familiar arabic-numerals. They
 \begin{multicols}{4}
 \small
 
-1  \numbr{1} 
+1   \numbr{1} 
 
 2   \numbr{2}
 
@@ -392,9 +430,21 @@ We will talk more of TeX in the next subchapter.
 
 
 
-\Section{On Dyslexia}{Stijn Janssens and Jonathan Roose}
+\section{On Dyslexia -- {\small Stijn Janssens}}
 
+About 3 to 7 percent of the population has some form of dyslexia (Peterson \& Pennington, May 2012),(Kooij, 2013), however up to 20 percent of the population experiences some degree of its symptoms (National Institutes of Health, 2015). For Atlan’s writing system, this means that a minority group faces these problems, therefore not interfering with it’s universality / majority constraint. However, from the perspective of the world population, this still amounts to a significant group of people that might be disadvantaged by a writing system that is hostile to dyslexia. Atlan’s writing system has some aspects that work with and others that work against dyslectics.  
 
+Within language psychology, different orthographies are classified by their orthographic depth. Shallow orthographies are mostly phonetical, encoding all the necessary information for pronunciation in a straightforward and consistent way. Deep / opaque orthographies are on the other end of the spectrum, often deviating from literal, phonetic spellings, or omitting certain phonemes from written language (Besner \& Smith, 1992). Examples of languages with shallow orthographies are Hindi, Spanish and Turkish, while examples of languages with deep orthographies are English, French and most extremely Tibetan (whose last spelling reform took place 800 years ago).  
+
+Ideally, an IAL has an orthography that is as shallow as possible, making it more accessible for dyslectic people, as well as optimising learnability for non-dyslexics. In this regard, English is quite a poor IAL candidate. Because of great phonetic shifts and many etymological spellings (see chapter 8.2.0 on language variation), English orthography is highly inconsistent, which can be shown by pushing it to some quite absurd extremes. The word ‘church’ could hypothetically be spelled ‘tolot’, by combining the ‘t’ as pronounced in the word ‘picture’ with ‘olo’ as pronounced in ‘colonel’. The word ‘fish’ could be spelled ‘ghoti’, combining the ‘gh’ from ‘enough’, the ‘o’ from ‘women’ and the ‘ti’ from ‘nation’. The word ‘what’ could be spelled ‘oed’ by combining ‘o’ as in ‘one’ with ‘ed’ from ‘hacked’, and ‘why’ could be spelled ‘ho’, using the ‘ho’ from ‘choir’. Different spelling proposals have been suggested during the past centuries, however no major reforms have been established because of low public acceptance (Wolman, 2009). 
+
+Because Atlan is spelled phonetically, it might be seen as having a shallow orthography. However, because of its syllabic nature, vowels are not directly notated but rather implied by the place of conjunction of consonant lines. Therefore technically speaking, vowels are notated, however they might require more focus and attention to be interpreted. More concerningly, many of Atlan’s glyphs have symmetrical counterparts, or are composed very similarly, only differing in orientation or place of conjunction. Since the Roman letters p, q, p and b are often confused, we might expect that such symmetries and similarities might also pose a problem for Atlan. A counterargument could be that the specific locations of line conjunction in Atlan is very regular and straightforward, only requiring readers to identify these relative positions in order to differentiate them from one another. Since Atlan does not have any fluent speakers at the time of writing, its actual effect on dyslexia can only be guessed. Therefore, we shall briefly discuss three example orthographies that share some similarities with Atlan, with respect to dyslexia. 
+
+Most research has been done on alphabetic orthographies, most often English, this tendency is also known as {\it alphabetism}. Therefore, it is hard to come with concrete data on the effects of other types of writing systems on dyslexia. Hangul, a {\it featural}\ writing system used for writing Korean, has many letters that look alike, or are each other’s mirror image: ㄴ, ㄱ, ㅓ, ㅏ, ㅕ, ㅑ, ㅗ, ㅜ, ㅍ, ㅛ, ㅠ, ㅅ, ㅈ, ㅊ. Hangul’s orthography functions by combining letters into syllable blocks, therefore resulting in blocks that are sometimes barely distinguishable from one another at first glance, like 반 \& 번, and 본 \& 분. Surprisingly enough, many Koreans are unaware of the existence of dyslexia. A possible reason for this might be that Koreans read by identifying each syllable block all at once, rather than reading all the different letters within each block. Therefore, native speaking Koreans who learn to read as children might not experience any symptoms of dyslexia, because they learn to recognise many different syllable block combinations as single images, while always having the phonetic cues present within the block to verify if they read it right (jreidy17, 2014). This would foster a strong association between visual cues, pronunciation and meaning. Atlan might have the same benefit in children learning the language at an early age, where they might learn to recognise each glyph as an individual image, directly associating its pronunciation with it since this information is encoded in the glyph. Since each Atlan syllable glyph has a unique meaning assigned to it, this might even result in quasi-logographic reading, where people might recognise the word, its meaning and pronunciation from its visual shape. People who learn Atlan at a later age might not have this benefit and struggle more with learning the language, as they might keep trying to read each glyph letter for letter, making possible confusion more likely. 
+
+The Inuktitut language of the Inuit people employs a writing system which, like Atlan’s writing system, might be classified as a featural syllabary, or an {\it abugida}. It was developed by Christian missionaries in the 19th century, and just like Atlan, it consists of basic geometric shapes and lines, with different orientations or symmetries indicating different vowels, e.g.: ᐱ = pi, ᐳ = pu, ᐸ = pa, ᐯ = pai. Research into dyslexia among Inuktitut speakers is scarce, but the small existing body of research suggests that such writing systems are not any more difficult to learn for children than other writing systems, and that they might even be easier to learn as a first writing system because of the clear parsing of syllables as linguistic units (Donovan \& Tulloch, 2022).  
+
+The Amharic language of Ethiopia uses an abugida named ‘Fidel’. This writing system requires speakers to memorise many different basic shapes, some of which are very similar to one another, which are then systematically modified with small grapheme variations to indicate different vowels. E.g.: ጸ = ts’\"{a}, ጻ = ts’a, ጾ = ts’o, ደ = d\"{a}, ዳ = da, ዶ = do, ይ = d. Again, research is limited, but indicates that because of the nature of the writing system, glyph-naming is crucial for all other indicators of literacy (Mekonnen, 2023). When this type of writing system maximises legibility, this creates a positive feedback loop, but when it limits reading, it does the opposite, making overall legibility harder.  
 
 \section{\TeX\ and Atlan -- {\small Jarno Smets}}
 Atlan is precise when needed, but not forcingly rigid. Being all nitty-gritty is possible, but not demanded. Hence, the typesetting language \TeX\ \footnote{Or its modern forms \LaTeX\ and Lua\LaTeX, as used here.} is a great fit for this book, and for Atlan's writing system. Here I will quickly guide the reader through the uses of \TeX\ in this book.
