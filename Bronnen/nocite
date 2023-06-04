@@ -1,4 +1,6 @@
 \nocite{ArabicPhonology:Anacousticalandphysiologicalinvestigation}
+
+\nocite{eyes}
  
 \nocite{Medicine:useofEnglish}
  
@@ -410,9 +412,11 @@
  
 \nocite{AboutKhlebnikov}
  
-\%nocite{TheCross-LinguisticPrevalenceofSOVandSVOWordOrdersReflectstheSequentialandHierarchicalRepresentationofActioninBroca’sArea.LanguageandLinguisticsCompass}
+\nocite{TheCross-LinguisticPrevalenceofSOVandSVOWordOrdersReflectstheSequentialandHierarchicalRepresentationofActioninBroca’sArea.LanguageandLinguisticsCompass}
  
 \nocite{SomeUniversalsofGrammarwithParticularReferencetotheOrderofMeaningfulElements}
  
-\%nocite{DuodecimalFingerCounting:Countingto60onOneHand.}
+\nocite{DuodecimalFingerCounting:Countingto60onOneHand.}
+ 
+\%nocite{TowardstheDynamicArtofPartialComprehension}
  

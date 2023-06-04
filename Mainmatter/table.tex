@@ -1,10 +1,28 @@
+\documentclass[landscape,a5paper]{article}
+\usepackage{graphicx}
+\usepackage{tikz}                                                                                                                                 
+\usepackage{fancyhdr}
+\usepackage[tmargin=20pt, bmargin=5pt, rmargin=20pt, margin=5pt]{geometry}
+\usepackage{../Atlan}                                                                                                                                
+\usepackage{fontspec}                                                                                                                             
+\usepackage{longtable}                                                                                                                            
+\usepackage[t,lf]{spectral}                                                                                                                       
+\usepackage{geometry}                                                                                                                             
+\pagestyle{empty}
+\begin{document}
+\newgeometry{tmargin=50pt, bmargin=5pt}
+\fancyhead[R]{3.1. TYPOGRAPHY AND DIRECTION OF READING}
+\fancyhead[L]{}
 
+\let\newbullet\bullet
+\renewcommand{\bullet}{\raisebox{0.3em}{\newbullet}}
+\renewcommand{\corpsgrootte}{15pt}
 \begin{longtable}{c c | c c c c c || c c | c c c c c}
-\multicolumn{2}{c}{Base lines} & u & i & a & o & i \\
+	\multicolumn{2}{c}{Base lines} & u & i & a & o & e & \multicolumn{2}{c}{Base lines} & u & i & a & o & e \\
 \hline
 
-\emty & 
-\emty &
+$\empty$ &  
+$\empty$  &
 \Atlanu &
 \Atlani &
 \Atlana &
@@ -12,7 +30,7 @@
 \Atlane & 
 	&  & & & &  \\
 
-\emty &
+$\empty$  &
 \DeclareStroke{\CenterVertical} &
 \ut &
 \Atlanit &
@@ -21,7 +39,7 @@
 \et &
 
 \DeclareStroke{\CenterVertical} &
-\emty &
+$\empty$ & 
 \tu &
 \ti &
 \ta &
@@ -168,7 +186,7 @@ $\bullet$ &
 \pet \\
 
 
-\emty
+$\empty$ &
 \DeclareStroke{\CenterHorizontal} &
 \uk &
 \ik &
@@ -177,7 +195,7 @@ $\bullet$ &
 \ek &
 
 \DeclareStroke{\CenterHorizontal} &
-\emty
+$\empty$ &
 \ku &
 \ki &
 \ka &
@@ -275,6 +293,21 @@ $\bullet$ &
 \lok &
 \lek \\
 
+\end{longtable}
+
+\pagebreak
+\restoregeometry
+\fancyhead{}
+\fancyhead[L]{CHAPTER 3. WRITING ATLAN}
+\fancyhead[R]{}
+
+
+\begin{longtable}{c c | c c c c c || c c | c c c c c}
+\multicolumn{2}{c}{Base lines} & u & i & a & o & e &  \multicolumn{2}{c}{Base lines} & u & i & a & o & e \\
+\hline
+
+
+
 \DeclareStroke{\CenterHorizontal} &
 \DeclareStroke{\BigNW} &
 \kuj &
@@ -283,8 +316,8 @@ $\bullet$ &
 \koj &
 \kej &
 
-\DeclareStroke{\CenterHorizontal} &
 \DeclareStroke{\BigNW} &
+\DeclareStroke{\CenterHorizontal} &
 \juk &
 \jik &
 \jak &
@@ -307,7 +340,7 @@ $\bullet$ &
 \pok &
 \pek \\
 
-\emty
+$\empty$ &
 \DeclareStroke{\RightDiagonal} &
 \un &
 \Atlanin &
@@ -316,7 +349,7 @@ $\bullet$ &
 \en &
 
 \DeclareStroke{\RightDiagonal} &
-\emty
+$\empty$ &
 \Atlannu &
 \Atlanni &
 \na &
@@ -382,7 +415,7 @@ $\bullet$ &
 \DeclareStroke{\RightDiagonal} &
 \DeclareStroke{\BigNE} &
 \nul &
-\nil &
+\Atlannil &
 \nal &
 \nol &
 \nel &
@@ -427,7 +460,7 @@ $\bullet$ &
 \pon &
 \pen \\
 
-\emty
+$\empty$ &
 \DeclareStroke{\LeftDiagonal} &
 \um &
 \im &
@@ -436,7 +469,7 @@ $\bullet$ &
 \Atlanem &
 
 \DeclareStroke{\LeftDiagonal} &
-\emty
+$\empty$ &
 \Atlanmu &
 \mi &
 \ma &
@@ -531,7 +564,7 @@ $\bullet$ &
 \pom &
 \pem \\
 
-\emty
+$\empty$ &
 \DeclareStroke{\BigSE} &
 \uf &
 \Atlanif &
@@ -540,7 +573,7 @@ $\bullet$ &
 \ef &
 
 \DeclareStroke{\BigSE} &
-\emty
+$\empty$ &
 \fu &
 \Atlanfi &
 \fa &
@@ -555,6 +588,18 @@ $\bullet$ &
 \fof &
 \fef &
   & & & & & \\
+
+\end{longtable}
+
+\pagebreak 
+\newgeometry{tmargin=50pt, bmargin=5pt}
+
+\fancyhead[R]{3.1. TYPOGRAPHY AND DIRECTION OF READING}
+\fancyhead[L]{}
+
+\begin{longtable}{c c | c c c c c || c c | c c c c c}
+\multicolumn{2}{c}{Base lines} & u & i & a & o & e & \multicolumn{2}{c}{Base lines} & u & i & a & o & e \\
+\hline
 
 \DeclareStroke{\BigSE} &
 \DeclareStroke{\BigSW} &
@@ -620,16 +665,16 @@ $\bullet$ &
 \pof &
 \pef \\
 
+$\empty$ &
 \DeclareStroke{\BigSW} &
-\emty
 \us &
 \is &
 \as &
 \os &
 \es &
 
-\emty
 \DeclareStroke{\BigSW} &
+$\empty$ &
 \su &
 \sa &
 \si &
@@ -693,7 +738,7 @@ $\bullet$ &
 \pos &
 \pes \\
 
-\emty
+$\empty$ &
 \DeclareStroke{\BigNE} &
 \ul &
 \il &
@@ -702,7 +747,7 @@ $\bullet$ &
 \el &
 
 \DeclareStroke{\BigNE} &
-\emty
+$\empty$ &
 \lu &
 \li &
 \la &
@@ -750,7 +795,7 @@ $\bullet$ &
 \pol &
 \pel \\
 
-\emty
+$\empty$ &
 \DeclareStroke{\BigNW} &
 \uj &
 \Atlanij &
@@ -759,7 +804,7 @@ $\bullet$ &
 \ej &
 
 \DeclareStroke{\BigNW} &
-\emty
+$\empty$ &
 \ju &
 \ji &
 \ja &
@@ -791,7 +836,7 @@ $\bullet$ &
 \poj &
 \pej \\
 
-\emty
+$\empty$ &
 $\bullet$ &
 \up &
 \ip &
@@ -800,7 +845,7 @@ $\bullet$ &
 \ep &
 
 $\bullet$ &
-\emty
+$\empty$ &
 \pu &
 \Atlanpi &
 \pa &
@@ -818,5 +863,5 @@ $\bullet$ &
 
 \end{longtable}
 
-
+\end{document}
 

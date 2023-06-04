@@ -142,9 +142,10 @@ The second exception has to do with the k (/k/). That letter had the base line -
 \node at (-0.125, 2){\footnotesize u};
 \node at (3.125, 2){\footnotesize u};
 \end{tikzpicture}
+
+{\footnotesize \it Figure 4: the imaginary vowel-placement box for /k/.}
 \end{center}
 
-\vspace{0.5cm}
 \begin{center}
 \begin{tikzpicture}
 
@@ -154,9 +155,10 @@ The second exception has to do with the k (/k/). That letter had the base line -
 \node(B) at (3.3,0.5){\color{white} BR};
 	
 \end{tikzpicture}
+
+{\footnotesize \it Figure 5: the imaginary consonant-order-box for /k/.}
 \end{center}
 
-{\footnotesize \it Figure 4: the imaginary consonant-order-box for /k/.}
 
 The third exception: Remember that the {\it p} is represented by the dot $\bullet$\phantom{.}. For clarity, we couldn't combine simply two dots to make a full syllable. Hence, two p-dots combine a bit different from the rest of the lines. The p also can't combine well with the circle (which designated \lq\lq nothing \rq\rq). They combine in the following way:
 
@@ -177,7 +179,6 @@ $\bullet$ & $\bullet$ & \pup & \pip & \pap & \pop & \pep \\
 
 These were the rules for the script of Atlan. It might sound a bit cryptic, so let's discuss some examples. If you still feel uncertain whether you understand the rules, read through them again. Personal experience tells that, after some time, recognizing letters gets more intuitive. 
 
-\pagebreak
 
 \begin{wrapfigure}[7]{l}{0.4\textwidth}
 \renewcommand{\corpsgrootte}{100pt}
@@ -185,7 +186,7 @@ These were the rules for the script of Atlan. It might sound a bit cryptic, so l
 \restorecorps
 \end{wrapfigure}
 
-\noindent Let's dissect this letter. This is the letter \lq\lq mok \rq\rq, or ([/mok/]) phonetically. First stept is to discover the main line, which is the long diagonal here. This is the consonant {\it m} (/m/). Then there is a smaller line, found in the bottom-right corner. This is the {\it k} ([/k/]). The horizontal line is in the bottom-right of our imaginary square. Hence, the {\it m} comes before the {\it k} (see also figure one). We got the two consonants, now rests the vowel. Feel free to look back at figure two. The smaller line is found in the bottom-right corner, hence the vowel here is an {\it o} ([/o/]). The full syllable is {\it mok} ([/mok/]). 
+\noindent Let's dissect this letter. This is the letter \lq\lq mok \rq\rq, or ([/mok/]) phonetically. First step is to discover the main line, which is the long diagonal here. This is the consonant {\it m} (/m/). Then there is a smaller line, found in the bottom-right corner. This is the {\it k} ([/k/]). The horizontal line is in the bottom-right of our imaginary square. Hence, the {\it m} comes before the {\it k} (see also figure one). We got the two consonants, now rests the vowel. Feel free to look back at figure two. The smaller line is found in the bottom-right corner, hence the vowel here is an {\it o} ([/o/]). The full syllable is {\it mok} ([/mok/]). 
 
 
 \begin{wrapfigure}[7]{r}{0.4\textwidth}
@@ -196,7 +197,7 @@ These were the rules for the script of Atlan. It might sound a bit cryptic, so l
 \end{wrapfigure}
 
 \vspace{0.2cm}
-Now let's look at another one. See if you can determine the syllable yourself first. The main line is obvious: it's the big curve. This big curve is a {\it j\footnotemark} ([/j/]). The smaller dot is a {\it p} ([/p/]). The dot is found inside the quadrant \lq\lq UL\rq\rq of figure one. Hence, the dot comes first. The dot is found a bit left from the centre of our imaginary box. Hence, the vowel here, is the {\it a} ([/a/]). The full syllable is {\it jap} ([/jap/]). 
+Now let's look at another one. See if you can determine the syllable yourself first. The main line is obvious: it's the big curve. This big curve is a {\it j\footnotemark} ([/j/]). The smaller dot is a {\it p} ([/p/]). The dot is found inside the quadrant \lq\lq UL\rq\rq of figure one. Hence, the dot comes first. The dot is found a bit to the left of the centre of our imaginary box. Hence, the vowel here, is the {\it a} ([/a/]). The full syllable is {\it jap} ([/jap/]). 
 
 \footnotetext{Quick tip: the curve for {\it j} looks alot like the {\it j} itself, doesn't it? Look for more of these similarities in our writing system; they help!}
 
@@ -231,11 +232,14 @@ Again, on the next page is a table containing all our glyphs. The left two colum
 
 %\input{./Mainmatter/table.tex}
 \pagebreak
-\includepdf[pages=1, pagecommand={}, width = 0.5\pagewidth, angle=90]{./TABEL.pdf}%LE-crop.pdf}
+\newgeometry{rmargin=20pt, lmargin=50pt}
+\includepdf[pages=1, pagecommand={}, width = 0.8\pagewidth, angle=90]{./TABEL.pdf}%LE-crop.pdf}
 \pagebreak
 
-\includepdf[pages=2, pagecommand={}, width = 0.8\pagewidth, angle=-90]{./TABEL.pdf}%LE-crop.pdf}
+\restoregeometry
+\includepdf[pages=2, pagecommand={}, width = 0.8\pagewidth, angle=90]{./TABEL.pdf}%LE-crop.pdf}
 \pagebreak
+\newgeometry{rmargin=20pt, lmargin=50pt}
 
 \includepdf[pages=3, pagecommand={}, width = 0.8\pagewidth, angle=90]{./TABEL.pdf}%LE-crop.pdf}
 
@@ -389,45 +393,53 @@ Just as with punctuation, mathematical symbols can be approximated by semantic a
 
 \section{Typography}
 
-\begin{center}
-\includegraphics[scale=0.15]{./Images/Atlogos.jpeg}
-\end{center}
 
 
 \noindent Since Atlan’s writing system is comprised of a set of basic lines, a great degree of artistic freedom is possible in creating different fonts and calligraphy styles to write the language. Atlan typography should make sure to remain faithful to the specific orientations of the different lines as to not cause confusion between them. Since any glyph contains a minimal amount of lines, usually two, typographic ornamentation can be added to glyphs without causing much confusion. Here we provide four examples of typographic variations on the word ‘Atlan’: a Times New Roman font, a {\it Comic Sans}-style font, Asian-style calligraphy and Arabic-style calligraphy.
 
 
+\begin{center}
+\includegraphics[scale=0.15]{./Images/Atlogos.jpeg}
+
+{\footnotesize \it Figure 1: Atlan in different typographic styles.}
+\end{center}
 \section{Names, loanwords, and cartouches}
 
 Words that denote certain names, such as personal names, placenames, names for institutions, as well as loanwords denoting certain culture-specific objects or concepts, like certain meals, for example, are incorporated into Atlan as phonetic approximations of these words in their source language. Because every possible syllable in Atlan already has its own designated semantic value, this could cause confusion, if the syllables are interpreted as Atlan words instead of loanwords. For this reason, names and loanwords always follow the following structure: 
 
-\textbf{denoting category (e.g.: person \ej (EJ), place \lu (LU), town \tos (TOS), food \maj \kos (MAJ.KOS)) + NA \na (name) + phonetic approximation} 
+\begin{itemize}
+	\item denoting category, e.g.: 
+		\begin{itemize}
+			\item[] person \ej (EJ)
+			\item[] place \lu (LU)
+			\item[] town \tos (TOS)
+			\item[] food \maj \kos (MAJ.KOS)
+		\end{itemize}
+	\item NA \na (name)
+	\item phonetic approximation  
 
-Using this formula, ‘Paris’ would become: ‘TOS.NA.PA.LI’ \cartouche{\tos \na \pa \li}, and ‘curry’ would become ‘MAJ.KOS.NA.KA.LI’ \cartouche{\maj \kos \na \ka \li}. If the conversational context makes it explicit enough that the subject matter concerns a loanword, and not a literal Atlan word, the markers denoting category + NA may be omitted for the sake of fluent speech.  
+\end{itemize}
+
+Using this formula, ‘Paris’ would become: ‘TOS.NA. PA.LI’ \cartouche{\tos \na \pa \li}, and ‘curry’ would become ‘MAJ.KOS. NA.KA.LI’ \cartouche{\maj \kos \na \ka \li}. If the conversational context makes it explicit enough that the subject matter concerns a loanword, and not a literal Atlan word, the markers denoting category + NA may be omitted for the sake of fluent speech.  
 
 In (formal) typography, a cartouche may be employed to encircle the phonetic approximation in order to enhance intelligibility. Cartouches originate from Ancient Egyptian hieroglyphic orthography, where they were used to encircle the names of pharaohs (see Fig. 1) (Chrisholm, 1911).  
 
-\includegraphics[scale=0.3]{./Images/Cartouche.jpeg}
-Fig.1 Cartouche of Hapshepsut, one of the few female pharaohs in Egyptian history. She was often referred to androgynously because of a lack of feminine royal nomenclature (Graves-Brown, 2010). 
+\begin{wrapfigure}{l}{0.4\textwidth}
+\includegraphics[scale=0.1]{./Images/Cartouche.jpeg}
+	{\footnotesize \it Fig.1 Cartouche of Hapshepsut, one of the few female pharaohs in Egyptian history. She was often referred to androgynously because of a lack of feminine royal nomenclature (Graves-Brown, 2010). }
 
+\end{wrapfigure}
  
 
 The cartouche originates from the hieroglyphic ‘shen’, a stylised loop of a rope, which literally means ‘to encircle’, but had come to symbolise eternal protection. Therefore, it was also believed to have apotropaic powers (warding off evil). The word ‘cartouche’ comes from the French word for ‘paper bullet cartridge’, first applied when Napoleon’s soldiers encountered the frequently occurring glyph and noticed its resemblance to such cartridges (White, 2002). Interestingly, cartouches played an important role in deciphering Egyptian hieroglyphics. The early Egyptologist Thomas Young, following a suggestion from the decipherment scholar Jean-Jacques Barthélemy, compared the cartouches that appeared on the Rosetta Stone to the proper names that appeared in the Greek text (Robinson, 2009). This way, he was able to decipher the name ‘Ptolomy’ (Young, 1823). If Atlan were ever to become widely used, and inscriptions were made employing cartouches, perhaps the archaeologists of some distant future might employ them to decipher the script in the same manner that Young did. 
 
 The 2001 conlang Toki Pona by the Canadian linguist Sonja Lang also employs cartouches in these contexts, for the same reason that Atlan does so (Lang, 2016). Just like in Toki Pona, Atlan’s cartouche shall be a simple oval circumscribing the name or loanword, without the additional straight line as used in Egyptian cartouches. One could object that employing a typographic element that derives from a specific cultural tradition, namely that of ancient Egypt, is in conflict with Atlan’s constraint of cultural neutrality. To this we object with the following justifications: the cartouche serves a practical function in preventing orthographic ambiguity; the Ancient Egyptian culture is currently extinct and thus does not advantage current day Egyptians over any other culture; the historical origin adds an extra layer of symbolism and cultural depth which in no way interferes with practical use; and frankly, we are of the opinion that it looks quite cool. 
 
-As we will see in the next part, the glyphs can be made on the computer using \TeX. This also is true of cartouches. A cartouche can be made by simply saying \cartouche{name}. For example, the \TeX code \cartouche{Utrecht} produces: 
+As we will see in the next part, the glyphs can be made on the computer using \TeX\footnote{We will talk more of \TeX shortly.}. This also is true of cartouches. A cartouche can be made by simply saying \cartouche{name}. For example, the \TeX\ code  {\tt \symbol{92}cartouche\{Utrecht\}} produces \cartouche{Utrecht}\footnotemark  
+
+\footnotetext{Utrecht = UT-LEK-T }
 
  
-
-[SAMPLE CODE: \cartouche{Utrecht} ] 
-
-Utrecht = UT-LEK-T 
-
- 
-
-We will talk more of TeX in the next subchapter. 
-
 
 
 \section{On Dyslexia -- {\small Stijn Janssens}}

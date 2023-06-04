@@ -1,5 +1,5 @@
 
-\Section{Unambiguous Syntax}{Jarno Smets}
+\section{Unambiguous Syntax -- {\small Jarno Smets}}
 \lettrine{A}{mbiguity} is of all times and places, and natural language is rife with it. {\it Goal}, {\it purple people eater}, {\it John trades with Mary}; these words and expressions can all be interpreted in multiple ways. Some despise ambiguity, while others wallow in it. Whatever one thinks of ambiguity, it is a part of natural languages. 
 
 For our constructed language, we want to minimize ambiguity. This for the sake of clarity and communicability. Hence this essay.
@@ -8,9 +8,10 @@ In this essay, I will cover a specific type of ambiguity, namely {\it syntactic 
 
 My aim in this essay is twofold. First, I want to show why syntactic ambiguity is a problem, especially for the goals of our project. Then, I will propose a strategy to minimize this form of ambiguity, and argue for that strategy choice.
 
-\section*{What is syntactic ambiguity?}
+{\it What is syntactic ambiguity?}
 
-Syntactic ambiguity occurs when word-order gives rise to multiple interpretations (Oaks,2012, p.16) . The sentence \lq\lq I see the man with binoculars\rq\rq \phantom{} could be parsed (split into grammatical parts) in two ways:
+
+Syntactic ambiguity occurs when word-order gives rise to multiple interpretations (Oaks,2012, p.16) . The sentence {\lq\lq I see the man with binoculars\rq\rq } could be parsed (split into grammatical parts) in two ways:
 \begin{center}
 \begin{forest}
 	for tree = {s sep = 0.5mm}
@@ -37,7 +38,7 @@ For further illustration: one common type of syntactic ambiguity, is {\it scope 
 \end{center}
 \end{singlespace*}
 
-\phantom{}\\
+
 \noindent Two readings for (1): my cat is neither grey nor black, he is red, for example. Alternatively, my cat is not grey, but is black of colour. The scope for negation is ambiguous here. The {\it not} either or it has scope over {\it grey or black}, or it only has scope over {\it grey}, . 
 
 
@@ -62,7 +63,7 @@ Finally, cause E refers to a modifier. A {\it modifier} is a linguistic element 
 
 \noindent I propose we bring these causes down to two. Firstly, structural ambiguity is caused by unclear semantic roles. A {\it semantic role} of a word or sentence-part is the role it plays in the meaning of the sentence. For example, the semantic role of {\it the grey dog} is the same in both sentences underneath:
 
-\phantom{}
+
 
 \begin{singlespace*}
 	\begin{center}
@@ -76,9 +77,9 @@ Finally, cause E refers to a modifier. A {\it modifier} is a linguistic element 
 
 The second cause I propose, is unclear word-grouping and unclear scope. To get rid of the ambiguity in phrases as {\it purple people eater}, or {\it lesbian vampire killer}, it needs to be specified which words modify which. 
 
-\section*{The issue for Atlan}
+\noindent {\it The issue for Atlan}
 
-In the previous part, I examined syntactic ambiguity. Now, why is this a problem for Atlan?. I will here propose three reasons for that goal. First, I will argue that structural ambiguity inhibits the parsing of language by computers. Computer-parsing could boost the spread of Atlan. Secondly, I will show that some forms of syntactic ambiguity would endanger the communicative function of our constructed language. Atlan should be a bridge between two languages. Syntactic ambiguity can make it more difficult for two speakers from different languages to communicate.  Lastly, I will argue that, in some high-stakes circumstances, syntactic ambiguity could be a great danger.
+\noindent In the previous part, I examined syntactic ambiguity. Now, why is this a problem for Atlan?. I will here propose three reasons for that goal. First, I will argue that structural ambiguity inhibits the parsing of language by computers. Computer-parsing could boost the spread of Atlan. Secondly, I will show that some forms of syntactic ambiguity would endanger the communicative function of our constructed language. Atlan should be a bridge between two languages. Syntactic ambiguity can make it more difficult for two speakers from different languages to communicate.  Lastly, I will argue that, in some high-stakes circumstances, syntactic ambiguity could be a great danger.
 
 First of all, syntactic ambiguity is a problem for computers. Computers need a so-called {\it parser} to understand our language: The machines pick apart a sentence, in order to fully understand it (Schubert,2020). Syntactic ambiguity is a true roadblock for such parsing. Because syntactic ambiguity gives rise to multiple parsing options, a computer can't give a definite parsing of a syntactically ambiguous sentence. To circumvent, or to (partially) overcome it, multiple algorithms have been created. Yet it remains a difficult problem (Chowdhary, 2020, p.645).
 
@@ -116,7 +117,6 @@ Of course, this was a fabricated example. A real-life example, can be found in (
 the rights which the ... laws grant ... to the subjects of the most favoured nation. 
 }
 \end{singlespace*}
-\phantom{}\\
 
 \noindent Example (4) elicits two interpretations: Serbian subjects who reside already in the United States enjoy the rights, or Serbian subjects, independent of where they remain, enjoy the rights when they are in the United States. This is syntactic ambiguity in law. Here it can have grave consequences for a large number of citizens.
 
@@ -132,13 +132,14 @@ It must be noted, however, that syntactic ambiguity is not only a {\it bad} phen
 
 \noindent is undeniably witty\footnote{Found in (Cornish-Bowden, 2015).}. Does the fruit fly similar to a banana, or do fruit flies love a banana? The first part of (5) seems to prime the reader for the first reading.  
 
-\section*{Minimizing syntactic ambiguity}
+{\it Minimizing syntactic ambiguity}
 
 \noindent Now I will look at the efforts of other constructed language to minimize syntactic ambiguities. I will examine the benefits and downfalls of their approaches. From that examination, I will aim to distill the strategy for {\it our} constructed language to bring structural ambiguity to a minimum. 
 
 One of the main origins of structural ambiguity is the distance between sentence-parts. In a structurally ambiguous sentence, it becomes unclear how the words are fit into phrases, and then how phrases fit in a sentence. For example, in the noun-phrase {\it purple people eater}, does {\it purple} belong to {\it people}, or to {\it eater}? Solving structural ambiguity is then making clear which words modify what , to only give one interpretation of a phrase or sentence.
 
-The constructed language Lojban\footnote{Lojban [lo\textyogh ban] is a constructed language, created by a group of people wanting to improve another constructed language, {\it Loglan}. One of its spear points is having an ambiguous syntactic structure. Found on: https://mw.lojban.org/papri/Lojban, may 23rd, 2023.} indeed does this. It has two ways of specifying which words belong together. The first manner comes in the form of the structure word {\it bo}. \def\bo{{\it bo} } {\it Bo} enforces scope (The Lojban Reference Grammar, 2023). To see how, let's take the English sentence \lq\lq That is a big bug catcher\rq\rq.\phantom{} In English, you could interpret this either as a big catcher of bugs, or a catcher of big bugs. In Lojban, the word \bo makes this difference explicit:
+The constructed language Lojban\footnote{Lojban [lo\textyogh ban] is a constructed language, created by a group of people wanting to improve another constructed language, {\it Loglan}. One of its spear points is having an ambiguous syntactic structure. Found on: https://mw.lojban.org/papri/Lojban, may 23rd, 2023.} indeed does this. It has two ways of specifying which words belong together. The first manner comes in the form of the structure word {\it bo}. \def\bo{{\it bo} } {\it Bo} enforces scope (The Lojban Reference Grammar, 2023). To see how, let's take the English sentence \lq\lq That is a big bug catcher\rq\rq. In English, you could interpret this either as a big catcher of bugs, or a catcher of big bugs. In Lojban, the word \bo makes this difference explicit:
+
 
 \begin{center}
 	{\center (6) That is a bug-catcher that is big.\\ {\it Ta barda miptera bo kavbu\footnote{{\it Ta} = \lq\lq That is\rq\rq, {\it barda} = \lq\lq big\rq\rq, {\it miptera} = \lq\lq bug\rq\rq, {\it kavbu} = \lq\lq catcher\rq\rq, and \bo is the structure word. English translation found in  (Jbovlaste: a lojban dictionary, 2023)}.}}
@@ -190,3 +191,136 @@ Secondly, I have proposed several general recommendations for battling syntactic
 
 Atlan won't be as specific as Ithkuil or Lojban. It is a balance we need to find between preciseness and learnability. Both Ithkuil and Lojban are extremely precise, but sacrifice learnability. I am confident that Atlan will find a good balance, and that the learner will profit from that. 
 
+
+\section{Atlan's grammar}
+
+
+Atlan´s grammar has the challenge of steering a middle course between minimalism of complexity, yet simultaneously allowing for unambiguity. It tries to be minimally prescriptive in its structure, allowing for more freedom for individual and cultural expression while remaining intelligible. Atlan will do this in the following way: any grammatical function that can be expressed within the language, has its own unique assigned syllable. Verbs are not conjugated in complicated arbitrary tables, and nouns are not endlessly modified by cases, but rather specific grammatical functions are conjoined together, like legoblocks, in an entirely regular way. This allows for a lot of freedom in choosing specific grammatical forms without having to know foliages of grammar. The grammatical markers are added in the order in which they are listed in the word list provided in chapter 6.2.  
+
+Atlan´s word order is both SVO (subject – verb – object, I eat fruit) and SOV (subject – object – verb, I fruit eat). This means that in every case, the first word of a sentence (apart from mood markers such as interrogative or exclamative) is the subject of the sentence. From there, the speaker is free to choose either the verb or the object to follow, depending on, for example, highlighting words, concept constructions, stream of consciousness \&c. According to Kemmerer (2012), the total amount of SOV and SVO dominant languages, or in other words, languages that always put the subject first, amounts to 89\% of all languages on earth. However, most languages still allow a basic degree of freedom in word order, the dominant word orders are merely tendencies, never hard rules. Therefore, having the flexibility of SVO and SOV ensures that most people on earth will be intuitively capable of formulating sentences in Atlan. 
+
+Different cases can be marked by adding their corresponding syllables as prefixed to the designated word. The object is marked with the accusative marker ´EK´ \ek, verbs with the verb marker ´TU´ \tu, possessives with the genitive ´TA´ \ta \&c. Plural is always marked at the very end of the word, as the only exception. 
+
+Verbs can be given tense, aspect and mood. Unmarked verbs are always present tense or infinitive, depending on whether it has a subject. A word can be made past by adding the prefix ´PA´ \pa, future by adding ´FE´ \fe, progressive by adding ´PO´, passive by adding ´PI´ \&c. For the complete list of grammatical markers, see the list in chapter 6.2. 
+
+Predicates, in which something is said of something else, e.g. fruit is sweet, are marked with the predicate marker, where the noun (fruit) comes before, and the predicate (sweet) would come after. This would make ´FUT SI TIT´ \fut  \si  \tit. An adjective can also predicate something of a noun, meaning that the very same construction, without spaces, can create ´fruit which is sweet´, which can be reformulated as ´sweet fruit´. Since sweet describes the fruit, it is placed behind the word for fruit, since this is the basic rule of thumb for word hierarchy in Atlan. 
+
+Because usually, Atlan words are interpreted literally, metaphoric speech may be indicated by the prefix ´MU´ \mu. 
+
+Gender is not marked obligatory, so purely gender neutral language is entirely possible and even more straightforward, however, if the speaker so desires, the particles for ´masculine´, ´MA´ \ma or ´feminine´, ´FI´ \Atlanfi can be added. 
+
+Atlan has three separate markers for so called ´degrees of removedness from speaker´. This means that the first degree refers to the here and now of the person uttering the language: the first person ´I´ ´EJ.AM´, the place ´here´ ´LU.AM´ \lu \am, the demonstrative ´this´ ES.AM \es \am, the time ´now´ ´JA.AM´ \ja \am. The second degree is the second person, once removed from the speaker: ´you´ ´EJ.UN´ \ej \un, ´there´ ´LU.UN´ \lu \un, ´that´ ´ES.UN´ \es \un, ´then´ JA.UN´ \ja \un, and the third degree is ´them´ ´EJ.AJ´ \ej \aj, ´yonder´ ´LU.AJ´ \lu \aj. The demonstrative ´ES´ \es without marker for removedness can be understood to be equivalent to ´it´.  
+
+Finally, Atlan uses a scale degree of ´negative´ - ´neutral´ - ´positive´. These markers can be added as prefixes to words to create relative terms, such as cold – room / body temperature – warm. The possibilities with nuanced expression are endless as you can combine many different words and functions together, allowing for the expression of thought that might go beyond the lexical inventory of natural languages. 
+
+\section{Greenberg's universals}
+
+The American linguist Joseph Greenberg (1963) compiled a proposed set of cross-linguistic grammatical principles. Atlan, being an IAL, should ideally comply with as much of these universals as possible, such that its grammar is as intuitive as possible to as much people as possible. Below is the full list of Greenberg´s universals. If indicated with a plus ´+ ´, this means that Atlan follows this principle. If it is indicated with ´\~{}´ this means that it does not apply to Atlan´s structure, but therefore also doesn´t break any universal. If it is indicated with a minus ´-´, however, this means that Atlan does not follow this principle, while it would have to apply. Only 4 out of the total 45 universals are not obeyed by Atlan, and 18 do not apply. This means that Atlan complies with Greenberg´s universals to a satisfying degree, and in the cases in which it doesn´t comply, this is for the sake of consistency and simplicity of its rules. 
+
+\noindent {\it Typology }
+\begingroup
+\catcode`\~=11
+\begin{enumerate}
+\item +  \lq\lq In declarative sentences with nominal subject and object, the dominant order is almost always one in which the subject precedes the object." 
+
+\item +  \lq\lq In languages with prepositions, the genitive almost always follows the governing noun, while in languages with postpositions it almost always precedes." 
+
+\item ~  \lq\lq Languages with dominant VSO order are always prepositional." 
+
+\item -  \lq\lq With overwhelmingly greater than chance frequency, languages with normal SOV order are postpositional." 
+
+\item +  \lq\lq If a language has dominant SOV orderand the genitive follows the governing noun, then the adjective likewise follows the noun." 
+
+\item ~  \lq\lq All languages with dominant VSO orderhave SVO as an alternative or as the only alternative basic order." 
+\end{enumerate}
+
+\noindent {\it Syntax  }
+\begin{enumerate}
+\setcounter{enumi}{6}
+\item ~  \lq\lq If in a language with dominant SOV order, there is no alternative basic order, or only OSV as the alternative, then all adverbial modifiers of the verb likewise precede the verb. (This is the 'rigid' subtype of III.)" 
+
+\item +  \lq\lq When a yes-no question is differentiated from the corresponding assertion by an intonational pattern, the distinctive intonational features of each of these patterns are reckoned from the end of the sentence rather than from the beginning." 
+
+\item +  \lq\lq With well more than chance frequency, when question particles or affixes are specified in position by reference to the sentence as a whole, if initial, such elements are found in prepositional languages, and, if final, in postpositional." 
+
+\item +  \lq\lq Question particles or affixes, when specified in position by reference to a particular word in the  
+
+\item +  \lq\lq Particles do not occur in languages with dominant order VSO." 
+
+\item ~  \lq\lq Inversion of statement order so that verbprecedes subject occurs only in languages where the question word or phrase is normally initial. This same inversion occurs in yes-no questions only if it also occurs in interrogative word questions." 
+
+\item ~  \lq\lq If a language has dominant order VSO in declarative sentences, it always puts interrogative words or phrases first in interrogative word questions; if it has dominant order SOV in declarative sentences, there is never such an invariant rule." 
+
+\item +  \lq\lq If the nominal object always precedes the verb, then verb forms subordinate to the main verb also precede it." 
+
+\item +  \lq\lq In conditional statements, the conditional clause precedes the conclusion as the normal order in all languages." 
+
+\item +  \lq\lq In expressions of volition and purpose, a subordinate verbal form always follows the main verb as the normal order except in those languages in which the nominal object always precedes the verb." 
+
+\item -  \lq\lq In languages with dominant order VSO, an inflected auxiliary always precedes the main verb. In languages with dominant order SOV, an inflected auxiliary always follows the main verb." 
+
+\item ~  \lq\lq With overwhelmingly more than chance frequency, languages with dominant order VSO have the adjective after the noun." 
+
+\item ~  \lq\lq When the descriptive adjective precedes the noun, the demonstrative and the numeral, with overwhelmingly more than chance frequency, do likewise." 
+
+\item -  \lq\lq When the general rule is that the descriptive adjective follows, there may be a minority of adjectives which usually precede, but when the general rule is that descriptive adjectives precede, there are no exceptions." 
+
+\item +  \lq\lq When any or all of the items (demonstrative, numeral, and descriptive adjective) precede the noun, they are always found in that order. If they follow, the order is either the same or its exact opposite." 
+
+\item -  \lq\lq If some or all adverbs follow the adjective they modify, then the language is one in which the qualifying adjective follows the noun and the verb precedes its nominal object as the dominant order." 
+
+\item +  \lq\lq If in comparisons of superiority the only order, or one of the alternative orders, is standard-marker-adjective, then the language is postpositional. With overwhelmingly more than chance frequency if the only order is adjective-marker-standard, the language is prepositional." 
+
+\item ~  \lq\lq If in apposition the proper noun usually precedes the common noun, then the language is one in which the governing noun precedes its dependent genitive. With much better than chance frequency, if the common noun usually precedes the proper noun, the dependent genitive precedes its governing noun." 
+
+\item ~  \lq\lq If the relative expression precedes the noun either as the only construction or as an alternate construction, either the language is postpositional, or the adjective precedes the noun or both." 
+
+\item ~  \lq\lq If the pronominal object follows the verb, so does the nominal object." 
+\end{enumerate}
+
+\noindent {\it Morphology}
+\begin{enumerate}
+\setcounter{enumi}{26}
+\item ~  \lq\lq If a language has discontinuous affixes, it always has either prefixing or suffixing or both." 
+
+\item ~  \lq\lq If a language is exclusively suffixing, it is postpositional; if it is exclusively prefixing, it is prepositional." 
+
+\item +  \lq\lq If both the derivation and inflection follow the root, or they both precede the root, the derivation is always between the root and the inflection." 
+
+\item +  \lq\lq If a language has inflection, it always has derivation." 
+
+\item +  \lq\lq If the verb has categories of person-number or if it has categories of gender, it always has tense-mode categories." 
+
+\item ~  \lq\lq If either the subject or object noun agrees with the verb in gender, then the adjective always agrees with the noun in gender." 
+
+\item ~  \lq\lq Whenever the verb agrees with a nominal subject or nominal object in gender, it also agrees in number." 
+
+\item ~  \lq\lq When number agreement between the noun and verb is suspended and the rule is based on order, the case is always one in which the verb precedes and the verb is in the singular." 
+
+\item ~  \lq\lq No language has a trial number unless it has a dual. No language has a dual unless it has a plural." 
+
+\item +  \lq\lq There is no language in which the plural does not have some nonzero allomorphs, whereas there are languages in which the singular is expressed only by zero. The dual and the trial are almost never expressed only by zero." 
+
+\item +  \lq\lq If a language has the category of gender, it always has the category of number." 
+
+\item +  \lq\lq A language never has more gender categories in nonsingular numbers than in the singular." 
+
+\item ~  \lq\lq Where there is a case system, the only case which ever has only zero allomorphs is the one which includes among its meanings that of the subject of the intransitive verb." 
+
+\item +  \lq\lq Where morphemes of both number and case are present and both follow or both precede the noun base, the expression of number almost always comes between the noun base and the expression of case." 
+
+\item +  \lq\lq When the adjective follows the noun, the adjective expresses all the inflectionalcategories of the noun. In such cases the noun may lack overt expression of one or all of these categories." 
+
+\item +  \lq\lq If in a language the verb follows both the nominal subject and nominal object as the dominant order, the language almost always has a case system." 
+
+\item +  \lq\lq All languages have pronominal categories involving at least three persons and two numbers." 
+
+\item ~  \lq\lq If a language has gender categories in the noun, it has gender categories in the pronoun." 
+
+\item + \lq\lq If a language has gender distinctions in the first person, it always has gender distinctions in the second or third person, or in both." 
+
+\item + \lq\lq If there are any gender distinctions in the plural of the pronoun, there are some gender distinctions in the singular also."
+
+
+\end{enumerate}
+\endgroup
