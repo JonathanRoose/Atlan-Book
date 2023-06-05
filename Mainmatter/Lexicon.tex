@@ -120,19 +120,19 @@ Hence, we need translation software. We will use the public available library ca
 \newcounter{tablecount}
 \setcounter{tablecount}{1}
 
+\resizebox{1\textwidth}{!}{
 \begin{tabular}{|c|c|c|c|c|}
 	{\bf Language } &
 	
 
-	{\bf Number of Native 
-
-	\newline speakers in Millions } &
+	\thead{\bf Number of Native \\ 
+	\bf speakers in Millions } &
 	
 
-	{\bf Number of Total \newline speakers in Millions } &
+	\thead{\bf Number of Total \\ \bf speakers in Millions } &
 	
 
-	{\bf Language family \newline of the language} \\
+	\thead{\bf Language family \\  \bf of the language} \\
 
 	\thetablecount\stepcounter{tablecount}& 
 English &
@@ -590,7 +590,24 @@ Nepali &
 	
 
 Indo-European \\
-	\thetablecount\stepcounter{tablecount} &
+\end{tabular}
+}
+
+\resizebox{1\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|}
+
+	{\bf Language } &
+	
+
+	\thead{\bf Number of Native \\ 
+	\bf speakers in Millions } &
+	
+
+	\thead{\bf Number of Total \\ \bf speakers in Millions } &
+
+	\thead{\bf Language family \\  \bf of the language} \\
+	
+\thetablecount\stepcounter{tablecount} &
 
 Sindhi &
 	
@@ -808,6 +825,502 @@ Hungarian &
 Uralic \\
 
 \end{tabular}
+}
+
+{\it \footnotesize Table 6.3: Overview of the languages and their number of speakers according to Ethnologue (2022).}
+\vspace{0.3cm}
+
+
+\noindent Assume that this entire set of 57 possible languages becomes the dataset, called set \alpha. Then it is possible to find the frequencies of each family in the \alpha set. Since we want to compare these numbers relative to the total amount of languages, we need to convert these frequencies to percentages by dividing them by the total number of languages in set \alpha, which is 57. Now it is possible to compute the distance between the current percentage and the target percentage by taking the absolute of the target number minus the current percentage. This is called the error rate. So, for Indo-European, the error rate would be |42 – 43.9| = |-1.9| = 1.9, meaning that is almost 2% away from the target percentage. We can do this calculation for every language family, and the result can be viewed in the fourth column of Table 6.5. The error values average to an average error rate of 2.76. Meaning that on average each language family is either 1.58 languages too large or too little. This is not a bad score, but it is possible to make this error figure smaller by adding and removing some languages to counterbalance. 
+
+The Indo-European language family is well represented, with almost a language from each branch or otherwise a very similar language present. Thus, we leave those 25 languages untouched. We want those 25 languages to make up for 42 percent of the set, thus we need 100\% of the dataset to be around (24/42 $\times$ 100) $\approx$ 60 languages. With the current 57, we should be able to add three more languages. 
+
+However, there is one language family that is far too overrepresented. Almost all the languages in the top 100 from the Austronesian family made it into the  database, while they should be less frequent than Afro-asiatic and Niger-Congo. Therefore, we remove one language from this language family: Malay. Even though there are several less spoken Austronesian languages, the older common ancestor between these languages (Tryon, 1995) entails that these may contain more vital information about a group of languages not seen in the data. The only exception is Filipino, which is a language that is derived from the already present in  language Tagalog, meaning they are also very similar. The choice to let Filipino stay is due to the interesting fact that it has much more speakers than a lot of languages, even though it has a relative low number of native speakers. This aspect of the language might be a good contribution to the desired ‘easy-to-learn-aspect.’ This reduces the number of present languages to 56, so we can add four new languages. 
+
+The family with the largest error is Sino-Tibetan. There is only one language that could be seen as Sino-Tibetan, although not all linguists would agree. Hmong is classified as part of the Hmong-Mien languages. Most Chinese scholars have accepted that is part of the Sino-Tibetan family tree (Matisoff, 1991). Although linguists outside of Europe have a narrower view of Sino-Tibetan, they at least agree that the Hmong-Mien languages are strongly influenced by Chinese languages. Therefore, we add Hmong to the data set and count is as a Sino-Tibetan language. Even with Hmong added the Sino-Tibetan family seems underrepresented. However, we need to keep in mind that a lot of the languages in the top 100 most spoken languages are a form of Chinese and strongly related to Mandarin, which is present in the data set. 
+
+Now there are three languages to add left for the other underrepresented languages: Niger-Congo and Afroasiatic. Afroasiatic has a higher frequency in the 100 most spoken languages, but they are currently both equally present. This means we should give Afro-asiatic two extra languages and Niger-Congo only one.  
+
+For Afroasiatic we can translate into Hebrew and Maltese, both Semitic languages. Thus, we don’t need to make any choices here. In the Niger-Congo family we can choose between Shona, Sesotho and Chichewa. Since they are all the same branch, we choose the one with the most speakers, which is Chichewa.   
+
+\resizebox{1\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|}
+	{\bf Language } &
+	
+
+	\thead{\bf Number of Native \\ 
+	\bf speakers in Millions } &
+	
+
+	\thead{\bf Number of Total \\ \bf speakers in Millions } &
+	
+
+	\thead{\bf Language family \\  \bf of the language} \\
+
+	Hmong &
+	
+
+	8 &
+	
+
+	8 &
+	
+
+	Sino-Tibetan \\ 
+
+	Hebrew &
+	
+
+	7 &
+	
+
+	9 &
+	
+
+Afro-asiatic \\
+
+	Maltese &
+	
+
+	0.5 &
+	
+
+	0.5 &
+	
+
+Afro-asiatic \\
+
+	Chichewa &
+	
+
+	9 &
+	
+
+	9 &
+	
+
+Niger-Congo \\ 
+\end{tabular}
+}
+
+{\it \footnotesize Table 6.4: Information about the new languages chosen for the dataset.}
+
+\noindent With this modification to set $\alpha$, we have a new set of languages, we can call language set . By calculating the errors again for each language family, we can see that the error measure now averages to an amazing 1.83. Meaning that on average a family is 1.1 language off from the real distribution. These are distributions that are very realistic to the real world. 
+
+\vspace{0.3cm}
+
+\resizebox{1\textwidth}{!}{
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+	{\bf Language family} &
+	
+
+\thead{\bf Frequency in the \\ \bf 100 most spoken \\ \bf languages}& 
+	
+
+\thead{\bf Frequency in the \\ \bf $\alpha$ set} & 
+	
+
+\thead{ \bf Percentage in the \\ \bf $\alpha$ set }& 
+	
+
+\thead{\bf Error in the \\ \bf $\alpha$ set} & 
+	
+
+\thead{\bf Frequency in the \\ \bf $\beta$ set} & 
+	
+
+\thead{\bf Percentage in the \\ \bf $\beta$ set}& 
+	
+
+\thead{\bf Error in the \\ \bf  $\beta$ set}\\ 
+
+Indo-European & 
+	
+
+42 & 
+	
+
+25& 
+	
+
+43.9& 
+	
+
+1.9& 
+	
+
+25& 
+	
+
+41.6& 
+	
+
+0.4\\ 
+
+	Afro-Asiatic &
+	
+
+15& 
+	
+
+5& 
+	
+
+8.8& 
+	
+
+6.2& 
+	
+
+7& 
+	
+
+11.6& 
+	
+
+3.4\\ 
+
+Niger-Congo &
+	
+
+12& 
+	
+
+5& 
+	
+
+8.8& 
+	
+
+3.2& 
+	
+
+6& 
+	
+
+10.0& 
+	
+
+2.0\\ 
+
+Austronesian &
+	
+
+9& 
+	
+
+8& 
+	
+
+14.0& 
+	
+
+5& 
+	
+
+7& 
+	
+
+11.6& 
+	
+
+2.6\\ 
+
+Sino-Tibetan &
+	
+
+9& 
+	
+
+2& 
+	
+
+3.5& 
+	
+
+5.5& 
+	
+
+3& 
+	
+
+5.0& 
+	
+
+4\\ 
+
+Turkic &
+	
+
+4& 
+	
+
+4& 
+	
+
+7.0& 
+	
+
+3& 
+	
+
+4& 
+	
+
+6.7& 
+	
+
+2.7\\ 
+
+Dravidian &
+	
+
+4& 
+	
+
+4& 
+	
+
+7.0& 
+	
+
+3& 
+	
+
+4& 
+	
+
+6.7& 
+	
+
+2.7\\ 
+
+Japanic &
+	
+
+1& 
+	
+
+1& 
+	
+
+1.8& 
+	
+
+0.8& 
+	
+
+1& 
+	
+
+1.7& 
+	
+
+0.7\\ 
+
+Uralic &
+	
+
+1& 
+	
+
+1& 
+	
+
+1.8& 
+	
+
+0.8& 
+	
+
+1& 
+	
+
+1.7& 
+	
+
+0.7\\ 
+
+Koreanic & 
+	
+
+1& 
+	
+
+1& 
+	
+
+1.8& 
+	
+
+0.8& 
+	
+
+1& 
+	
+
+1.7& 
+	
+
+0.7\\ 
+
+Kra-Dai &
+	
+
+2& 
+	
+
+1& 
+	
+
+1.8& 
+	
+
+0.2& 
+	
+
+1& 
+	
+
+1.7& 
+	
+
+0.3\\ 
+
+\end{tabular}
+}
+
+{\it \footnotesize Table 6.5: Frequencies of languages families in different language sets}
+
+\vspace{0.3cm}
+
+\noindent To visually represent the diversity within this set, we provide you with figure 6.4. Each non-blue country in the figure is associated with at least one official or national language present in the dataset. The handful of blue countries indicate the absence of certain languages.  
+
+\begin{center}
+\includegraphics[scale=0.4]{./Images/worldatlas.jpg}
+
+	{\it \footnotesize Figure 6.2: World map to visualize where languages present in the dataset are spoken according to Ethnologue (2022) and WALS (2013), made with mapchart.net} 
+\end{center}
+
+\vspace{0.3cm}
+
+\noindent
+
+A closer examination of the blue regions reveals that the Scandinavian, Balkan and Baltic countries predominantly fall into this category. However, it is important to notice that although the language self is not in the dataset, there might be one that is very closely related to it. The languages spoken in Denmark, Norway, Sweden, Finland and Iceland share such close relationships. In cross-border communication, individuals from these regions often just continue using their respective languages (Gooskens, 2007). In the same way, languages in the Balkan region, such as Bosnian and Albanian, share a relatively recent common ancestor with Romanian (Kushniarevich, 2015). This means they still share a lot of vocabulary and grammar. Similarly, the Baltic states exhibit, although there are fewer resemblances, notable similarities with languages such as Hungarian. Hence, these languages are not entirely absent of the data set.
+
+We can do the same observation for the blue countries outside of Europe. Persian, as the official language of Iran, displays strong connections with Kurdish and Pashto and in lesser terms also with Hindi and Bengali (Fortson, 2011). Additionally, due to the high trade during the Mongol empire, Persian has been largely influenced by Arabic and Turkic languages (Perry, 2005). 
+
+Consequently, the only countries in the world for which there lacks any indication of a Proto-Language connection between their national language and our dataset are Greenland and Armenia. Greenlandic, being an Inuit-language, and Armenian, being a language isolate, show too little similarities with other languages. However, the population of these countries would be less than 4 million people, which accounts for less than 0.05% of the global population of 8 billion people. 
+
+\textbf{Weights} 
+
+As discussed previously, the source languages of Lojban with more native speakers were deemed more important (Cowan, 1997). Consequently, the scoring system slightly favored languages with higher wights, which seems justifiable as it benefits a larger number of individuals. However, the approach employed by Lojban only focused on the number of native speakers of the given language: Chinese had a larger weight then English. The existence of secondary speakers was completely disregarded. 
+
+The difference between a native and a secondary speaker is the fact that a native speaker the language learns while growing up. On the other hand, a secondary speaker acquires a language later in life, motivated by factors such as work, tourism or recreation. By exclusively utilizing native speakers as a metric for assessing the importance of a language, the developers of Lojban missed the crucial information that the secondary speakers provide. The number of secondary speakers conveys a significant insight into both the language's political influence as its reach. (Saville-Troike, 2017). Besides, it can indicate a lot about vitality and the preservation of the language (Grenoble et al, 2005). Moreover, the secondary speaker count offers us more about the ease of learning the language. All of these are factors that are vital for the language Atlan will be. 
+
+As a result, we contend that secondary speakers should not be forgotten and should even be given relatively more weight than native speakers. As a result, the number of total speakers is calculated by 0.4 times the native speakers and 0.6 times the secondary speakers. Subsequently, these adjusted totals are then normalized to obtain the final weights. This way, the largest language contributes the most to the product. 
+
+\noindent \textit{Lexi and her workings} 
+
+\noindent With consensus on the dataset and the weights, the time has come to explain how Lexi generates words from all these languages. Lexi is designed to take an English word as input to start the process. This is very important, because there is only a very select group of unreducible words that need to be generated this way. By taking a meaning as input, we prevent that it generates words we do not want and control the meaning of the new Atlan word. 
+
+This word is then translated into all the languages that make up the trainings set that was just discussed. That way we can find a common pattern in this set of 60 translations. However, it is key to keep in mind that the same letters are often pronounced differently in different words. For example, the sentence ‘the \textit{tear} in my new painting brought a \textit{tear} in my eye’ contains two words that look identical but sound very different. Such heteronyms prove it is not enough to compare words only by their spelling. To investigate how words are pronounced, Lexi now transforms every translation into their IPA format. 
+
+After the constraints of comparison were a bit hardened by this modification, it is possible to soften them now again. That is, because Atlan reduces the number of vowels drastically. This has as a result that certain sounds that are viewed differently in our languages, can only refer to one and the same letter in Atlan. That means that this sound can be viewed as the same in comparison. To achieve this, Lexi can map each IPA sound to the letter it would represent in Atlan, according to the rules discussed in the phonology-chapter. This creates a list with the transcriptions of how the translations would sound in Atlan.  
+
+The only task that is left now is to find the patterns in this set. Since these patterns will form the new Atlan word, it is certain they will always follow one of three patterns: either consonant-vowel-consonant (CVC), consonant-vowel (CV) or vowel-consonant (VC). We can look at possible candidates for this pattern by splitting each translation up into every possible combination that follows one of these patterns. This way, Lexi provides a dataset of candidates of the patterns, made up from small parts of natural language translations. 
+
+If we calculate the similarity between every possible pattern and the transcribed translations, we can get the pattern that resembles the words best. However, to simulate the natural way of words generation a bit better, we experiment with some algorithms to make sure we pick the best word, such as evolutionary computing. 
+
+This is a problem-solving technique that uses the principles of natural selection and genetics to find patterns and optimal solutions. Just as in nature, the individual with the highest ‘fitness’ are selected to create new children. Generation after generation this will mean that only the best traits survive, resulting in a solution. By using evolutionary computing, we are trying to simulate a natural way of one word evolving over time, with only the fittest words surviving. In this case, a ‘fit’ individual is on average very similar to all the translations. We calculate the fitness with the previously discussed cosine similarity. 
+
+The fittest individuals create children through a cross-over process. Lexi divides both words in all possible points and then swaps both halves.  For example, if the words \textit{jap} and \textit{tek} are combined, it can recombine into \textit{j-ek} and \textit{t-ap} and similarly \textit{jak} and \textit{tep.} These children, combined with the parents, form again a large pool of possible Atlan words. The best individuals are again selected, and the winners produce the next generation. After 50 generations, the three individuals with the highest scores are selected and crowned as winners. In the end this process gave us the same outcomes as calculating the highest score for all of them. 
+
+In this way, we generated the five best options for every atom of language we needed to exist in Atlan. Another computer program assigned each word one of these options, keeping in mind that some syllables might appear in the list of options for several words. In the end, this leaves us with a lexicon of words that should be easy to learn and remember for almost the entire population.
+
+\section{Semantic atom vocabulary}
+
+
+
+\section{Protocol for translation}
+
+Atlan’s lexicon is composed by adding together different semantic atoms (see: oligosynthesis). Meaning is specified by following the principle of a “semantic lens” which “zooms in” with every atom that is added, reducing the possible meanings of a word to a more defined meaning. The order in which atoms are added is structured hierarchically. The first atom specifies the most basic classification of the intended word, to which other atoms are appended which incrementally specify the exact definition. Two combinations of the same atoms that are ordered in different ways (e.g. AB and BA) will thus have different definitions. For example: 
+
+\begin{itemize}
+\item[] Bird + house = a pet bird (a bird pertaining to the domestic) 
+
+\item[] House + bird = a bird’s nest (the house of a bird) 
+
+\item[]  
+
+\item[] Flower + smell = a fragrant flower (a flower which smells) 
+
+\item[] Smell + flower = a floral scent (the smell of a flower) 
+
+\item[]  
+
+\item[] Sing + community = to sing in a choir (to sing communally) 
+
+\item[] Community + sing = a choir (a community of singers / singing) 
+\end{itemize}
+
+\noindent 
+
+Morphosyntactic atoms can be recognised by the fact that they contain one one consonant and syllable (not CVC). These are always put in front of the main semantic atom, again following the principle of hierarchy, and taking into account the scope of each atom. Any atom only determines the scope of the atoms that come after it, not the ones that come before it. For example:
+
+\begin{itemize}
+\item[] Passive + give = to receive X (to be given X: to receive a gift = to be given a gift) 
+
+ 
+
+\item [] Passive + give + (dative) = to be given to X (the gift was given given to them) 
+
+ 
+
+\item []Predicate + not + life = (to be) inanimate 
+
+ 
+
+\item [] Not + predicate + life = not (to be) alive 
+
+\end{itemize}
+
+\noindent Finally, the plural marker comes at the very end of a word. The general order for compound words it thus:  
+
+\begin{center}
+morphosyntactic markers - main semantic root - specifying semantic atoms – plural
+\end{center}
+
+It must be noted that translations are open to individual and cultural interpretation. As long as the hierarchical structure of word formation is obeyed, different approaches to specifying the same word are possible. For example: 
+
+
+
+\begin{itemize}
+\item [] Fish + fly = flying fish (a fish which flies) 
+
+\item[] Fish + wing = flying fish (a fish with wings) 
+
+ 
+
+\item[] Vehicle + sea = boat (a vehicle for the sea) 
+
+\item[] Vehicle + float = boat (a vehicle which floats)
+\end{itemize}
+
+\noindent Because of their sheer quantity and diversity, words for specific human artifacts can sometimes be more challenging to synthesize. Phonetically approximated loanwords can be employed when referring to specific cultural artefacts or concepts (see chapter 3.7), marked by the name particle NA, together with a cartouche in written language. 
+
+Expletives, better known as swear words, can be made by adding the prefix ´O´ \Atlano to mark the exclamatory nature, followed by a literal translation of the word, which will thus be culture dependent (e.g.: ´shit´ = O.FES.TOJ \Atlano \fes \toj). 
+
+\section{Jargon translation}
+
+
+Atlan’s established lexicon will not be enough to cover the large quantity of topic/discipline-specific jargon within human language. Specialists within their respective fields could formalize nomenclature systems which could then be adopted by their respective intellectual communities as the standard for communicating about their subject matters in Atlan as an auxlang. This could be a natural evolution within the arts and sciences away from obsolete and culturally imposed greco-latin terminology of the European academic tradition, as well as serving as an opportunity for scientists who often complain about illogical and arbitrary terminology within their subject to collectively design a rigorous reform towards more logical and useful words in a more neutral lingua franca.  
+
+We cannot dictate in this context how each discipline will end up standardizing their terminology in Atlan, but we could suggest taking inspiration from original etymologies and nomenclatures already in place as standardized systems. We will not further expound on how this should be done here, since this is beyond our own expertise, and almost impossible to cover comprehensively.
+
+
+
+
 
 
 
@@ -817,7 +1330,6 @@ Uralic \\
 
 \section{Atlan to English}
 
-\section{Translation Protocol}
 
 
 
