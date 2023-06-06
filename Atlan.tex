@@ -80,6 +80,7 @@
 \newlength{\chaptertopskip}
 \setlength{\chaptertopskip}{-50pt}
 \makeatletter
+%NOG VERANDEREN
 \xpatchcmd{\@makechapterhead}{\vspace*{50\p@}}{\vspace*{\chaptertopskip}}{\typeout{Success}}{\typeout{Failure!!!}}
 \makeatother
 
