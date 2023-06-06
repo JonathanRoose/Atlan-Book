@@ -1,4 +1,5 @@
-\section{Writing system -- {\small Jarno Smets}}
+\setcounter{section}{-1}
+\Section{Writing system}{Jarno Smets}
 
 \lettrine{A}{tlan's} writing system is a natural application of our philosophy: start with elementary parts, and  then every complexity shall be a mere combination of those parts. Our glyphs (as we shall call them) each denote one syllable. This is always the case: they will always stand for the {\it same} syllable. Unlike English: in the words \lq\lq tone\rq\rq and  \lq\lq to\rq\rq, the \lq\lq to\rq\rq is pronounced respectively [t\textturnm] and [t\textbaro]. 
 
@@ -19,7 +20,7 @@ That is the rationale behind our writing system; let us dive into the details. A
 \DeclareStroke{\BigSW} & /s/ &  & \\ 
 \DeclareStroke{\BigSE} & /f/ & & \\
 \DeclareStroke{\BigNE} & /l\~{}r/ & & \\
-{$\emptyset$} & /p/ & &\\
+\DeclareStroke{\Dot{Center}} & /p/ & &\\
 \DeclareStroke{\MediumCircle{Center}} & <nil\footnotemark> & & \\
 \end{tabular}
 
@@ -54,7 +55,6 @@ This order is determined by the manner in which the lines combine. There is alwa
 
 As you see here, the smaller line is found on top. Hence, it is placed inside the upper-left triangle. The consonant for which the smaller horizontal line stands (the {\it k}), comes before the other consonant, the {\it s}.
 
-As said, the vowel emerges from the position of the smaller line in relation to the bigger letter-line. Again, a visual will help:
 \phantom{}
 
 \begin{center}
@@ -109,7 +109,7 @@ The vowel is...
 
 Then we have three exceptions to these rules. The first: you can combine two of the same letter-lines, to make syllables such as {\it pop}, {\it mum}, or {\it lol}. The order of these lines doesn't matter; hence we choose place the smaller line to the upper-left of the main line in such cases. For the vowel {\it u}, there are two small lines, split at the center. For {\it e}, there are either two or three small lines. At least one of those lines crosses through the center of the imaginary box.
 
-The second exception has to do with the k (/k/). That letter had the base line -- , right? It's a horizontal line. Because of that, we have to think of a different box than figure 2 and 3  to figure out the consonant-order and the vowel. The solution is simple: we flip the boxes. They then look like this:
+The second exception has to do with the k (/k/). That letter had the base line -- , right? It's a horizontal line. Because of that, we have to think of a different box than figure 2 and 3  to figure out the consonant-order and the vowel. The solution is simple: we flip the box. It then looks like this:
 
 \begin{center}
 \definecolor{melon}{RGB}{255,179,179}
@@ -143,6 +143,7 @@ The second exception has to do with the k (/k/). That letter had the base line -
 \node at (3.125, 2){\footnotesize u};
 \end{tikzpicture}
 
+{\footnotesize \it Figure 4: the imaginary vowel-placement box for /k/.}
 \end{center}
 
 \begin{center}
@@ -155,7 +156,7 @@ The second exception has to do with the k (/k/). That letter had the base line -
 	
 \end{tikzpicture}
 
-{\footnotesize \it Respectively Figure 4: the imaginary vowel-placement box for /k/. Figure 5: the imaginary consonant-order-box for /k/.}
+{\footnotesize \it Figure 5: the imaginary consonant-order-box for /k/.}
 \end{center}
 
 
@@ -200,8 +201,6 @@ Now let's look at another one. See if you can determine the syllable yourself fi
 
 \footnotetext{Quick tip: the curve for {\it j} looks alot like the {\it j} itself, doesn't it? Look for more of these similarities in our writing system; they help!}
 
-Do you feel if you got the hang of it? If you don't, then we'll do a few more. To spice things up a bit, we'll have a syllable with the vowel {\it e}.
-
 \begin{wrapfigure}[7]{r}{0.4\textwidth}
 \renewcommand{\corpsgrootte}{100pt}
 \vspace{-0.5cm}
@@ -210,9 +209,7 @@ Do you feel if you got the hang of it? If you don't, then we'll do a few more. T
 \end{wrapfigure}
 
 
-%Do you feel if you got the hang of it? Let's do a few more. To spice things up a bit, we'll have a syllable with the vowel {\it e}.
-
-Remember that this vowel had smaller lines be placed in the centre. Alternatively, the smaller line could intersect the centre, or be split up by it. In this example, the smaller line is split up by the bigger line. The bigger line, the {\it l} ([/l/]) splits up the line for {\it j} ([/j/]). Because it does, the vowel is {\it e} ([/e/]), and the syllable is {\it lej} ([/lej/]). 
+Do you feel if you got the hang of it? Let's do a few more. To spice things up a bit, we'll have a syllable with the vowel {\it e}. Remember that this vowel had smaller lines be placed in the centre. Alternatively, the smaller line could intersect the centre, or be split up by it. In this example, the smaller line is split up by the bigger line. The bigger line, the {\it l} ([/l/]) splits up the line for {\it j} ([/j/]). Because it does, the vowel is {\it e} ([/e/]), and the syllable is {\it lej} ([/lej/]). 
 
 
 \begin{wrapfigure}[7]{l}{0.4\textwidth}
@@ -231,9 +228,7 @@ We hope the examples have made clear how our writing system works. This conclude
 	\item Any blank space is the \lq\lq nothing \rq\rq we talked about above. You can see the circles appear at the rows of those blank spaces. If the half of an entire row is empty, it means that a combination's reverse is unneccessary. Think of syllables like {\it lol}, {\it nun} or {\it juj}. They are symmetric, so we don't need a full row for them. 
 \end{itemize}
 
-\noindent Again, on the next page is a table containing all our glyphs. The left two columns contain the base lines, placed in order of combination. If you've forgot which base line stands for which consonant, return to the table at the begin of the chapter. It's a great tool for using as a reference. So come back when you need it.  
-
-\vfill
+Again, on the next page is a table containing all our glyphs. The left two columns contain the base lines, placed in order of combination. If you've forgot which base line stands for which consonant, return to the table at the begin of the chapter. It's a great tool for using as a reference. So come back when you need it.  
 
 %\input{./Mainmatter/table.tex}
 \pagebreak
@@ -268,6 +263,7 @@ Atlan’s syllables are all (C)V(C). Some loanwords or names, however, might hav
 \section{Numerals}
 
 Atlan also has a numeric system distinct from the familiar arabic-numerals. They look like this:
+\pagebreak
 
 \setlength{\columnsep}{10pt}
 
@@ -359,7 +355,7 @@ Atlan also has a numeric system distinct from the familiar arabic-numerals. They
 
 \end{multicols}
 
-The bottom right corner will be the first order of magnitude (below 10), the upper-right corner the second order (tens), the bottom-left corner the third (hundreds) and the top left the fourth (thousands). This way, when reading a single numeral, one would read from left to right and top to bottom, first the thousands, then the hundreds, then the tens and then the below tens, like for example the number 2023 (\numbr{2023}). An empty line is equal to zero (\numbr{0}), and having one of the corners empty but others with a number attached means that that order of magnitude is zero (such as the third order of magnitude in 2023). Decimals can be made by using a comma and adding a numeral behind it: in this case the orders of magnitude are flipped: one behind the comma is a tenth, two is a hundredth, three a thousandth and four a ten thousandth. For example, 2023,2023 would be \numbr{2023}\comma\numbr{2023}. 
+The bottom right corner will be the first order of magnitude (below 10), the upper-right corner the second order (tens), the bottom-left corner the third (hundreds) and the top left the fourth (thousands). This way, when reading a single numeral, one would read from left to right and top to bottom, first the thousands, then the hundreds, then the tens and then the below tens, like for example the number 2023 (\numbr{2023}). An empty line is equal to zero (\numbr{0}), and having one of the corners empty but others with a number attached means that that order of magnitude is zero (such as the third order of magnitude in 2023). Decimals can be made by using a comma and adding a numeral behind it: in this case the orders of magnitude are flipped: one behind the comma is a tenth, two is a hundredth, three a thousandth and four a ten thousandth. For example, 2023,2023 would be \numbr{2023}◡\numbr{2023}. 
 
 An added benefit of this numeral system, besides taking less space, is that addition could be more visually intuitive for some numbers: \numbr{1} plus \numbr{3} equals \numbr{4}, \numbr{2} plus \numbr{3} equals \numbr{5}, \numbr{1} plus \numbr{6} equals \numbr{7}. 
 
@@ -437,9 +433,9 @@ In (formal) typography, a cartouche may be employed to encircle the phonetic app
 
 The cartouche originates from the hieroglyphic ‘shen’, a stylised loop of a rope, which literally means ‘to encircle’, but had come to symbolise eternal protection. Therefore, it was also believed to have apotropaic powers (warding off evil). The word ‘cartouche’ comes from the French word for ‘paper bullet cartridge’, first applied when Napoleon’s soldiers encountered the frequently occurring glyph and noticed its resemblance to such cartridges (White, 2002). Interestingly, cartouches played an important role in deciphering Egyptian hieroglyphics. The early Egyptologist Thomas Young, following a suggestion from the decipherment scholar Jean-Jacques Barthélemy, compared the cartouches that appeared on the Rosetta Stone to the proper names that appeared in the Greek text (Robinson, 2009). This way, he was able to decipher the name ‘Ptolomy’ (Young, 1823). If Atlan were ever to become widely used, and inscriptions were made employing cartouches, perhaps the archaeologists of some distant future might employ them to decipher the script in the same manner that Young did. 
 
-The 2001 conlang {\it Toki Pona} by the Canadian linguist Sonja Lang also employs cartouches in these contexts, for the same reason that Atlan does so (Lang, 2016). Just like in Toki Pona, Atlan’s cartouche shall be a simple oval circumscribing the name or loanword, without the additional straight line as used in Egyptian cartouches. One could object that employing a typographic element that derives from a specific cultural tradition, namely that of ancient Egypt, is in conflict with Atlan’s constraint of cultural neutrality. To this we object with the following justifications: the cartouche serves a practical function in preventing orthographic ambiguity; the Ancient Egyptian culture is currently extinct and thus does not advantage current day Egyptians over any other culture; the historical origin adds an extra layer of symbolism and cultural depth which in no way interferes with practical use; and frankly, we are of the opinion that it looks quite cool. 
+The 2001 conlang Toki Pona by the Canadian linguist Sonja Lang also employs cartouches in these contexts, for the same reason that Atlan does so (Lang, 2016). Just like in Toki Pona, Atlan’s cartouche shall be a simple oval circumscribing the name or loanword, without the additional straight line as used in Egyptian cartouches. One could object that employing a typographic element that derives from a specific cultural tradition, namely that of ancient Egypt, is in conflict with Atlan’s constraint of cultural neutrality. To this we object with the following justifications: the cartouche serves a practical function in preventing orthographic ambiguity; the Ancient Egyptian culture is currently extinct and thus does not advantage current day Egyptians over any other culture; the historical origin adds an extra layer of symbolism and cultural depth which in no way interferes with practical use; and frankly, we are of the opinion that it looks quite cool. 
 
-As we will see in the next part, the glyphs can be made on the computer using \TeX\footnote{We will talk more of \TeX\ shortly.}. This also is true of cartouches. A cartouche can be made by simply saying \cartouche{name}. For example, the \TeX\ code  {\tt \symbol{92}cartouche\{Utrecht\}} produces \cartouche{Utrecht}\footnotemark.
+As we will see in the next part, the glyphs can be made on the computer using \TeX\footnote{We will talk more of \TeX shortly.}. This also is true of cartouches. A cartouche can be made by simply saying \cartouche{name}. For example, the \TeX\ code  {\tt \symbol{92}cartouche\{Utrecht\}} produces \cartouche{Utrecht}\footnotemark  
 
 \footnotetext{Utrecht = UT-LEK-T }
 
@@ -471,7 +467,9 @@ To print any of the Atlan glyphs in \TeX\, you load in the package {\tt Atlan.st
 
 Then, our numeral glyphs rely on Lua\LaTeX\, a more potent version of \TeX. The command, again, is straightforward. You simply state \texttt{\\numbr\{<number>\footnotemark\}}. \footnotetext{Due to the nature of our numeric system, the biggest number you can fill in, is 9999.}  An example of the command: \texttt{\symbol{92}numbr\{321\}} produces \numbr{321}.  
 
-Then, of course, this book is typeset in \TeX . We could have made it easier for ourselves. But, typesetting with \TeX\ was worth the effort. We are proud of what we have made; both content- and appearance-wise.    
+Then, of course, this book is typeset in \TeX\. We could have made it easier for ourselves. But, typesetting with \TeX\ was worth the effort. We are proud of what we have made; both content- and appearance-wise.    
 
 
-\vfill
+
+
+

@@ -1,6 +1,5 @@
-\section{Introduction}
 
-According to research by First Education (2022), the Dutch are positioned as the most proficient English-speaking population globally. Other countries that achieved a position in the top 10 ranking were Denmark, Belgium, Sweden, Finland, and Germany. While a proud Dutchman may attribute this success to hard work and dedication, it is worth considering other factors that could be at play here. Notably, these countries with commendable English proficiency are all located in North Europe and speak very similar languages.  
+\lettrine{A}{ccording} to research by First Education (2022), the Dutch are positioned as the most proficient English-speaking population globally. Other countries that achieved a position in the top 10 ranking were Denmark, Belgium, Sweden, Finland, and Germany. While a proud Dutchman may attribute this success to hard work and dedication, it is worth considering other factors that could be at play here. Notably, these countries with commendable English proficiency are all located in North Europe and speak very similar languages.  
 
 Linguistics offers a unique perspective on the relationships between different languages. By comparing the vocabulary, grammar and sound systems of various languages, researchers have identified related language families and have constructed language family trees to illustrate the evolution and divergence of languages over time. Thanks to that research, we know that many countries with notable position in the English Proficiency Index share a common linguistic background. Such a linguistic background, or language family, thus may provide a foundation for proficiency in a new language. 
 
@@ -8,7 +7,7 @@ This would imply that certain languages are easier to learn for certain populati
 
 To achieve this, it is first key to create some understandings of what methods are used to compare different languages. Therefore, we will take a closer look at the so-called cosine similarity. Thereafter, it is necessary to conduct an examination of the existing language families that exist. In that way, we gain a deeper insight into the connections between existing natural languages. In addition, with that gained understanding, it is possible to decide which language we will make available in contributing to the process of cognate finding. The most spoken languages are weighed against each other to create a dataset that is representative of the real world. All these pieces of the puzzle come together in the final part of this chapter, where the computer program that we used to generate words in Atlan will be discussed.
 
-\section{Comparison methods and language families -- {\small Jep Antonisse}}
+\section{Comparison methods and language families}
 
 \subsection{Cosine Similarity}
 
@@ -42,7 +41,10 @@ To achieve this, it is first key to create some understandings of what methods a
  \noindent This table can be visualized in a two-dimensional array, where on each axis the count of a word is represented. Now both texts can be placed as a dot on this grid accordingly. Drawing two lines from each point to the origin of the grid creates an angle between those lines. This angle at the origin can be calculated, in this case it would be 45$^{\circ}$ . To finish the cosine similarity, all that is needed now is to take the cosine of this angle, in this example \textit{cos (45)} = 0.71. 
 
 
-%%%%AFBEELDING
+\begin{center}
+	\includegraphics[scale=0.8]{./Images/graphs.jpg}
+	{\it \footnotesize Figure 6.1: Graph depicting word-appearance}
+\end{center}
 
 If the compared sentences are identical, the two dots would be placed on the same place in the grid. Thus, the lines towards the origin would fall precisely over each other. Therefore, the angle between both lines would be 0$^{\circ}$, resulting in a cosine score of \textit{cos (0) = 1.} On the other hand, if both sentences have not a single element in common, the lines would be perpendicular to each other. With an angle of 90$^{\circ}$, the cosine similarity would return \textit{cos (90) = 0.} Thus, in any case, the cosine similarity gives a score between 0 and 1, showing the degree of similarity. 
 
@@ -61,13 +63,16 @@ As another example, let’s compare two words: \textit{‘Bert’} to \textit{�
 {\it \footnotesize Table 6.2: Letter frequency in the words \lq\lq Bert" and \lq\lq Ernie".}
 \end{center}
 
-\begin{samepage}
 \noindent With six different letters occurring, it would be possible to place both \textit{‘Bert’} and \textit{‘Ernie’} in a six-dimensional grid and draw the lines to the origin. However, it is impossible for humans to visualize a six-dimensional graph. Thus, we need a new way to calculate the angle between the two vectors. Luckily, there exists a formula to compute the cosine similarity. 
 
 \begin{center}
-\includepdf[scale=0.5]{./Mainmatter/sum.pdf}
+\includegraphics[scale=0.2]{./Images/cosine.jpeg}
 \end{center}
-\end{samepage}
+
+%\begin{center}
+%\includepdf[scale=0.5]{./Mainmatter/sum.pdf}
+%\end{center}
+%\end{samepage}
 
 %\begin{equation}
 %Cosine~ similarity~ A, ~B = \frac{\sum_{i=1}^{n} A_i B_i}{\sqrt{\sum_{i=1}^{n} A_i^2 \sqrt{\sum_{i=1}^{n} B_i^2}}}
@@ -75,9 +80,15 @@ As another example, let’s compare two words: \textit{‘Bert’} to \textit{�
 
 In less mathematical terms, what this means is that each element of the two vectors A and B are compared. The products of all the elements are then summed up and divided by the length of both the vectors together. If we fill in the numbers for our Bert-Ernie-comparison, it will look like this: 
 
-\begin{equation}
+%\resizebox{1\textwidth}{!}{
+{\small
+%\begin{equation}
+	\[
 	\frac{1 \times 2 + 1 \times 1 + 1 \times 0 + 1 \times 0 + 0 \times 1 + 1 \times 0}{\sqrt{2^2 + 1^2 + 1^2 + 1^2 + 0^2 + 0^2 \sqrt{1^2 + 1^2 + 0^2 + 0^2 + 1^2 + 1^2}}} = 0.56
-\end{equation}
+\]
+%\end{equation}
+%}
+}
 
 Nevertheless, converting the words based solely on letter frequency inadvertently results in losing vital information about the arrangement of the letters. This preservation is of utmost importance for our project since we try to find patterns and therefore adjacent letter combinations. To address this concern, we introduced a slight adjustment to the regular cosine similarity, where each index with the same character in both words also scores a small point. In this way, our cosine similarity tries to reward words that have the same letters on the same place.
 
@@ -115,13 +126,15 @@ Also, if the desired distribution should resemble the distribution of the real w
 
 Now we will create a \textit{language set} or \textit{data set}, with in it all the languages we want to find cognates in. It is important that the cognate and the Atlan word has the same meaning in all these languages: otherwise, it might find similar looking words, but with different meanings in different languages, which are known as \textit{false cognates}. These cognates are not a sign of a common ancestor but rather a display of randomness and luck. Also, these false cognates are the hardest words to learn in a new language, even harder than non-cognate words (Otwinowska et al., 2018), thus we should avoid creating those in Atlan if we can. Therefore, we should be able to control the meaning of the words in other languages. 
 
-Hence, we need translation software. We will use the public available library called Googletrans (3.0.0). This software supports translation into 107 different languages. Since we desire the same significance the language set of Lojban had, we can analyze which of these languages are present in the list of the 100 most spoken languages. The result can be viewed in table 6.3, along with some information about each language.
+Hence, we need translation software. We will use the public available library called Googletrans (3.0.0). This software supports translation into 107 different languages. Since we desire the same significance the language set of Lojban had, we can analyze which of these languages are present in the list of the 100 most spoken languages. The result can be viewed in these tables: 
 
 \newcounter{tablecount}
 \setcounter{tablecount}{1}
 
 \resizebox{1\textwidth}{!}{
 \begin{tabular}{|c|c|c|c|c|}
+	\hline
+	{\bf Number} & 
 	{\bf Language } &
 	
 
@@ -590,12 +603,14 @@ Nepali &
 	
 
 Indo-European \\
+\hline
 \end{tabular}
 }
 
 \resizebox{1\textwidth}{!}{
 \begin{tabular}{|c|c|c|c|c|}
-
+\hline
+	{\bf Number} & 
 	{\bf Language } &
 	
 
@@ -823,6 +838,7 @@ Hungarian &
 	
 
 Uralic \\
+\hline
 
 \end{tabular}
 }
@@ -843,8 +859,10 @@ Now there are three languages to add left for the other underrepresented languag
 
 For Afroasiatic we can translate into Hebrew and Maltese, both Semitic languages. Thus, we don’t need to make any choices here. In the Niger-Congo family we can choose between Shona, Sesotho and Chichewa. Since they are all the same branch, we choose the one with the most speakers, which is Chichewa.   
 
+\begin{center}
 \resizebox{1\textwidth}{!}{
 \begin{tabular}{|c|c|c|c|}
+	\hline
 	{\bf Language } &
 	
 
@@ -856,6 +874,7 @@ For Afroasiatic we can translate into Hebrew and Maltese, both Semitic languages
 	
 
 	\thead{\bf Language family \\  \bf of the language} \\
+	\hline
 
 	Hmong &
 	
@@ -903,36 +922,41 @@ Niger-Congo \\
 \end{tabular}
 }
 
+\vspace{0.1cm}
 {\it \footnotesize Table 6.4: Information about the new languages chosen for the dataset.}
+\end{center}
 
 \noindent With this modification to set $\alpha$, we have a new set of languages, we can call language set . By calculating the errors again for each language family, we can see that the error measure now averages to an amazing 1.83. Meaning that on average a family is 1.1 language off from the real distribution. These are distributions that are very realistic to the real world. 
 
-\vspace{0.3cm}
-
+\begin{center}
+%	\begin{adjustbox}{angle=90}
 \resizebox{1\textwidth}{!}{
+	\large
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
+	\hline
 	{\bf Language family} &
 	
 
-\thead{\bf Frequency in the \\ \bf 100 most spoken \\ \bf languages}& 
+\thead{\bf \footnotesize Frequency in the \\ \bf 100 most spoken \\ \bf languages}& 
 	
 
-\thead{\bf Frequency in the \\ \bf $\alpha$ set} & 
+\thead{\bf \footnotesize Frequency in the \\ \bf $\alpha$ set} & 
 	
 
-\thead{ \bf Percentage in the \\ \bf $\alpha$ set }& 
+\thead{ \bf \footnotesize Percentage in the \\ \bf $\alpha$ set }& 
 	
 
-\thead{\bf Error in the \\ \bf $\alpha$ set} & 
+\thead{\bf \footnotesize Error in the \\ \bf $\alpha$ set} & 
 	
 
-\thead{\bf Frequency in the \\ \bf $\beta$ set} & 
+\thead{\bf \footnotesize Frequency in the \\ \bf $\beta$ set} & 
 	
 
-\thead{\bf Percentage in the \\ \bf $\beta$ set}& 
+\thead{\bf \footnotesize Percentage in the \\ \bf $\beta$ set}& 
 	
 
-\thead{\bf Error in the \\ \bf  $\beta$ set}\\ 
+\thead{\bf \footnotesize Error in the \\ \bf  $\beta$ set}\\ 
+\hline
 
 Indo-European & 
 	
@@ -1189,12 +1213,12 @@ Kra-Dai &
 
 \end{tabular}
 }
-
+%\end{adjustbox}
+\vspace{0.1cm}
 {\it \footnotesize Table 6.5: Frequencies of languages families in different language sets}
+\end{center}
 
-\vspace{0.3cm}
-
-\noindent To visually represent the diversity within this set, we provide you with figure 6.4. Each non-blue country in the figure is associated with at least one official or national language present in the dataset. The handful of blue countries indicate the absence of certain languages.  
+\noindent To visually represent the diversity within this set, we provide you with the following map. Each non-blue country in the figure is associated with at least one official or national language present in the dataset. The handful of blue countries indicate the absence of certain languages.  
 
 \begin{center}
 \includegraphics[scale=0.4]{./Images/worldatlas.jpg}
@@ -1212,7 +1236,7 @@ We can do the same observation for the blue countries outside of Europe. Persian
 
 Consequently, the only countries in the world for which there lacks any indication of a Proto-Language connection between their national language and our dataset are Greenland and Armenia. Greenlandic, being an Inuit-language, and Armenian, being a language isolate, show too little similarities with other languages. However, the population of these countries would be less than 4 million people, which accounts for less than 0.05% of the global population of 8 billion people. 
 
-\textbf{Weights} 
+\subsection{Weights}
 
 As discussed previously, the source languages of Lojban with more native speakers were deemed more important (Cowan, 1997). Consequently, the scoring system slightly favored languages with higher wights, which seems justifiable as it benefits a larger number of individuals. However, the approach employed by Lojban only focused on the number of native speakers of the given language: Chinese had a larger weight then English. The existence of secondary speakers was completely disregarded. 
 
@@ -1220,7 +1244,7 @@ The difference between a native and a secondary speaker is the fact that a nativ
 
 As a result, we contend that secondary speakers should not be forgotten and should even be given relatively more weight than native speakers. As a result, the number of total speakers is calculated by 0.4 times the native speakers and 0.6 times the secondary speakers. Subsequently, these adjusted totals are then normalized to obtain the final weights. This way, the largest language contributes the most to the product. 
 
-\noindent \textit{Lexi and her workings} 
+\subsection{Lexi and her workings}
 
 \noindent With consensus on the dataset and the weights, the time has come to explain how Lexi generates words from all these languages. Lexi is designed to take an English word as input to start the process. This is very important, because there is only a very select group of unreducible words that need to be generated this way. By taking a meaning as input, we prevent that it generates words we do not want and control the meaning of the new Atlan word. 
 
@@ -1228,7 +1252,7 @@ This word is then translated into all the languages that make up the trainings s
 
 After the constraints of comparison were a bit hardened by this modification, it is possible to soften them now again. That is, because Atlan reduces the number of vowels drastically. This has as a result that certain sounds that are viewed differently in our languages, can only refer to one and the same letter in Atlan. That means that this sound can be viewed as the same in comparison. To achieve this, Lexi can map each IPA sound to the letter it would represent in Atlan, according to the rules discussed in the phonology-chapter. This creates a list with the transcriptions of how the translations would sound in Atlan.  
 
-The only task that is left now is to find the patterns in this set. Since these patterns will form the new Atlan word, it is certain they will always follow one of three patterns: either consonant-vowel-consonant (CVC), consonant-vowel (CV) or vowel-consonant (VC). We can look at possible candidates for this pattern by splitting each translation up into every possible combination that follows one of these patterns. This way, Lexi provides a dataset of candidates of the patterns, made up from small parts of natural language translations. 
+The only task that is left now is to find the patterns in this set. Since these patterns will form the new Atlan word, it is certain they will always follow one of three patterns: either con-sonant-vowel-consonant (CVC), consonant-vowel (CV) or vowel-consonant (VC). We can look at possible candidates for this pattern by splitting each translation up into every possible combination that follows one of these patterns. This way, Lexi provides a dataset of candidates of the patterns, made up from small parts of natural language translations. 
 
 If we calculate the similarity between every possible pattern and the transcribed translations, we can get the pattern that resembles the words best. However, to simulate the natural way of words generation a bit better, we experiment with some algorithms to make sure we pick the best word, such as evolutionary computing. 
 

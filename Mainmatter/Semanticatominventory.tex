@@ -1,5 +1,6 @@
 \newcounter{lexi}
 \setcounter{lexi}{1}
+\newcolumntype{x}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
 \footnotesize
 \renewcommand{\corpsgrootte}{10pt}
@@ -13,14 +14,15 @@
 %	\hline
 %	\end{tabular}
 %}
-
+\begin{center}
 \resizebox{1\textwidth}{!}{ \footnotesize
-	\begin{tabular}{|l|c|c|}
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+	%\begin{tabular}{|l|c|c|}
 	\hline
 		\multicolumn{3}{|c|}{{\bf MORPHOSYNTAX (V,CV,VC)}}\\
 		\multicolumn{3}{|c|}{{\bf MOOD MARKERS}}\\ 
 	\hline
-		\thead{\thelexi.\stepcounter{lexi} Exclamative/ \\
+		\thelexi.\stepcounter{lexi} Exclamative/ \\
 		imperative/vocative \\
 		expletive} & O & \Atlano \\	
 		\thelexi.\stepcounter{lexi} Interrogative & E & \Atlane \\	
@@ -30,23 +32,29 @@
 	\hline
 	\end{tabular}
 }
+\end{center}
 
-\resizebox{1\textwidth}{!}{ \footnotesize
-	\begin{tabular}{|l|c|c|}
+
+\footnotesize
+%\resizebox{1\textwidth}{!}{
+{ \footnotesize
+\begin{center}
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth}|cx{0.2\textwidth}|}
 	\hline
-	\multicolumn{3}{|c|}{LOGICAL OPERATORS}\\
+	\multicolumn{3}{|c|}{\bf LOGICAL OPERATORS}\\
 	\hline
 		\thelexi.\stepcounter{lexi} Conjunction (and, $\wedge$) & AN & \an \\	
 		\thelexi.\stepcounter{lexi} Disjunction (or, $\vee$) & OL & \ol \\	
-		\thead{\thelexi.\stepcounter{lexi} Conditional (if, $\rightarrow$,\\ {\it ceteris paribus)}} & IF & \Atlanif \\	
-		\thead{\thelexi.\stepcounter{lexi} Conclusion (thus, \\ therefore $\therefore$)} & IS & \is \\	
-		\thead{\thelexi.\stepcounter{lexi} Negation (not, $\neg$) \\ Sentential and \\ predicate scope} & NE & \Atlanne \\	
-		\thead{\thelexi.\stepcounter{lexi}Some ($\exists$, -few\\ +many)} & SO & \so \\	
+		\thelexi.\stepcounter{lexi} Conditional (if, $\rightarrow$, {\it ceteris paribus)} & IF & \Atlanif \\	
+		\thelexi.\stepcounter{lexi} Conclusion (thus,  therefore $\therefore$) & IS & \is \\	
+		\thelexi.\stepcounter{lexi} Negation (not, $\neg$)  Sentential and predicate scope & NE & \Atlanne \\	
+		\thelexi.\stepcounter{lexi}Some ($\exists$, -few +many) & SO & \so 	\\
 		\thelexi.\stepcounter{lexi} Possible ($\diamond$) & PE & \pe \\	
 		\thelexi.\stepcounter{lexi} Necessary ($\square$) & SE & \se \\	
 	\hline
 	\end{tabular}
-}
+\end{center}
+%}
 
 \def\tabb#1{\thead{\thelexi.\stepcounter{lexi} #1}}
 \resizebox{1\textwidth}{!}{ \footnotesize

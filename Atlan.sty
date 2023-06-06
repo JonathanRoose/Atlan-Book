@@ -69,10 +69,12 @@
 		}
 	}
 
-\newtcbox{\cartouche}{on line,
+\newtcbox{\cartouchebox}{on line,
 arc=3pt,colback=white,colframe=black,
-before upper={\rule[-3pt]{0pt}{10pt}},boxrule=2pt,
-boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=.5pt}
+before upper={\rule[-3pt]{0pt}{7pt}},boxrule=2pt,
+boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=0.5pt}
+
+\def\cartouche#1{\renewcommand{\corpsgrootte}{12.5pt}\cartouchebox{#1}\restorecorps}
 
 
 %%%%%%%%%%%%%%%%%%%%%Lines%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1078,13 +1080,15 @@ boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=.5pt}
 
 %Komma
 
-\def\comma{\setbox0=\hbox{\kern-0.4em\DeclareStroke{(1.75, -2.5) to [bend left = -50] (5.75, -2.5)}}\kern-0.5em\box0}
+\def\comma{\setbox0=\hbox{\kern0.4em\hbox{\DeclareStroke{(1.75, 0) to [bend left = -50] (5.75, 0)}}}\kern-0.5em\box0}
 
 %\DeclareStroke{(1.75, -2.5)
 
 %Punt
 
-\DefineLetter{\period}{\DeclareStroke{(1.75, -2.5) to [bend left = 50] (5.75, -2.5)}}
+\def\period{\setbox0=\hbox{\kern1.4em\hbox{\DeclareStroke{(1.75, -2.5) to [bend left = 50] (5.75, -2.5)}}}\box0}
+
+%\DefineLetter{\period}{\DeclareStroke{(1.75, -2.5) to [bend left = 50] (5.75, -2.5)}}
 
 
 
