@@ -74,7 +74,8 @@ arc=3pt,colback=white,colframe=black,
 before upper={\rule[-3pt]{0pt}{7pt}},boxrule=2pt,
 boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=0.5pt}
 
-\def\cartouche#1{\renewcommand{\corpsgrootte}{12.5pt}\cartouchebox{#1}\restorecorps}
+\def\cartoucheraise{0.15em}
+\def\cartouche#1{\renewcommand{\corpsgrootte}{12.5pt}\raisebox{\cartoucheraise}{\cartouchebox{#1}\restorecorps}\restorecorps}
 
 
 %%%%%%%%%%%%%%%%%%%%%Lines%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -369,7 +370,7 @@ boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=0.5pt}
 
 %\def\DefineLetter#1#2{\def#1{\setbox0=\hbox{\lower.2em\hbox{#2}} \box0}}
 %\def\DefineLetter#1#2{\def#1{#2}}
-\def\DefineLetter#1#2{\def#1{\raisebox{-0.15em}{#2}}}
+\def\DefineLetter#1#2{\def#1{\kern-0.15em\raisebox{-0.15em}{#2}\kern-0.15em}}
 
 %%%%%%%%%%%%%%%%%%%%%%Letters%%%%%%%%%%%%%%%%%%%%%%%%%%%351-1241
 
