@@ -1105,67 +1105,94 @@ boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=0.5pt}
 \def\singleright{(10,1.125)}
 \def\singleup{(7.5, 5)}
 \def\singlerightup{(10,5)}
+\def\singlemid{(8.625,5)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\singleone{\singleright -- \singlerightup;}
 \def\singletwo{\single -- \singleup;}
-\def\singlethree{\single -- \singlerightup;}
-\def\singlefour{\singleup-- \singleright;}
-\def\singlefive{\singleup-- \single -- \singlerightup;}
-\def\singlesix{\single -- \singleright;}
-\def\singleseven{\single -- \singleright -- \singlerightup;}
-\def\singleeight{\singleup-- \single -- \singleright;}
-\def\singlenine{\singleup-- \single -- \singleright -- \singlerightup;}
+%\def\singlethree{\single -- \singlerightup;}
+\def\singlethree{\single -- \singleright;}
+\def\singlefour{\single -- \singleright -- \singlerightup;}
+%\def\singlefour{\singleup-- \singleright;}
+\def\singlefive{\singlemid -- (8.625,1.125) -- \single -- \singleright;}
+%\def\singlesix{\single -- \singleright;}
+\def\singlesix{\singleup-- \single -- \singleright;}
+\def\singleseven{\singleup-- \single -- \singleright -- \singlerightup;}
+%\def\singleseven{\single -- \singleright -- \singlerightup;}
+%\def\singleeight{\singleup-- \single -- \singleright;}
+\def\singleeight{\singleup-- \singleright;}
+%\def\singlenine{\singleup-- \single -- \singleright -- \singlerightup;}
+\def\singlenine{\single -- \singlerightup;}
+%Duodecimal
+\def\singleddten{\singleup-- \single -- \singlerightup;}
+\def\singleddeleven{(8.625,5) -- \single -- \singleright -- (8.625,5);}
 
 
 \def\double{(7.5,8.625)}
 \def\doubleright{(10,8.625)}
 \def\doubleup{(7.5,5)}
 \def\doublerightup{(10,5)}
+\def\doublemid{(8.625,5)}
+\def\doublemidup{(8.625,8.625)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\tripleone{\doubleright -- \doublerightup;}
 \def\tripletwo{\double -- \doubleup;}
-\def\triplethree{\double -- \doublerightup;}
-\def\triplefour{\doubleup-- \doubleright;}
-\def\triplefive{\doubleup-- \double -- \doublerightup;}
-\def\triplesix{\double -- \doubleright;}
-\def\tripleseven{\double -- \doubleright -- \doublerightup;}
-\def\tripleeight{\doubleup-- \double -- \doubleright;}
-\def\triplenine{\doubleup-- \double -- \doubleright -- \doublerightup;}
+\def\triplethree{\double -- \doubleright;}
+\def\triplefour{\double -- \doubleright -- \doublerightup;}
+\def\triplefive{\doublemid -- \doublemidup -- \double -- \doubleright;}
+\def\triplesix{\doubleup-- \double -- \doubleright;}
+\def\tripleseven{\doubleup-- \double -- \doubleright -- \doublerightup;}
+\def\tripleeight{\doubleup-- \doubleright;}
+%\def\triplenine{\doubleup-- \double -- \doubleright -- \doublerightup;}
+\def\triplenine{\double -- \doublerightup;}
 
+\def\tripleddten{\doubleup-- \double -- \doublerightup;}
+\def\tripleddeleven{\doublemid -- \doubleup -- \doublerightup -- \doublemid;}
 
 
 \def\triple{(0,1.125)}
 \def\tripleright{(-2.5,1.125)}
 \def\tripleup{(0,5)}
 \def\triplerightup{(-2.5,5)}
+\def\triplemid{(-1.25,5)}
+\def\triplemidup{(-1.25,1.125)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\doubleone{\tripleright -- \triplerightup;}
 \def\doubletwo{\triple -- \tripleup;}
-\def\doublethree{\triple -- \triplerightup;}
-\def\doublefour{\tripleup-- \tripleright;}
-\def\doublefive{\tripleup-- \triple -- \triplerightup;}
-\def\doublesix{\triple -- \tripleright;}
-\def\doubleseven{\triple -- \tripleright -- \triplerightup;}
-\def\doubleeight{\tripleup-- \triple -- \tripleright;}
-\def\doublenine{\tripleup-- \triple -- \tripleright -- \triplerightup;}
+\def\doublethree{\triple -- \tripleright;}
+\def\doublefour{\triple -- \tripleright -- \triplerightup;}
+\def\doublefive{\triplemid -- \triplemidup -- \triple -- \tripleright;}
+\def\doublesix{\tripleup-- \triple -- \tripleright;}
+\def\doubleseven{\tripleup-- \triple -- \tripleright -- \triplerightup;}
+%\def\doubleeight{\tripleup-- \triple -- \tripleright;}
+\def\doubleeight{\tripleup-- \tripleright;}
+%\def\doublenine{\tripleup-- \triple -- \tripleright -- \triplerightup;}
+\def\doublenine{\triple -- \triplerightup;}
 
+\def\doubleddten{\tripleup-- \triple -- \triplerightup;}
+\def\doubleddeleven{\triplemid -- \tripleright -- \triple -- \triplemid;}
 
 
 \def\quadruple{(0,8.625)}
 \def\quadrupleright{(-2.5,8.625)}
 \def\quadrupleup{(0,5)}
 \def\quadruplerightup{(-2.5,5)}
+\def\quadruplemid{(-1.25,5)}
+\def\quadruplemidup{(-1.25,8.625)}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\quadrupleone{\quadrupleright -- \quadruplerightup;}
 \def\quadrupletwo{\quadruple --\quadrupleup;}
-\def\quadruplethree{\quadruple --\quadruplerightup;}
-\def\quadruplefour{\quadrupleup--\quadrupleright;}
-\def\quadruplefive{\quadrupleup--\quadruple --\quadruplerightup;}
-\def\quadruplesix{\quadruple --\quadrupleright;}
-\def\quadrupleseven{\quadruple --\quadrupleright --\quadruplerightup;}
-\def\quadrupleeight{\quadrupleup--\quadruple --\quadrupleright;}
-\def\quadruplenine{\quadrupleup--\quadruple --\quadrupleright --\quadruplerightup;}
+\def\quadruplethree{\quadruple --\quadrupleright;}
+\def\quadruplefour{\quadruple --\quadrupleright --\quadruplerightup;}
+\def\quadruplefive{\quadruplemid -- \quadruplemidup -- \quadruple -- \quadrupleright;}
+\def\quadruplesix{\quadrupleup--\quadruple --\quadrupleright;}
+\def\quadrupleseven{\quadrupleup--\quadruple --\quadrupleright --\quadruplerightup;}
+%\def\quadrupleeight{\quadrupleup--\quadruple --\quadrupleright;}
+\def\quadrupleeight{\quadrupleup--\quadrupleright;}
+%\def\quadruplenine{\quadrupleup--\quadruple --\quadrupleright --\quadruplerightup;}
+\def\quadruplenine{\quadruple --\quadruplerightup;}
 
+\def\quadrupleddten{\quadrupleup--\quadruple --\quadruplerightup;}
+\def\quadrupleddeleven{\quadruplemid -- \quadruple -- \quadrupleright -- \quadruplemid;}
 %%%%%%%%%NUMERIC CMD%%%%%%%%%%%%%%%%%%
 
 

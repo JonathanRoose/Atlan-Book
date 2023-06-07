@@ -1,9 +1,11 @@
+\renewcommand{\numberraise}{-0.15em}
 \newcounter{lexi}
 \setcounter{lexi}{1}
 \newcolumntype{x}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
+\def\tabb#1{\thelexi.\stepcounter{lexi} #1}
 
 \footnotesize
-\renewcommand{\corpsgrootte}{10pt}
+\renewcommand{\corpsgrootte}{12pt}
 
 %\resizebox{1\textwidth}{!}{ \footnotesize
 %	\begin{tabular}{|l|c|c|}
@@ -15,30 +17,44 @@
 %	\end{tabular}
 %}
 \begin{center}
-\resizebox{1\textwidth}{!}{ \footnotesize
-	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+	\resizebox{1\textwidth}{!}{
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth}|cx{0.2\textwidth}|}
 	%\begin{tabular}{|l|c|c|}
 	\hline
 		\multicolumn{3}{|c|}{{\bf MORPHOSYNTAX (V,CV,VC)}}\\
+		\hline
 		\multicolumn{3}{|c|}{{\bf MOOD MARKERS}}\\ 
 	\hline
-		\thelexi.\stepcounter{lexi} Exclamative/ \\
-		imperative/vocative \\
-		expletive} & O & \Atlano \\	
+		\thelexi.\stepcounter{lexi} Exclamative/ 
+		imperative/ \newline vocative 
+		expletive & O & \Atlano \\	
 		\thelexi.\stepcounter{lexi} Interrogative & E & \Atlane \\	
 		\thelexi.\stepcounter{lexi} Subjunctive & U & \\	
-		\thelexi.\stepcounter{lexi} Stress & A + prosodic stress & \Atlana\\	
-		\thelexi.\stepcounter{lexi} Relative clause & I (+ pronoun) & \Atlani \\	
+		\thelexi.\stepcounter{lexi} Stress & A \newline + prosodic stress & \Atlana\\	
+		\thelexi.\stepcounter{lexi} Relative clause & I \newline (+ pronoun) & \Atlani \\	
 	\hline
 	\end{tabular}
 }
+
+	%\begin{tabular}{|l|c|c|}
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+	\hline
+		\multicolumn{3}{|c|}{{\bf TENSE/ASPECT MARKERS}}\\
+	\hline
+		\tabb{Past} & PA & \pa \\
+		\tabb{Future} & FE & \fe \\
+		\tabb{Beginning} & KA & \ka \\
+		\tabb{Perfective} & NI & \Atlanni\\
+		\tabb{Progressive} & PO & \po\\
+		\tabb{Passive} & PI & \Atlanpi\\
+	\hline
+	\end{tabular}
+
 \end{center}
 
-
 \footnotesize
-%\resizebox{1\textwidth}{!}{
-{ \footnotesize
 \begin{center}
+\resizebox{1\textwidth}{!}{
 	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth}|cx{0.2\textwidth}|}
 	\hline
 	\multicolumn{3}{|c|}{\bf LOGICAL OPERATORS}\\
@@ -53,62 +69,52 @@
 		\thelexi.\stepcounter{lexi} Necessary ($\square$) & SE & \se \\	
 	\hline
 	\end{tabular}
+	}
 \end{center}
-%}
 
-\def\tabb#1{\thead{\thelexi.\stepcounter{lexi} #1}}
-\resizebox{1\textwidth}{!}{ \footnotesize
-	\begin{tabular}{|l|c|c|}
+
+%\resizebox{1\textwidth}{!}{ \footnotesize
+	%\begin{tabular}{|l|c|c|}
+\begin{center}
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
 	\hline
 		\multicolumn{3}{|c|}{{\bf SYNTACTICAL MARKERS}}\\
 	\hline
-		\thead{\thelexi.\stepcounter{lexi} Accusative (affected \\ thing/person, object, + verb = \\ transitive } & EK & \ek \\	
-		\tabb{Genitive (possession, \\ + verb = to have)} & TA & \ta \\
-		\tabb{Dative (receptive, \\ benifice)} & LO & \lo \\
-		\tabb{Instrumental (tool, \\ method etc.)} & UT & \ut \\
-		\tabb{Nominal (noun, \\ definite object \\ loanword, name\\ (cartouche))} & NA & \na \\
-		\tabb{Plural (suffix) \\ many} & ON & \on \\
-		\tabb{Verb \\ to do $x$} TU \tu \\
-		\tabb{Predicate (being, \\ identity, attribute, \\ adjective (behind \\ noun) \\ adverbs (behind \\ verb))} & SI & \si \\
+	\thelexi.\stepcounter{lexi} Accusative (affected thing/person, object, + verb = transitive  & EK & \ek \\	
+		\tabb{Genitive (possession,  + verb = to have)} & TA & \ta \\
+		\tabb{Dative (receptive,  benifice)} & LO & \lo \\
+		\tabb{Instrumental (tool,  method etc.)} & UT & \ut \\
+		\tabb{Nominal (noun,  definite object, \newline loanword, name\newline (cartouche))} & NA & \na \\
+		\tabb{Plural (suffix)  many} & ON & \on \\
+		\tabb{Verb  to do $x$} & TU & \tu \\
+		\tabb{Predicate (being,  identity, attribute, \newline  adjective (behind noun) adverbs (behind  verb))} & SI & \si \\
 		\tabb{Metaphor} & MU & \Atlanmu\\
 	\hline
 	\end{tabular}
-}
 
-
-\resizebox{1\textwidth}{!}{ \footnotesize
-	\begin{tabular}{|l|c|c|}
-	\hline
-	\multicolumn{3}{|c|}{TENSE/ASPECT MARKERS}\\
-	\hline
-		\tabb{Past} & PA & \pa \\
-		\tabb{Future} & FE & \fe \\
-		\tabb{Beginning} & KA & \ka \\
-		\tabb{Perfective} & NI & \Atlanni\\
-		\tabb{Progressive} & PO & \po\\
-		\tabb{Passive} & PI & \Atlanpi\\
-	\hline
-	\end{tabular}
-}
+	\end{center}
 
 
 
-\resizebox{1\textwidth}{!}{ \footnotesize
-	\begin{tabular}{|l|c|c|}
+
+
+\begin{center}
+	%\begin{tabular}{|l|c|c|}
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
 	\hline
-	\multicolumn{3}{|c|}{PREPOSITIONS}\\
+		\multicolumn{3}{|c|}{{\bf PREPOSITIONS}}\\
 	\hline
-		\tabb{Coordinate: at \\ (time/place)} & ET & \et \\
+		\tabb{Coordinate: at  (time/place)} & ET & \et \\
 		\tabb{Left (+earth=west)} & LA & \la \\
 		\tabb{Right (+earth=east)} & TI & \ti\\
 		\tabb{In front (time:before)} & EN & \en\\
 		\tabb{Behind (time:after)} & IT & \Atlanit \\
-		\tabb{Next to \\ (right and left)} & KE & \ke\\
+		\tabb{Next to  (right and left)} & KE & \ke\\
 		\tabb{Above} & EF & \ef \\
 		\tabb{On} & AF & \af\\
 		\tabb{Under, below} & OT & \ot\\
-		\tabb{Inside \\ (+time=during)} & IN & \Atlanin \\
-		\tabb{Via, through} & LE & \le\\
+		\tabb{Inside  (+time=during)} & IN & \Atlanin \\
+		\tabb{Via, through} & LE & \Atlanle\\
 		\tabb{Outside} & AP & \ap\\
 		\tabb{Surrounding} & AL & \al\\
 		\tabb{In between} & MI & \mi\\
@@ -117,79 +123,86 @@
 		\tabb{Horizontal} & IL &\il\\
 		\tabb{Vertical} & TE & \te\\
 		\tabb{Sagittal} & SA & \sa\\
-		\tabb{Direction (of \\ movement, \\ combine \\coordinates x \\ to y} & LI & \li\\
-		\tabb{Range \\ (until, up to)} & TO & \Atlanto\\
+		\tabb{Direction (of  movement,  combine coordinates x  to y} & LI & \li\\
+		\tabb{Range (until, up to)} & TO & \Atlanto\\
 		\tabb{Division: per} & EP &\ep\\
 		\tabb{Clockwise} & AK & \ak\\
 	\hline
 	\end{tabular}
-}
+
+\end{center}
 
 
-\resizebox{1\textwidth}{!}{ \footnotesize
-	\begin{tabular}{|l|c|c|}
+\begin{center}
+	%\begin{tabular}{|l|c|c|}
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
 	\hline
-	\multicolumn{3}{|c|}{NUMBERS}\\
+		\multicolumn{3}{|c|}{{\bf NUMBERS}}\\
 	\hline
-		\tabb{One} & IP & \thead{\ip \\ \numbr{1}}\\
-		\tabb{Two} & OP & \thead{\op \\ \numbr{2}}\\
-		\tabb{Three} & UP & \thead{\up \\ \numbr{3}}\\
-		\tabb{Four} & IK & \thead{\ik \\ \numbr{4}}\\
-		\tabb{Five} & OK & \thead{\ok \\ \numbr{5}}\\
-		\tabb{Six} &  UK & \thead{\uk \\ {\numbr{6}}}\\
-		\tabb{Seven} &  IM & \thead{\im \\ \numbr{7}}\\
-		\tabb{Eight} & OM & \thead{\om \\ \numbr{8}}\\
-		\tabb{Nine} & UM & \thead{\om \\ \numbr{9}}\\
-		\tabb{Ten} & JI & \thead{\ji \\ \numbr{10}}\\
-		\tabb{Eleven} & JO & \thead{\jo \\ \numbr{11}}\\
-		\tabb{Twelve} & JU & \thead{\ju \\ \numbr{12}}\\
-		\tabb{Hundred (base 10) \\ /144 (base 12)} & NO & \thead{\no}\\
-		\tabb{Thousand (base 10) \\ 1728 (base 12)} & NU & \thead{\nu}\\
+		\tabb{One} & IP & \thead{\ip  \numbr{1}}\\
+		\tabb{Two} & OP & \thead{\op  \numbr{2}}\\
+		\tabb{Three} & UP & \thead{\up  \numbr{3}}\\
+		\tabb{Four} & IK & \thead{\ik  \numbr{4}}\\
+		\tabb{Five} & OK & \thead{\ok  \numbr{5}}\\
+		\tabb{Six} &  UK & \thead{\uk  {\numbr{6}}}\\
+		\tabb{Seven} &  IM & \thead{\im  \numbr{7}}\\
+		\tabb{Eight} & OM & \thead{\om \numbr{8}}\\
+		\tabb{Nine} & UM & \thead{\om  \numbr{9}}\\
+		\tabb{Ten} & JI & \thead{\ji  \numbr{10}}\\
+		\tabb{Eleven} & JO & \thead{\jo  \numbr{11}}\\
+		\tabb{Twelve} & JU & \thead{\ju  \numbr{12}}\\
+		\tabb{Hundred (base 10) \newline/144 (base 12)} & NO & \thead{\no}\\
+		\tabb{Thousand (base 10) \newline /1728 (base 12)} & NU & \thead{\Atlannu}\\
 		\tabb{Exponent} & US & \thead{\us}\\
 		\tabb{Ordinal} & OJ & \thead{\oj}\\
 	\hline
 	\end{tabular}
-}
 
-\resizebox{1\textwidth}{!}{ \footnotesize
-	\begin{tabular}{|l|c|c|}
+\end{center}
+
+\begin{center}
+	%\begin{tabular}{|l|c|c|}
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
 	\hline
-	\multicolumn{3}{|c|}{SYNTAX-SEMANTIC}\\
+		\multicolumn{3}{|c|}{{\bf SYNTAX-SEMANTIC}}\\
 	\hline
 		\tabb{Masculine} & MA & \ma\\
 		\tabb{Feminine} & FI & \Atlanfi\\
 		\tabb{Person} & EJ & \ej\\
 		\tabb{Time} & JA & \ja\\
 		\tabb{Place} & LU & \lu\\
-		\tabb{Demonstrative \\ (This, that)} & ES & \es\\
+		\tabb{Demonstrative  (This, that)} & ES & \es\\
 		\tabb{1st removed: speaker} & AM & \am\\
-		\tabb{2nd removed: listener, \\speaking context} & UN & \un\\
-		\tabb{3rd removed: beyond \\ context of speaker} & AJ & \aj\\
-		\tabb{Part-to-whole\\relationship} & PU & \pu\\
+		\tabb{2nd removed: listener \newline speaking context} & UN & \un\\
+		\tabb{3rd removed: beyond context \newline of speaker} & AJ & \aj\\
+		\tabb{Part-to-whole relationship} & PU & \pu\\
 		\tabb{Final state} & FU & \fu\\
 		\tabb{Intention} & UF & \uf\\
-		\tabb{Cause, reason \\ (effect = caused, \\passive)} & KO & \ko\\
+		\tabb{Cause, reason  \newline (effect = caused, passive)} & KO & \ko\\
 		\tabb{Inverse} & EM & \Atlanem\\
 		\tabb{Negative} & JE & \je\\
 		\tabb{Neutral} & UJ & \uj\\
 		\tabb{Positive} & FO & \fo\\
 		\tabb{Equative (same as)} & ME &\me\\
-		\tabb{Comparative \\ (more,very)} & MO & \mo\\
+		\tabb{Comparative  (more,very)} & MO & \mo\\
 		\tabb{Superlative (most)} & AS &\as\\
-		\tabb{Contrast (than, \\ + relative clause \\ = but)} & KU & \ku\\
+		\tabb{Contrast (than,  + relative clause  = but)} & KU & \ku\\
 		\tabb{Self} & SU & \su\\
 		\tabb{Other} & OF &\of\\
 	\hline
 	\end{tabular}
-}
+
+\end{center}
 
 
-\resizebox{1\textwidth}{!}{ \footnotesize
-	\begin{tabular}{|l|c|c|}
+ \footnotesize
+\begin{center}
+	%\begin{tabular}{|l|c|c|}
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
 	\hline
-		\multicolumn{3}{|c|}{SEMANTICS - (196-CVC)}\\
+		\multicolumn{3}{|c|}{{\bf SEMANTICS - (196-CVC)}}\\
 	\hline
-	\multicolumn{3}{|c|}{QUALIA}\\
+		\multicolumn{3}{|c|}{{\bf QUALIA}}\\
 	\hline
 		\tabb{See} & SIK & \sik\\
 		\tabb{Colour} & KAL & \kal\\
@@ -209,7 +222,7 @@
 		\tabb{Bitter} & KIT & \kit\\
 		\tabb{Salty} & SAL & \sal\\
 		\tabb{Umami} & MUM & \mum\\
-		\tabb{Feeling, affect \\ (+good=valence \\ +bad =pain)} & SIN & \Atlansin\\
+		\tabb{Feeling, affect  (+good=valence \newline +bad =pain)} & SIN & \Atlansin\\
 		\tabb{Contact, touch} & TOT & \tot\\
 		\tabb{Tension} & JEN & \jen\\
 		\tabb{Texture} & TEK & \tek\\
@@ -217,7 +230,1770 @@
 		\tabb{Balance} & PAN & \pan\\
 	\hline
 	\end{tabular}
+\end{center}
+
+\begin{center}
+	%\begin{tabular}{|l|c|c|}
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+\hline
+	\multicolumn{3}{|c|}{{\bf ORAL VERBS}}\\
+\hline
+\tabb{	Consume (+ solid = eat, + liquid = drink)  }
+&
+KOS 
+	
+&
+\kos 
+\\
+\tabb{	Bite  }
+	
+&
+JAT 
+	
+&
+\jat 
+\\
+\tabb{	Suck  }
+	
+&
+SOS 
+	
+&
+\sos 
+\\
+\tabb{	Spit  }
+	
+&
+TUS &	
+
+\tus 
+\\
+\tabb{	Vomit, regurgitate  }
+	
+&
+FOT 
+	
+&
+\fot 
+\\
+\tabb{	Blow  }
+	
+&
+PUL 
+	
+&
+\pul 
+\\
+\tabb{	Breathe (+ organ = lung, + smoke = to smoke something)  }
+	
+&
+LUS 
+	
+&
+\lus 
+\\
+\tabb{	Laugh (humor)  }
+	
+&
+LAF 
+	
+&
+\laf 
+\\
+\tabb{	Cry  }
+	
+&
+KAJ 
+	
+&
+\kaj 
+\\
+\tabb{   Shout  }
+	
+&
+NOJ 
+	
+&
+\noj 
+\\
+\hline
+\end{tabular}
+
+	\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+	\hline
+		\multicolumn{3}{|c|}{{\bf LIFE AND DEATH}}\\
+	\hline
+	\tabb{	Intercourse, sex }
+	
+&
+SEK 
+	
+&
+\sek 
+\\
+\tabb{	Birth (+ active = to birth, + passive = to be born) }
+	
+&
+PES 
+	
+&
+\pes 
+\\
+\tabb{	Grow }
+	
+&
+KEP 
+	
+&
+\kep 
+\\
+\tabb{	Life }
+	
+&
+FIN 
+	
+&
+\fin 
+\\
+\tabb{	Disease }
+	
+&
+TIM 
+	
+&
+\tim 
+\\
+\tabb{	Death }
+	
+&
+MOT 
+	
+&
+\mot 
+\\
+\tabb{	Kill }
+	
+&
+KIL 
+	
+&
+\kil 
+\\
+\tabb{	Fight }
+	
+&
+FAJ 
+	
+&
+\faj 
+\\
+\tabb{	Hunt }
+	
+&
+JAF 
+	
+&
+\jaf 		
+\\
+	\hline
+	\end{tabular}
+	\end{center}
+
+
+
+
+\begin{center}
+
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+\hline
+\multicolumn{3}{|c|}{{\bf MOVEMENT}}\\
+\hline
+\tabb{	Hit } &
+	
+
+MAT& 
+	
+
+\mat\\ 
+
+\tabb{	Cut } &
+	
+
+KUT& 
+	
+
+\kut\\ 
+
+\tabb{	Split } &
+	
+
+TIP & 
+	
+
+\tip\\ 
+
+\tabb{	Stab } &
+	
+
+SUT & 
+	
+
+\sut\\ 
+
+\tabb{	Scratch } &
+	
+
+SEJ & 
+	
+
+\sej\\ 
+
+\tabb{	Turn } &
+	
+
+TON & 
+	
+
+\ton\\ 
+
+\tabb{	Move, go } &
+	
+
+MEF & 
+	
+
+\mef\\ 
+
+\tabb{	Dig } &
+	
+
+KIK & 
+	
+
+\kik\\ 
+
+\tabb{	Swim } &
+	
+
+NAS & 
+	
+
+\nas\\ 
+
+\tabb{	Fly } &
+	
+
+FUL & 
+	
+
+\ful\\ 
+
+\tabb{	Walk } &
+	
+
+TOM & 
+	
+
+\tom\\ 
+
+\tabb{	Come } &
+	
+
+KOM & 
+	
+
+\kom\\ 
+
+\tabb{	Lie } &
+	
+
+LOM & 
+	
+
+\lom\\ 
+
+\tabb{	Stand } &
+	
+
+TUF & 
+	
+
+\tuf\\ 
+
+\tabb{	Sit } &
+	
+
+SUP & 
+	
+
+\Atlansup\\ 
+
+\tabb{	Fall (+ transitive = drop, \newline + water = sink) } &
+	
+
+KOL & 
+	
+
+\kol\\ 
+
+\tabb{	Happen, occur (+ transitive = do) } &
+	
+
+NES & 
+	
+
+\nes\\ 
+
+\tabb{	Steer (a vehicle) } &
+	
+
+JIL & 
+	
+
+\jil\\ 
+
+\tabb{Jump} & 
+	
+
+MOS & 
+	
+
+\mos\\ 
+
+\tabb{Block} & 
+	
+
+FOK & 
+	
+
+\fok\\ 
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+\hline
+\multicolumn{3}{|c|}{{\bf HANDLING OBJECTS}}\\
+\hline
+\tabb{	Give (+ passive = receive) } &
+	
+
+KIF & 
+	
+
+\kif\\ 
+
+\tabb{	Hold } &
+	
+
+LEL & 
+	
+
+\lel \\ 
+
+\tabb{	Squeeze } &
+	
+
+JIP & 
+	
+
+\jip\\ 
+
+\tabb{	Rub } &
+	
+
+LOP & 
+	
+
+\lop\\ 
+
+\tabb{	Wash, clean } &
+	
+
+SAS & 
+	
+
+\sas\\ 
+
+\tabb{	Wipe } &
+	
+
+TAP & 
+	
+
+\tap\\ 
+
+\tabb{	Pull } &
+	
+
+JAL & 
+	
+
+\jal\\ 
+
+\tabb{	Push } &
+	
+
+PUS & 
+	
+
+\pus\\ 
+
+\tabb{	Throw } &
+	
+
+NOL & 
+	
+
+\nol\\ 
+
+\tabb{	Tie } &
+	
+
+TAL & 
+	
+
+\tal\\ 
+
+\tabb{	Sew } &
+	
+
+SES & 
+	
+
+\ses\\ 
+
+\tabb{	Shake, vibrate } &
+	
+
+JAK & 
+	
+
+\jak\\ 
+
+\tabb{	Pick, take } &
+	
+
+NEP & 
+	
+
+\nep\\ 
+
+\tabb{	Make, create } &
+	
+
+MEN & 
+	
+
+\men\\ 
+\tabb{ Find} &
+	
+
+FUN & 
+	
+
+\fun\\ 
+
+\tabb{Meet} &
+	
+
+MIF & 
+	
+
+\mif\\ 
+
+\tabb{Hang} &
+	
+
+NUN & 
+	
+
+\nun\\ 
+
+\tabb{Kick} &
+	
+
+KUP & 
+	
+
+\kup\\ 
+
+\tabb{ Exchange } &
+	
+
+JEM & 
+	
+
+\jem\\ 
+
+\tabb{ Sell } &
+	
+
+MEM & 
+	
+
+\mem\\ 
+
+\tabb{ Steal } &
+	
+
+JOF & 
+	
+
+\jof\\ 
+
+\tabb{ Attach } &
+	
+
+NUF & 
+	
+
+\mif\\ 
+
+\tabb{  Replace } &
+	
+
+LUP & 
+	
+
+\lup\\ 
+
+\tabb{  Gather } &
+	
+
+SOJ & 
+	
+
+\soj\\ 
+
+\tabb{ Search } &
+	
+
+SOF & 
+	
+
+\sof\\ 
+
+\tabb{ Wait } &
+	
+
+JES & 
+	
+
+\jes\\ 
+
+\tabb{ Change } &
+	
+
+MEJ & 
+	
+
+\mej\\ 
+
+\tabb{ To stick, stay } &
+	
+
+PUJ & 
+	
+
+\puj\\ 
+\hline
+\end{tabular}
+
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+\hline
+	\multicolumn{3}{|c|}{{\bf HANDLING OBJECTS (Continued) }}\\ 
+\hline
+
+\tabb{ Open } &
+	
+
+KOF & 
+	
+
+\kof\\ 
+
+\tabb{ Control } &
+	
+
+JON & 
+	
+
+\jon\\ 
+
+\tabb{ Order}  &
+	
+
+MOM & 
+	
+
+\mom\\ 
+
+\tabb{ Allow } &
+	
+
+MUL & 
+	
+
+\mul\\ 
+
+\tabb{ Try } &
+	
+
+MOK & 
+	
+
+\mok\\ 
+
+
+\hline
+\end{tabular}		%\tabb{} &  & \thead{}}\\
+\end{center}
+
+
+
+\begin{center}
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+\hline
+\multicolumn{3}{|c|}{{\bf SUBSTANCE}}\\
+\hline
+\tabb{	Matter, substance, material } &
+	
+
+MA &
+	
+
+\ma \\ 
+
+\tabb{ Thing } &
+	
+
+MU &
+	
+
+\mu \\ 
+
+\tabb{	Weight, heavy } &
+	
+
+NE &
+	
+
+\ne \\ 
+
+\tabb{	Water } &
+	
+
+NA &
+	
+
+\na \\ 
+
+\tabb{	Liquid } &
+	
+
+JI &
+	
+
+\ji \\ 
+
+\tabb{	Flow } &
+	
+
+FEL &
+	
+
+\fe \\ 
+
+	\tabb{Wave} &
+	
+
+PE &
+	
+
+\pe \\ 
+
+\tabb{	Float } &
+	
+
+TA &
+	
+
+\ta \\ 
+
+\tabb{	Freeze } &
+	
+
+LI &
+	
+
+\li \\ 
+
+\tabb{	Ice} &
+	
+
+PI &
+	
+
+\Atlanpi \\ 
+
+\tabb{	Snow } &
+	
+
+SE &
+	
+
+\se \\ 
+
+\tabb{	Swell } &
+	
+
+SU &
+	
+
+\su \\ 
+
+\tabb{	Rain } &
+	
+
+JU &
+	
+
+\ju \\ 
+
+\tabb{	Soil } &
+	
+
+SO &
+	
+
+\so \\ 
+
+\tabb{	Solid } &
+	
+
+TO &
+	
+
+\Atlanto \\ 
+
+\tabb{	Stone } &
+	
+
+JE &
+	
+
+\je \\ 
+
+\tabb{	Sand} &
+	
+
+SA &
+	
+
+\sa \\ 
+
+\tabb{	Dust} &
+	
+
+TU &
+	
+
+\tu \\ 
+
+\tabb{	Air, wind } &
+	
+
+KE &
+	
+
+\ke \\ 
+
+\tabb{	Gas} &
+	
+
+KA &
+	
+
+\ka \\ 
+
+\tabb{	Sky } &
+	
+
+SO &
+	
+
+\so \\ 
+
+\tabb{	Cloud } &
+	
+
+NA &
+	
+
+\na \\ 
+
+\tabb{	Fog } &
+	
+
+TU &
+	
+
+\tu \\ 
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+\hline
+	\multicolumn{3}{|c|}{{\bf SUBSTANCE (Continued)}}\\
+\hline
+
+\tabb{	Fire } &
+	
+
+FA &
+	
+
+\fa \\ 
+
+\tabb{	Burn } &
+	
+
+PE &
+	
+
+\pe \\ 
+
+\tabb{	Smoke } &
+	
+
+TU &
+	
+
+\tu \\ 
+
+\tabb{	Ash } &
+	
+
+KA &
+	
+
+\ka \\ 
+
+\tabb{	Metal } &
+	
+
+MI &
+	
+
+\mi \\ 
+
+\tabb{	Glass } &
+	
+
+KU &
+	
+
+\ku \\ 
+
+\tabb{	Paper} &
+	
+
+PE &
+	
+
+\pe \\ 
+
+\tabb{	Textile } &
+	
+
+TI &
+	
+
+\ti \\ 
+
+\tabb{	Rubber } &
+	
+
+LA &
+	
+
+\la \\ 
+
+\tabb{	Foam } &
+	
+
+MO &
+	
+
+\mo \\ 
+
+\tabb{	Petrol-based substance (+ solid = plastic, + liquid = oil) } &
+	
+
+PA &
+	
+
+\pa \\ 
+
+\tabb{	Molecule } &
+	
+
+ME &
+	
+
+\me \\ 
+
+\tabb{	Atom (+ number = chemical element)} &
+	
+
+TA &
+	
+
+\ta \\ 
+
+\tabb{	Particle } &
+	
+
+KI &
+	
+
+\ki \\ 
+
+\tabb{ Explode } &
+	
+
+FO &
+	
+
+\fo \\ 
+
+\tabb{ Shrink } &
+	
+
+FU &
+	
+
+\fu \\ 
+
+\tabb{ Pure } &
+	
+
+PU &
+	
+
+\pu \\ 
+
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+\hline
+\multicolumn{3}{|c|}{{\bf GEOLOGY AND ASTRONOMY}}\\
+\hline
+\tabb{	Sun } &
+	
+
+SON  &
+	
+
+\son  \\
+
+\tabb{	Star } &
+	
+
+SIS  &
+	
+
+\sis  \\
+
+\tabb{	Planet } &
+	
+
+PAL  &
+	
+
+\pal  \\
+
+\tabb{	Earth planet } &
+	
+
+TEM  &
+	
+
+\tem  \\
+
+\tabb{	Night } &
+	
+
+NAJ  &
+	
+
+\naj  \\
+
+\tabb{	Day } &
+	
+
+JAN  &
+	
+
+\jan  \\
+
+\tabb{	Week } &
+	
+
+MIK  &
+	
+
+\mik  \\
+
+\tabb{	Year } &
+	
+
+JIN  &
+	
+
+\jin  \\
+
+\tabb{	Orbital system (+ sun = solar system, + star = galaxy) } &
+	
+
+LOT  &
+	
+
+\lot  \\
+
+\tabb{	Moon (+ time = month) } &
+	
+
+MUN  &
+	
+
+\mun  \\
+
+\tabb{	Mountain (+ sand = dune) } &
+	
+
+MAN  &
+	
+
+\man  \\
+
+\tabb{Top, peak }   &
+	
+
+FON  &
+	
+
+\fon  \\
+
+\tabb{	Plain } &
+	
+
+PAS  &
+	
+
+\pas  \\
+
+\tabb{	Ground } &
+	
+
+NAM  &
+	
+
+\nam  \\
+
+\tabb{	Country } &
+	
+
+MES  &
+	
+
+\mes  \\
+
+\tabb{	Continent } &
+	
+
+KUN  &
+	
+
+\kun  \\
+
+\tabb{	Island } &
+	
+
+PIL  &
+	
+
+\pil  \\
+
+\tabb{	Road  } &
+	
+
+LOL  &
+	
+
+\lol  \\
+
+\tabb{	River } &
+	
+
+LEF  &
+	
+
+\lef  \\
+
+\tabb{	Lake } &
+	
+
+LEK  &
+	
+
+\lek  \\
+
+\tabb{	Sea } &
+	
+
+SAM  &
+	
+
+\sam \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+
+\begin{center}
+\resizebox{1\textwidth}{!}{
+%\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth}|cx{0.2\textwidth}|}
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth}|cx{0.2\textwidth}|}
+\hline
+	\multicolumn{3}{|c|}{{\bf QUALITIES}} \\
+\hline
+\tabb{      Origin } &
+	 &
+
+JOL  &
+	 &
+
+\jol  \\
+
+\tabb{	Full } &
+	 &
+
+MOL  &
+	 &
+
+\mol  \\
+
+\tabb{	Good } &
+	 &
+
+POT  &
+	 &
+
+\pot  \\
+
+\tabb{	Bad } &
+	 &
+
+PAK  &
+	 &
+
+\pak  \\
+
+\tabb{	Rotten } &
+	 &
+
+LAL  &
+	 &
+
+\lal  \\
+
+\tabb{	Dirty } &
+	 &
+
+JUT  &
+	 &
+
+\jut  \\
+
+\tabb{	Sharp (+ negation = dull) } &
+	 &
+
+TAK  &
+	 &
+
+\tak  \\
+
+\tabb{	Smooth, soft } &
+	 &
+
+SAF  &
+	 &
+
+\saf  \\
+
+\tabb{	Hard, tough } &
+	 &
+
+TOF  &
+	 &
+
+\tof  \\
+
+\tabb{	Difficult } &
+	 &
+
+TIF  &
+	 &
+
+\tif  \\
+
+\tabb{	Wet } &
+	 &
+
+SIL  &
+	 &
+
+\sil  \\
+
+\tabb{	Dry } &
+	 &
+
+SUK  &
+	 &
+
+\suk  \\
+
+\tabb{	Correct } &
+	 &
+
+KEK  &
+	 &
+
+\kek  \\
+
+\tabb{	Beautiful  } &
+	 &
+
+LIT  &
+	 &
+
+\lit  \\
+
+\tabb{	Ugly } &
+	 &
+
+KUL  &
+	 &
+
+\kul  \\
+
+\tabb{	Strong } &
+	 &
+
+TUT  &
+	 &
+
+\tut  \\
+
+\tabb{	Weak } &
+	 &
+
+FIK  &
+	 &
+
+\fik  \\
+
+\tabb{      Quick } &
+	 &
+
+KIM  &
+	 &
+
+\kim  \\
+
+\tabb{      Slow } &
+	 &
+
+NIM  &
+	 &
+
+\nim  \\
+
+\tabb{      High } &
+	 &
+
+JEJ  &
+	 &
+
+\jek  \\
+
+\tabb{      Low } &
+	 &
+
+MEK  &
+	 &
+
+\mek  \\
+
+\tabb{      Real } &
+	 &
+
+LEJ  &
+	 &
+
+\lej  \\
+
+\tabb{      Last } &
+	 &
+
+LUM  &
+	 &
+
+\lum  \\
+
+\tabb{     Previous } &
+	 &
+
+POP  &
+	 &
+
+\pop  \\
+
+\tabb{     Relevant } &
+	 &
+
+FEJ  &
+	 &
+
+\fej  \\
+
+\tabb{      Silly } &
+	 &
+
+NUP  &
+	 &
+
+\nup  \\
+
+\tabb{      Extra } &
+	 &
+
+JEF  &
+	 &
+
+\jef  \\
+
+\hline
+\end{tabular}
 }
+\end{center}
 
 
-		%\tabb{} &  & \thead{}}\\
+
+\begin{center}
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+\hline
+\multicolumn{3}{|c|}{{\bf CULTURE}}\\
+\hline
+\tabb	Home, domestic  &
+	
+
+KEM  &
+	
+
+\kem  \\
+
+\tabb	School  &
+	
+
+SUJ  &
+	
+
+\suj  \\
+
+\tabb	Town, city, village  &
+	
+
+TOS  &
+	
+
+\tos  \\
+
+\tabb	Culture, customs  &
+	
+
+KUK  &
+	
+
+\kuk  \\
+
+\tabb	Job, profession  &
+	
+
+KAN  &
+	
+
+\kan  \\
+
+\tabb	Money  &
+	
+
+MON  &
+	
+
+\mon  \\
+
+\tabb	Politics  &
+	
+
+NIN  &
+	
+
+\nin  \\
+
+\tabb{    Tradition } &
+	
+
+NOP  &
+	
+
+\nop  \\
+
+\tabb	Individual  &
+	
+
+FIT  &
+	
+
+\fit  \\
+
+\tabb	Community, collective  &
+	
+
+SUM  &
+	
+
+\Atlansum  \\
+
+\tabb{    Group } &
+	
+
+KOK  &
+	
+
+\kok  \\
+
+\tabb	Science  &
+	
+
+NIS  &
+	
+
+\nis  \\
+
+\tabb	Law  &
+	
+
+LON  &
+	
+
+\lon  \\
+
+\tabb	King, chief, president  &
+	
+
+TES  &
+	
+
+\tes  \\
+
+\tabb	Medicine  &
+	
+
+MET  &
+	
+
+\met  \\
+
+\tabb	Machine  &
+	
+
+MAS  &
+	
+
+\mas  \\
+
+\tabb	Vehicle   &
+	
+
+FIL  &
+	
+
+\fil  \\
+
+\tabb	Wheel  &
+	
+
+MIL  &
+	
+
+\mil  \\
+
+\tabb{  Building block } &
+	
+
+FUK  &
+	
+
+\fuk  \\
+
+\tabb{    Layer } &
+	
+
+FEM  &
+	
+
+\fem  \\
+
+\tabb{   Projectile } &
+	
+
+PEM  &
+	
+
+\pem  \\
+
+\tabb	Pipe   &
+	
+
+PAP  &
+	
+
+\pap  \\
+
+\tabb	Wire  &
+	
+
+FAF  &
+	
+
+\faf  \\
+
+\tabb	Engine  &
+	
+
+NUT  &
+	
+
+\nut  \\
+
+\tabb	Electricity, energy  &
+	
+
+MIN  &
+	
+
+\Atlanmin  \\
+
+\tabb	Computer  &
+	
+
+KUM  &
+	
+
+\kum  \\
+
+\tabb{ System  } &
+	
+
+JIM  &
+	
+
+\jim  \\
+\hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|p{0.6\textwidth} | cx{0.2\textwidth} | cx{0.2\textwidth}|}
+\hline
+\multicolumn{3}{|c|}{{\bf CULTURE}}\\
+\hline
+
+
+\tabb{Building}  &
+	
+
+NAP  &
+	
+
+\nap  \\
+
+\tabb{ Wall } &
+	
+
+MUK  &
+	
+
+\muk  \\
+
+\tabb{ Door } &
+	
+
+MIP  &
+	
+
+\mip  \\
+
+\tabb{ Container } &
+	
+
+NON  &
+	
+
+\non  \\
+
+\tabb	God  &
+	
+
+JEL  &
+	
+
+\jel  \\
+
+\tabb{    Peace } &
+	
+
+PUN  &
+	
+
+\pun  \\
+
+\tabb{   Problem, Conflict } &
+	
+
+POM  &
+	
+
+\pom  \\
+
+\tabb{   Mistake } &
+	
+
+KUF  &
+	
+
+\kuf  \\
+
+\tabb{  Destruction } &
+	
+
+JUN  &
+	
+
+\jun  \\
+
+\tabb	Picture, image  &
+	
+
+SIM  &
+	
+
+\Atlansim \\
+
+\tabb{   Symbol } &
+	
+
+MIM  &
+	
+
+\mim  \\
+
+\tabb	Family  &
+	
+
+FAM  &
+	
+
+\Atlanfam  \\
+
+\tabb	Story  &
+	
+
+JOS  &
+	
+
+\jos  \\
+
+\tabb{      Garbage } &
+	
+
+LUL  &
+	
+
+\lul  \\
+
+\tabb{ Clothes } &
+	
+
+KEF  &
+	
+
+\kef  \\
+
+\tabb{   Furniture } &
+	
+
+MUP  &
+	
+
+\mup  \\
+
+\tabb{    Symmetry } &
+	
+
+FIM  &
+	
+
+\fim  \\
+
+\tabb{   Reflection } &
+	
+
+FEP  &
+	
+
+\fep  \\
+
+\tabb{  Complexity } &
+	
+
+KOJ  &
+	
+
+\koj  \\
+
+\tabb{ Success } &
+	
+
+JUK  &
+	
+
+\juk  \\
+
+\hline
+\end{tabular}
+\end{center}
+
+\vfill

@@ -16,6 +16,9 @@
 \usepackage{blindtext}
 \usepackage{fontspec, newunicodechar}
 \usepackage{tabularx}
+\usepackage[usestackEOL]{stackengine}
+\edef\tmp{\the\baselineskip}
+\setstackgap{L}{\tmp}
 \usepackage{array}
 \usepackage{longtable}
 \usepackage{tipa}
@@ -73,12 +76,13 @@
 \let\cleardoublepage=\clearpage
 
 \directlua{require("Numeric.lua")}
-\def\numbr#1{\raisebox{-0.5em}{\directlua{
-       % while string.find(#1, '.-%p') then..w. 
-
-        %end
+\def\numbr#1{\raisebox{-0.15em}{\directlua{
 
 	tex.print(Cisterian(#1))}}}
+\def\numberraise{-0.5em}
+\def\numbrdd#1{\raisebox{\numberraise}{\directlua{
+
+	tex.print(Cisteriandd(#1))}}}
 
 \newlength{\chaptertopskip}
 \setlength{\chaptertopskip}{-50pt}

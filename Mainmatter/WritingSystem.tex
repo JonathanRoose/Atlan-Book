@@ -286,12 +286,6 @@ Atlan also has a numeric system distinct from the familiar arabic-numerals. They
 
 6   \numbr{6}
 
-7   \numbr{7}
-
-8   \numbr{8}
-
-9   \numbr{9}	
-
 \columnbreak
 
 10   \numbr{10}
@@ -305,12 +299,6 @@ Atlan also has a numeric system distinct from the familiar arabic-numerals. They
 50   \numbr{50}
 
 60   \numbr{60}
-
-70   \numbr{70}
-
-80   \numbr{80}
-
-90   \numbr{90}
 
 
 \columnbreak
@@ -327,12 +315,6 @@ Atlan also has a numeric system distinct from the familiar arabic-numerals. They
 
 600   \numbr{600}
 
-700   \numbr{700}
-
-800   \numbr{800}
-
-900   \numbr{900}
-
 
 \columnbreak
 
@@ -348,12 +330,39 @@ Atlan also has a numeric system distinct from the familiar arabic-numerals. They
 
 6000   \numbr{6000}
 
+\end{multicols}
+%%%
+\begin{multicols}{4}
+\small
+7   \numbr{7}
+
+8   \numbr{8}
+
+9   \numbr{9}	
+\columnbreak
+
+70   \numbr{70}
+
+80   \numbr{80}
+
+90   \numbr{90}
+
+
+\columnbreak
+
+700   \numbr{700}
+
+800   \numbr{800}
+
+900   \numbr{900}
+
+\columnbreak
+
 7000   \numbr{7000}
 
 8000   \numbr{8000}
 
 9000   \numbr{9000}
-
 
 
 
@@ -367,9 +376,9 @@ Atlan’s numeral system also allows for a duodecimal base notation, with the ad
 
 \vspace{0.2cm}
 {\small
-10 = \numbr{10}, 120 = (\numbr{120}), 1440 = (\numbr{1440}), 17280 = (\numbr{17280}) 
+10 = \numbrdd{10}, 120 = \numbrdd{120}, 1440 = \numbrdd{1440}, 17280 = \numbrdd{17280} 
 
-11 = \numbr{11}, 132 = (\numbr{132}), 1584 = (\numbr{1584}), 19008 = (\numbr{19008}) 
+11 = \numbrdd{11}, 132 = \numbrdd{132}, 1584 = \numbrdd{1584}, 19008 = \numbrdd{19008} 
 }
 \vspace{0.2cm}
 
@@ -384,7 +393,7 @@ The added benefit of a duodecimal system is that certain fractions divisible by 
 
 The duodecimal system can also be easily counted on a single hand, by using the thumb of the same hand as a pointer to count off the 3 finger segments in the 4 remaining fingers (see figure). Atlans number syllables fit this system as well: 1, 2 and 3 are ´IP´ \ip ´OP´ \op ´UP´ \up, since these all end in P they are grouped together on the first finger. 4, 5 and 6 are ´IK´ \raisebox{-0.5em}{\ik} , ´OK´ \raisebox{-0.5em}{\ok}, ´UK´ \raisebox{-0.5em}{\uk}, following again the same vowel pattern, but with K, grouping them on the second finger. Similarly, 6, 7, and 8 are ´UK´ \uk ´IM´ \im ´OM´ \om, and 9, 10, 11 are ´JI´ \ji ´JO´ \jo ´JU´ \ju. 
 
-Currently, Atlan does not have a standardised system to clarify beforehand whether decimal or duodecimal numerals are used, other than to spot the usage of the numerals \numbr{10} and \numbr{11}. Frankly, current duodecimal systems in Arabic notation don´t have this either, but it could be easily stated verbally beforehand.  
+Currently, Atlan does not have a standardised system to clarify beforehand whether decimal or duodecimal numerals are used, other than to spot the usage of the numerals \numbrdd{10} and \numbrdd{11}. Frankly, current duodecimal systems in Arabic notation don´t have this either, but it could be easily stated verbally beforehand.  
 
  
 
@@ -469,7 +478,9 @@ First, there are our glyphs. They are hand-programmed in \TeX\ using Tikz. It wa
 
 To print any of the Atlan glyphs in \TeX\, you load in the package {\tt Atlan.sty}. Most glyphs are simply transliterations of syllables, with a backslash in front. E.g. \texttt{\symbol{92}mum} prints \mum. Some commands were already occupied, hence some of the commands are named differently, e.g. \texttt{\symbol{92}Atlanpi}, since simply \texttt{\symbol{92}pi} would print $\pi$. Next up, I plan to make a font that is available on other typesetting platforms. 
 
-Then, our numeral glyphs rely on Lua\LaTeX\, a more potent version of \TeX. The command, again, is straightforward. You simply state \texttt{\\numbr\{<number>\footnotemark\}}. \footnotetext{Due to the nature of our numeric system, the biggest number you can fill in, is 9999.}  An example of the command: \texttt{\symbol{92}numbr\{321\}} produces \numbr{321}.  
+Then, our numeral glyphs rely on Lua\LaTeX\, a more potent version of \TeX. The command, again, is straightforward. You simply state \texttt{\\numbr\{<number>\footnotemark\}}. \footnotetext{Due to the nature of our numeric system, the biggest number you can fill in decimals, is 9999.}  An example of the command: \texttt{\symbol{92}numbr\{321\}} produces \numbr{321}. To produce a duodecimal number, you type \verba|\numbrdd{1435}| to get \numbrdd{1435}\footnote{The highest duodecimal number you can fill in, is 20735.}. 
+
+
 
 Then, of course, this book is typeset in \TeX . We could have made it easier for ourselves. But, typesetting with \TeX\ was worth the effort. We are proud of what we have made; both content- and appearance-wise.    
 

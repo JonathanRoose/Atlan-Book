@@ -42,7 +42,7 @@ To achieve this, it is first key to create some understandings of what methods a
 
 
 \begin{center}
-	\includegraphics[scale=0.8]{./Images/graphs.jpg}
+	\includegraphics[scale=0.9]{./Images/graphs.jpg}
 	{\it \footnotesize Figure 6.1: Graph depicting word-appearance}
 \end{center}
 
@@ -81,7 +81,7 @@ As another example, let’s compare two words: \textit{‘Bert’} to \textit{�
 In less mathematical terms, what this means is that each element of the two vectors A and B are compared. The products of all the elements are then summed up and divided by the length of both the vectors together. If we fill in the numbers for our Bert-Ernie-comparison, it will look like this: 
 
 %\resizebox{1\textwidth}{!}{
-{\small
+{\footnotesize
 %\begin{equation}
 	\[
 	\frac{1 \times 2 + 1 \times 1 + 1 \times 0 + 1 \times 0 + 0 \times 1 + 1 \times 0}{\sqrt{2^2 + 1^2 + 1^2 + 1^2 + 0^2 + 0^2 \sqrt{1^2 + 1^2 + 0^2 + 0^2 + 1^2 + 1^2}}} = 0.56
@@ -843,11 +843,12 @@ Uralic \\
 \end{tabular}
 }
 
+\vspace{0.1cm}
 {\it \footnotesize Table 6.3: Overview of the languages and their number of speakers according to Ethnologue (2022).}
 \vspace{0.3cm}
 
 
-\noindent Assume that this entire set of 57 possible languages becomes the dataset, called set \alpha. Then it is possible to find the frequencies of each family in the \alpha set. Since we want to compare these numbers relative to the total amount of languages, we need to convert these frequencies to percentages by dividing them by the total number of languages in set \alpha, which is 57. Now it is possible to compute the distance between the current percentage and the target percentage by taking the absolute of the target number minus the current percentage. This is called the error rate. So, for Indo-European, the error rate would be |42 – 43.9| = |-1.9| = 1.9, meaning that is almost 2% away from the target percentage. We can do this calculation for every language family, and the result can be viewed in the fourth column of Table 6.5. The error values average to an average error rate of 2.76. Meaning that on average each language family is either 1.58 languages too large or too little. This is not a bad score, but it is possible to make this error figure smaller by adding and removing some languages to counterbalance. 
+\noindent Assume that this entire set of 57 possible languages becomes the dataset, called set \alpha. Then it is possible to find the frequencies of each family in the \alpha set. Since we want to compare these numbers relative to the total amount of languages, we need to convert these frequencies to percentages by dividing them by the total number of languages in set \alpha, which is 57. Now it is possible to compute the distance between the current percentage and the target percentage by taking the absolute of the target number minus the current percentage. This is called the error rate. So, for Indo-European, the error rate would be |42 – 43.9| = |-1.9| = 1.9, meaning that is almost 2\% away from the target percentage. We can do this calculation for every language family, and the result can be viewed in the fourth column of table 6.5. The error values average to an average error rate of 2.76. Meaning that on average each language family is either 1.58 languages too large or too little. This is not a bad score, but it is possible to make this error figure smaller by adding and removing some languages to counterbalance. 
 
 The Indo-European language family is well represented, with almost a language from each branch or otherwise a very similar language present. Thus, we leave those 25 languages untouched. We want those 25 languages to make up for 42 percent of the set, thus we need 100\% of the dataset to be around (24/42 $\times$ 100) $\approx$ 60 languages. With the current 57, we should be able to add three more languages. 
 
