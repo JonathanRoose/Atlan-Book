@@ -370,7 +370,10 @@ boxsep=0pt,left=2pt,right=2pt,top=1pt,bottom=0.5pt}
 
 %\def\DefineLetter#1#2{\def#1{\setbox0=\hbox{\lower.2em\hbox{#2}} \box0}}
 %\def\DefineLetter#1#2{\def#1{#2}}
-\def\DefineLetter#1#2{\def#1{\kern-0.15em\raisebox{-0.15em}{#2}\kern-0.15em}}
+\def\glyphkernleft{-0.15em}
+\def\glyphkernright{-0.15em}
+
+\def\DefineLetter#1#2{\def#1{\kern\glyphkernleft\raisebox{-0.15em}{#2}\kern\glyphkernright}}
 
 %%%%%%%%%%%%%%%%%%%%%%Letters%%%%%%%%%%%%%%%%%%%%%%%%%%%351-1241
 
