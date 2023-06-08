@@ -4,6 +4,7 @@
 \usepackage{Atlan}
 \usepackage{tocbibind}
 \usepackage{amssymb}
+\usepackage{rotating}
 \usepackage{adjustbox}
 \usepackage{pdfpages}
 \usepackage{multicol}
@@ -38,41 +39,6 @@
 \setmainfont{spectral}
 \newfontfamily{\fallbackfont}{EBGaramond}[Scale=MatchLowercase]
 \DeclareTextFontCommand{\textfallback}{\fallbackfont}
-\newunicodechar{ⱱ}{\textfallback{ⱱ}}
-\newunicodechar{ə}{\textfallback{ə}}
-\newunicodechar{ɑ}{\textfallback{ɑ}}
-\newunicodechar{ɪ}{\textfallback{ɪ}}
-\newunicodechar{ʊ}{\textfallback{ʊ}}
-\newunicodechar{ㄴ}{\textfallback{ㄴ}}
-\newunicodechar{ㄱ}{\textfallback{ㄱ}}
-\newunicodechar{ㅓ}{\textfallback{ㅓ}}
-\newunicodechar{ㅏ}{\textfallback{ㅏ}}
-\newunicodechar{ㅕ}{\textfallback{ㅕ}}
-\newunicodechar{ㅑ}{\textfallback{ㅑ}}
-\newunicodechar{ㅗ}{\textfallback{ㅗ}}
-\newunicodechar{ㅜ}{\textfallback{ㅜ}}
-\newunicodechar{ㅍ}{\textfallback{ㅍ}}
-\newunicodechar{ㅛ}{\textfallback{ㅛ}}
-\newunicodechar{ㅠ}{\textfallback{ㅠ}}
-\newunicodechar{ㅅ}{\textfallback{ㅅ}}
-\newunicodechar{ㅈ}{\textfallback{ㅈ}}
-\newunicodechar{ㅊ}{\textfallback{ㅊ}}
-\newunicodechar{반}{\textfallback{반}}
-\newunicodechar{번}{\textfallback{번}}
-\newunicodechar{본}{\textfallback{본}}
-\newunicodechar{분}{\textfallback{분}}
-\newunicodechar{ጸ}{\textfallback{ጸ}}
-\newunicodechar{ጻ}{\textfallback{ጻ}}
-\newunicodechar{ጾ}{\textfallback{ጾ}}
-\newunicodechar{ደ}{\textfallback{ደ}}
-\newunicodechar{ዳ}{\textfallback{ዳ}}
-\newunicodechar{ዶ}{\textfallback{ዶ}}
-\newunicodechar{ይ}{\textfallback{ይ}}
-\newunicodechar{ᐱ}{\textfallback{ᐱ}}
-\newunicodechar{ᐳ}{\textfallback{ᐳ}}
-\newunicodechar{ᐸ}{\textfallback{ᐸ}}
-\newunicodechar{ᐯ}{\textfallback{ᐯ}}
-%\newunicodechar{}{\textfallback{}}
 
 \usepackage{xpatch}
 \let\cleardoublepage=\clearpage
@@ -109,6 +75,7 @@
 %\input{./Dependencies/Cmd}
 %\input{./Dependencies/Grid}
 %\input{./Dependencies/numberlines}
+\DefineLetter{\Atlans}{\DeclareStroke{\BigSW}}
 
 %%%%%%%%%%%Definitions%%%%%%%%%%%%%%%%
 %\def\Section#1#2{\section{#1}  \vspace*{-0.5cm} {\small \bf \begin{center} #2\end{center}}}
@@ -121,7 +88,9 @@
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
-\input{./Frontmatter/Voorblad.tex}
+\phantom{.}
+\pagebreak
+%\input{./Frontmatter/Voorblad.tex}
 
 \input{./Frontmatter/Preface.tex}
 
@@ -156,11 +125,12 @@
 
 \chapter{Epilogue}\input{./Endmatter/Epilogue.tex}
 
-{\chapter{Bibliography}\input{./Endmatter/Sources.tex}}
+%{\chapter{Bibliography} 
+\input{./Endmatter/Sources.tex}
 
 %\chapter{Index}\input{./Endmatter/Index.tex}
 
-\input{./Endmatter/Blurp.tex}
+%\input{./Endmatter/Blurp.tex}
 
 
 \end{document}

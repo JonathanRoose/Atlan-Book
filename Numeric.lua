@@ -88,12 +88,7 @@ function Cisteriandd(number)
                 end 
                 if number >= 1  then fourthdigit = math.floor(numberfourth/1)  else fourthdigit = " " end 
 	end
-	print(firstdigit)
-	print(seconddigit)
-	print(thirddigit)
-	print(fourthdigit)
 	bignumber = tonumber(firstdigit .. seconddigit .. thirddigit .. fourthdigit)
-	print(bignumber)
 	if bignumber >= 1000 then ddfirstdigit = math.floor(bignumber/1728)
 	bignumbersecond = bignumber - (math.floor(bignumber/1728) * 1728)  
 	else ddfirstdigit = " "
@@ -110,10 +105,6 @@ function Cisteriandd(number)
 	bignumberfourth = bignumberthird
 	end 
 	if bignumber >= 1  then ddfourthdigit = math.floor(bignumberfourth/1)  else ddfourthdigit = " " end 
-	print(ddfirstdigit)
-	print(ddseconddigit)
-	print(ddthirddigit)
-	print(ddfourthdigit)
 
 
 
@@ -172,6 +163,5 @@ if ddfirstdigit == 1 then firstargument ="\\quadrupleone"
 	result = "\\DeclareNumber{" .. firstargument .. "}{" .. secondargument .. "}{" .. thirdargument .. "}{" .. fourthargument .. "}"
 	return result	
 end
-print(Cisteriandd(1727))
 
 
