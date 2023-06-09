@@ -1,12 +1,14 @@
 \documentclass[12pt,a5paper]{article}
 \usepackage{../Atlan}
+\usepackage{scalerel}
+\usepackage{graphicx}
+\usepackage{layout}
 \usepackage[bmargin=30pt]{geometry}
 \usepackage{multicol}
-
 \pagestyle{empty}
 \newcommand{\restorecorps}{\renewcommand{\corpsgrootte}{20pt}}
-
 \DefineLetter{\Atlann}{\DeclareStroke{\RightDiagonal}}
+\def\isyo{\scalerel*{\DeclareLetter{\BottomHorizontal}{\CenterVertical}}{24pt}}
 
 \begin{document}
 \begin{center}
@@ -43,6 +45,6 @@ Jarno Smets \hfill \ej \na \cartouche{\jal\no\ \Atlans\met\Atlans}
 
 
 
-
+\layout
 \end{center}
 \end{document}

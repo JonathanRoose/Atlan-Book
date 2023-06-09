@@ -1255,7 +1255,7 @@ This word is then translated into all the languages that make up the trainings s
 After the constraints of comparison were a bit hardened by this modification, it is possible to soften them now again. That is, because Atlan reduces the number of vowels drastically. This has as a result that certain sounds that are viewed differently in our languages, can only refer to one and the same letter in Atlan. That means that this sound can be viewed as the same in comparison. To achieve this, Lexi can map each IPA sound to the letter it would represent in Atlan, according to the rules discussed in the phonology-chapter. This creates a list with the transcriptions of how the translations would sound in Atlan.  
 
 \hyphenation{con-sonant-vowel}
-The only task that is left now is to find the patterns in this set. Since these patterns will form the new Atlan word, it is certain they will always follow one of three patterns: either con-sonant-vowel-consonant (CVC), consonant-vowel (CV) or vowel-consonant (VC). We can look at possible candidates for this pattern by splitting each translation up into every possible combination that follows one of these patterns. This way, Lexi provides a dataset of candidates of the patterns, made up from small parts of natural language translations. 
+The only task that is left now is to find the patterns in this set. Since these patterns will form the new Atlan word, it is certain they will always follow one of three patterns: either con-sonant-vowel-consonant (CVC), con-sonant-vowel (CV) or vowel-consonant (VC). We can look at possible candidates for this pattern by splitting each translation up into every possible combination that follows one of these patterns. This way, Lexi provides a dataset of candidates of the patterns, made up from small parts of natural language translations. 
 
 If we calculate the similarity between every possible pattern and the transcribed translations, we can get the pattern that resembles the words best. However, to simulate the natural way of words generation a bit better, we experiment with some algorithms to make sure we pick the best word, such as evolutionary computing. 
 
@@ -1264,8 +1264,9 @@ This is a problem-solving technique that uses the principles of natural selectio
 The fittest individuals create children through a cross-over process. Lexi divides both words in all possible points and then swaps both halves.  For example, if the words \textit{jap} and \textit{tek} are combined, it can recombine into \textit{j-ek} and \textit{t-ap} and similarly \textit{jak} and \textit{tep.} These children, combined with the parents, form again a large pool of possible Atlan words. The best individuals are again selected, and the winners produce the next generation. After 50 generations, the three individuals with the highest scores are selected and crowned as winners. In the end this process gave us the same outcomes as calculating the highest score for all of them. 
 
 In this way, we generated the five best options for every atom of language we needed to exist in Atlan. Another computer program assigned each word one of these options, keeping in mind that some syllables might appear in the list of options for several words. In the end, this leaves us with a lexicon of words that should be easy to learn and remember for almost the entire population.
-
+\vfill 
 \section{Semantic atom vocabulary}
+\vspace{-0.5cm}
 
 \footnotesize
 \input{./Mainmatter/Semanticatominventory.tex}
@@ -1344,7 +1345,7 @@ Expletives, better known as swear words, can be made by adding the prefix ´O´ 
 \section{Jargon translation}
 
 
-Atlan’s established lexicon will not be enough to cover the large quantity of topic/discipline-specific jargon within human language. Specialists within their respective fields could formalize nomenclature systems which could then be adopted by their respective intellectual communities as the standard for communicating about their subject matters in Atlan as an auxlang. This could be a natural evolution within the arts and sciences away from obsolete and culturally imposed greco-latin terminology of the European academic tradition, as well as serving as an opportunity for scientists who often complain about illogical and arbitrary terminology within their subject to collectively design a rigorous reform towards more logical and useful words in a more neutral lingua franca.  
+Atlan’s established lexicon will not be enough to cover the large quantity of topic/discipline-specific jargon in human language. Specialists within their respective fields could formalize nomenclature systems which could then be adopted by their respective intellectual communities as the standard for communicating about their subject matters in Atlan as an auxlang. This could be a natural evolution within the arts and sciences away from obsolete and culturally imposed greco-latin terminology of the European academic tradition, as well as serving as an opportunity for scientists who often complain about illogical and arbitrary terminology within their subject to collectively design a rigorous reform towards more logical and useful words in a more neutral lingua franca.  
 
 We cannot dictate in this context how each discipline will end up standardizing their terminology in Atlan, but we could suggest taking inspiration from original etymologies and nomenclatures already in place as standardized systems. We will not further expound on how this should be done here, since this is beyond our own expertise, and almost impossible to cover comprehensively.
 
