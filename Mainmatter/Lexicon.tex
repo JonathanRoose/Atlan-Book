@@ -20,7 +20,7 @@ This would imply that certain languages are easier to learn for certain populati
 To achieve this, it is first key to create some understandings of what methods are used to compare different languages. Therefore, we will take a closer look at the so-called cosine similarity. Thereafter, it is necessary to conduct an examination of the existing language families that exist. In that way, we gain a deeper insight into the connections between existing natural languages. In addition, with that gained understanding, it is possible to decide which language we will make available in contributing to the process of cognate\idx{cognate} finding. The most spoken languages are weighed against each other to create a dataset that is representative of the real world. All these pieces of the puzzle come together in the final part of this chapter, where the computer program that we used to generate words in Atlan will be discussed.
 \vspace{0.3cm}
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \resizebox{1\textwidth}{!}{
 \begin{tabular}{|c|c|c|}
 \hline
@@ -35,22 +35,22 @@ To achieve this, it is first key to create some understandings of what methods a
 	}
 
 {\it \footnotesize Table 6.1: Word-appearance in \lq\lq Merry" and \lq\lq Merry christmas".}
-\end{cent\idx{scent}er}
+\end{center}
 
  \noindent This table can be visualized in a two-dimensional array, where on each axis the count of a word is represented. Now both texts can be placed as a dot on this grid accordingly. Drawing two lines from each point to the origin of the grid creates an angle between those lines. This angle at the origin can be calculated, in this case it would be 45$^{\circ}$ . To finish the cosine similarity, all that is needed now is to take the cosine of this angle, in this example \textit{cos (45)} = 0.71. 
 
 
-\begin{cent\idx{scent}er}
+\begin{center}
 	\includegraphics[scale=0.6]{./Images/graphs.jpg}
 
 	{\it \footnotesize Figure 6.1: Graph depicting word-appearance}
-\end{cent\idx{scent}er}
+\end{center}
 
 If the compared sentences are identical, the two dots would be placed on the same place in the grid. Thus, the lines towards the origin would fall precisely over each other. Therefore, the angle between both lines would be 0$^{\circ}$, resulting in a cosine score of \textit{cos (0) = 1.} On the other hand, if both sentences have not a single element in common, the lines would be perpendicular to each other. With an angle of 90$^{\circ}$, the cosine similarity would return \textit{cos (90) = 0.} Thus, in any case, the cosine similarity gives a score between 0 and 1, showing the degree of similarity. 
 
 As another example, let’s compare two words: \textit{‘Bert’} to \textit{‘Ernie’}. Instead of words, the vector now can be made up of letters. In a table, this would look like this:
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \begin{tabular}{|l|c|c|c|c|c|c|c|}
 \hline
 {\bf Name} & {\bf E} & {\bf R} & {\bf N} & {\bf I} & {\bf B} & {\bf T} \\
@@ -61,17 +61,17 @@ As another example, let’s compare two words: \textit{‘Bert’} to \textit{�
 \end{tabular}
 
 {\it \footnotesize Table 6.2: Letter frequency in the words \lq\lq Bert" and \lq\lq Ernie".}
-\end{cent\idx{scent}er}
+\end{center}
 
 \noindent With six different letters occurring, it would be possible to place both \textit{‘Bert’} and \textit{‘Ernie’} in a six-dimensional grid and draw the lines to the origin. However, it is impossible for humans to visualize a six-dimensional graph. Thus, we need a new way to calculate the angle between the two vectors. Luckily, there exists a formula to compute the cosine similarity. 
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \includegraphics[scale=0.2]{./Images/cosine.jpeg}
-\end{cent\idx{scent}er}
+\end{center}
 
-%\begin{cent\idx{scent}er}
+%\begin{center}
 %\includepdf[scale=0.5]{./Mainmatter/sum.pdf}
-%\end{cent\idx{scent}er}
+%\end{center}
 %\end{samepage}
 
 %\begin{equation}
@@ -861,7 +861,7 @@ Now there are three languages to add left for the other underrepresented languag
 
 For Afroasiatic we can translate into Hebrew and Maltese, both Semitic languages. Thus, we don’t need to make any choices here. In the Niger-Congo family we can choose between Shona, Sesotho and Chichewa. Since they are all the same branch, we choose the one with the most speakers, which is Chichewa.   
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \resizebox{1\textwidth}{!}{
 \begin{tabular}{|c|c|c|c|}
 	\hline
@@ -926,12 +926,12 @@ Niger-Congo \\
 
 \vspace{0.1cm}
 {\it \footnotesize Table 6.4: Information about the new languages chosen for the dataset.}
-\end{cent\idx{scent}er}
+\end{center}
 
 \noindent With this modification to set $\alpha$, we have a new set of languages, we can call language set . By calculating the errors again for each language family\idx{language family}, we can see that the error measure now averages to an amazing 1.83. Meaning that on average a family is 1.1 language off from the real distribution. These are distributions that are very realistic to the real world. 
 
 \vspace{-0.1cm}
-\begin{cent\idx{scent}er}
+\begin{center}
 %	\begin{adjustbox}{angle=90}
 \resizebox{1\textwidth}{!}{
 	\large
@@ -1220,15 +1220,15 @@ Kra-Dai &
 \vspace{0.1cm}
 
 {\it \footnotesize Table 6.5: Frequencies of languages families in different language sets}
-\end{cent\idx{scent}er}
+\end{center}
 
 \noindent To visually represent the diversity within this set, we provide you with the following map. Each non-blue country in the figure is associated with at least one official or national language present in the dataset. The handful of blue countries indicate the absence of certain languages.  
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \includegraphics[scale=0.4]{./Images/worldatlas.jpg}
 
 	{\it \footnotesize Figure 6.2: World map to visualize where languages present in the dataset are spoken according to Ethnologue (2022) and WALS (2013), made with mapchart.net} 
-\end{cent\idx{scent}er}
+\end{center}
 
 \vspace{0.3cm}
 
@@ -1252,9 +1252,9 @@ As a result, we contend that secondary speakers should not be forgotten and shou
 
 \noindent With consensus on the dataset and the weights, the time has come to explain how Lexi\idx{Lexi} generates words from all these languages. Lexi\idx{Lexi} is designed to take an English word as input to start the process. This is very important, because there is only a very select group of unreducible words that need to be generated this way. By taking a meaning as input, we prevent that it generates words we do not want and control the meaning of the new Atlan word. 
 
-This word is then translated into all the languages that make up the trainings set that was just discussed. That way we can find a common pattern in this set of 60 translation\idx{translation}s. However, it is key to keep in mind that the same letters are often pronounced differently in different words. For example, the sentence ‘the \textit{tear} in my new painting brought a \textit{tear} in my eye’ contains two words that look identical but sound\idx{sound} very different. Such heteronyms prove it is not enough to compare words only by their spelling. To investigate how words are pronounced, Lexi\idx{Lexi} now transforms every translation\idx{translation} into their IPA\idx{International Phonetic Alphabet\idx{International Phonetic Alphabet}} format. 
+This word is then translated into all the languages that make up the trainings set that was just discussed. That way we can find a common pattern in this set of 60 translation\idx{translation}s. However, it is key to keep in mind that the same letters are often pronounced differently in different words. For example, the sentence ‘the \textit{tear} in my new painting brought a \textit{tear} in my eye’ contains two words that look identical but sound\idx{sound} very different. Such heteronyms prove it is not enough to compare words only by their spelling. To investigate how words are pronounced, Lexi\idx{Lexi} now transforms every translation\idx{translation} into their IPA\idx{International Phonetic Alphabet} format. 
 
-After the constraints of comparison were a bit hardened by this modification, it is possible to soften them now again. That is, because Atlan reduces the number of vowels\idx{vowels} drastically. This has as a result that certain sound\idx{sound}s that are viewed differently in our languages, can only refer to one and the same letter in Atlan. That means that this sound\idx{sound} can be viewed as the same in comparison. To achieve this, Lexi\idx{Lexi} can map each IPA\idx{International Phonetic Alphabet\idx{International Phonetic Alphabet}} sound\idx{sound} to the letter it would represent in Atlan, according to the rules discussed in the phonology\idx{phonology}-chapter. This creates a list with the transcriptions of how the translation\idx{translation}s would sound\idx{sound} in Atlan.  
+After the constraints of comparison were a bit hardened by this modification, it is possible to soften them now again. That is, because Atlan reduces the number of vowels\idx{vowels} drastically. This has as a result that certain sound\idx{sound}s that are viewed differently in our languages, can only refer to one and the same letter in Atlan. That means that this sound\idx{sound} can be viewed as the same in comparison. To achieve this, Lexi\idx{Lexi} can map each IPA{International Phonetic Alphabet\idx{International Phonetic Alphabet}} sound\idx{sound} to the letter it would represent in Atlan, according to the rules discussed in the phonology\idx{phonology}-chapter. This creates a list with the transcriptions of how the translation\idx{translation}s would sound\idx{sound} in Atlan.  
 
 \hyphenation{con-sonant-vowel}
 The only task that is left now is to find the patterns in this set. Since these patterns will form the new Atlan word, it is certain they will always follow one of three patterns: either con-sonant-vowel-consonant (CVC), con-sonant-vowel (CV) or vowel-consonant (VC). We can look at possible candidates for this pattern by splitting each translation\idx{translation} up into every possible combination that follows one of these patterns. This way, Lexi\idx{Lexi} provides a dataset of candidates of the patterns, made up from small parts of natural language translation\idx{translation}s. 
@@ -1320,9 +1320,9 @@ Morphosyntactic atoms can be recognised by the fact that they contain one one co
 
 \noindent Finally, the plural marker comes at the very end of a word. The general order for compound\idx{sound} words it thus:  
 
-\begin{cent\idx{scent}er}
+\begin{center}
 morphosyntactic markers - main semantic root - specifying semantic atom\idx{semantic atom}s – plural
-\end{cent\idx{scent}er}
+\end{center}
 
 It must be noted that translation\idx{translation}s are open to individual and cultural interpretation. As long as the hierarchical structure of word formation is obeyed, different approaches to specifying the same word are possible. For example: 
 

@@ -97,9 +97,12 @@
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Frontmatter%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frontmatter
-\phantom{.}
-\thispagestyle{empty}
 \setcounter{page}{-1}
+\includepdf{./Final-join/voor.pdf}
+\pagebreak
+\shipout\null
+\shipout\null
+
 \pagebreak
 %\input{./Frontmatter/Voorblad.tex}
 
@@ -141,7 +144,12 @@
 
 \input{./Endmatter/Index.tex}
 
-%\input{./Endmatter/Blurp.tex}
-
+\pagebreak
+\shipout\null
+\shipout\null
+\shipout\null
+\pagebreak
+\thispagestyle{empty}
+\includepdf{./Final-join/achter.pdf}
 
 \end{document}

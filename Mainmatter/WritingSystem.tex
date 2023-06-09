@@ -4,7 +4,7 @@
 
 That is the rationale behind our writing system; let us dive into the details. As told, Atlan has a set of basic lines. They are:
 
-\begin{cent\idx{scent}er}
+\begin{center}
 
 \begin{tabular}{c|c| m{1cm} |c}
 \hline
@@ -23,14 +23,14 @@ That is the rationale behind our writing system; let us dive into the details. A
 \DeclareStroke{\MediumCircle{Center}} & <nil\footnotemark> & & \\
 \end{tabular}
 
-\end{cent\idx{scent}er}
+\end{center}
 {\it Figure 1: The basic lines of Atlan's writing system.} \footnotetext{When you see this hollow circle, the other line is combined with nothing. Don't panic if you don't yet understand this; it will be explained shortly.}
 
 These lines all represent a single vowel ({\it V}), or a single consonant ({\it C}). We can combine them to make syllable\idx{syllable}s. By combining two consonant lines, you get a CVC-syllable\idx{syllable}, such as {\it loj}, {\it pas} or {\it mup}. You can also make a VC-syllable\idx{syllable}, such as {\it mu}, {\it po}, or {\it ji}. The vowels\idx{vowels} don't have separate lines in a CVC or VC-syllable\idx{syllable}; instead, the vowel is determined by the position of the two consonant-lines. We will go deeper into that below. First, we give the rules for the order of the consonants\idx{consonants} and vowels\idx{vowels}: what determines whether two lines make e.g. {\it poj} or {\it jop}, {\it mu} or {\it um}? 
 
 This order is determined by the manner in which the lines combine. There is always a \lq\lq bigger \rq\rq line, and a smaller one. Rule of thumb: the bigger line usually is the most vertical of the two. These lines fit inside an imaginary box. The position of the smaller line relative to the bigger line, determines the order of consonants\idx{consonants}. A visual of this rule helps:
 
-\begin{cent\idx{scent}er}
+\begin{center}
 
 \begin{tikzpicture}
 \draw[blue!30, fill= blue!30] (0,0) -- (3,4) -- (0,4) -- (0,0);
@@ -40,7 +40,7 @@ This order is determined by the manner in which the lines combine. There is alwa
 \end{tikzpicture}
 
 {\it \footnotesize Figure 2: Box for determining consonant order.}
-\end{cent\idx{scent}er}
+\end{center}
 
 \noindent If the smaller line is in the upper-left triangle (UL), the consonant it designates comes first. If it is in the bottom-right one, it comes second. For the rest of the explanation, it is advised to keep this box in the back of your head. An example:
 
@@ -57,10 +57,10 @@ As you see here, the smaller line is found\idx{sound} on top. Hence, it is place
 As said, the vowel emerges from the position of the smaller line in relation to the bigger letter-line. Again, a visual will help:
 \phantom{}
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \definecolor{melon}{RGB}{255,179,179}
 \definecolor{caian}{RGB}{204,255,247}
-\definecolor{lavender\idx{gender}}{RGB}{242,179,255}
+\definecolor{lavendel}{RGB}{242,179,255}
 \definecolor{jasmine}{RGB}{255,212,128}
 \definecolor{lemon}{RGB}{255,247,204}
 \begin{tikzpicture}
@@ -75,7 +75,7 @@ As said, the vowel emerges from the position of the smaller line in relation to 
 \draw[fill = jasmine] (1.5,1.5) rectangle (3,0.5);
 \draw[fill = lemon] (1.5,1.5) rectangle (0,2.5);
 \draw[fill = lemon] (1.5,1.5) rectangle (3,2.5);
-\draw[fill = lavender\idx{gender}] (1.5,2) circle (0.5);
+\draw[fill = lavendel] (1.5,2) circle (0.5);
 \node at (1.5,3.75){u};
 \node at (0.75,3){i};
 \node at (2.25,3){i};
@@ -88,7 +88,7 @@ As said, the vowel emerges from the position of the smaller line in relation to 
 \node at (-0.125, 2){\footnotesize u};
 \node at (3.125, 2){\footnotesize u};
 \end{tikzpicture}
-\end{cent\idx{scent}er}
+\end{center}
 
 {\footnotesize \it Figure 3: Location of the smaller line in relation to the vowel.}
 \vspace{0.5cm}
@@ -107,14 +107,14 @@ The vowel is...
 \item{\it e\ } if the smaller line is placed in the middle. Or, if the small line intersects with the main line at the middle. In some instances, the small line is then split up by the main line.  
 \end{itemize}
 
-Then we have three exceptions to these rules. The first: you can combine two of the same letter-lines, to make syllable\idx{syllable}s such as {\it pop}, {\it mum}, or {\it lol}. The order of these lines doesn't matter; hence we choose place the smaller line to the upper-left of the main line in such cases. For the vowel {\it u}, there are two small lines, split at the cent\idx{scent}er. For {\it e}, there are either two or three small lines. At least one of those lines crosses through the cent\idx{scent}er of the imaginary box.
+Then we have three exceptions to these rules. The first: you can combine two of the same letter-lines, to make syllable\idx{syllable}s such as {\it pop}, {\it mum}, or {\it lol}. The order of these lines doesn't matter; hence we choose place the smaller line to the upper-left of the main line in such cases. For the vowel {\it u}, there are two small lines, split at the center. For {\it e}, there are either two or three small lines. At least one of those lines crosses through the center of the imaginary box.
 
 The second exception has to do with the k (/k/). That letter had the base line -- , right? It's a horizontal line. Because of that, we have to think of a different box than figure 2 and 3  to figure out the consonant-order and the vowel. The solution is simple: we flip the boxes. They then look like this:
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \definecolor{melon}{RGB}{255,179,179}
 \definecolor{caian}{RGB}{204,255,247}
-\definecolor{lavender\idx{gender}}{RGB}{242,179,255}
+\definecolor{lavendel}{RGB}{242,179,255}
 \definecolor{jasmine}{RGB}{255,212,128}
 \definecolor{lemon}{RGB}{255,247,204}
 \begin{tikzpicture}[rotate=90]
@@ -129,7 +129,7 @@ The second exception has to do with the k (/k/). That letter had the base line -
 \draw[fill = jasmine] (1.5,1.5) rectangle (3,0.5);
 \draw[fill = lemon] (1.5,1.5) rectangle (0,2.5);
 \draw[fill = lemon] (1.5,1.5) rectangle (3,2.5);
-\draw[fill = lavender\idx{gender}] (1.5,2) circle (0.5);
+\draw[fill = lavendel] (1.5,2) circle (0.5);
 \node at (1.5,3.75){u};
 \node at (0.75,3){i};
 \node at (2.25,3){i};
@@ -143,9 +143,9 @@ The second exception has to do with the k (/k/). That letter had the base line -
 \node at (3.125, 2){\footnotesize u};
 \end{tikzpicture}
 
-\end{cent\idx{scent}er}
+\end{center}
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \begin{tikzpicture}
 
 \draw[blue!30, fill= blue!30] (0,0) -- (4,3) -- (0,3) -- (0,0);
@@ -156,12 +156,12 @@ The second exception has to do with the k (/k/). That letter had the base line -
 \end{tikzpicture}
 
 {\footnotesize \it Respectively Figure 4: the imaginary vowel-placement box for /k/. Figure 5: the imaginary consonant-order-box for /k/.}
-\end{cent\idx{scent}er}
+\end{center}
 
 
 The third exception: Remember that the {\it p} is represented by the dot $\bullet$\phantom{.}. For clarity, we couldn't combine simply two dots to make a full syllable\idx{syllable}. Hence, two p-dots combine a bit different from the rest of the lines. The p also can't combine well with the circle (which designated \lq\lq nothing \rq\rq). They combine in the following way:
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \renewcommand{\corpsgrootte}{12pt}
 \begin{tabular}{c|c|c|c|c|c|c|}
 
@@ -173,7 +173,7 @@ $\bullet$ & $\bullet$ & \pup & \pip & \pap & \pop & \pep \\
 
 {$\bullet$} &  & \pu & \Atlanpi & \pa & \po & \pe\\
 \end{tabular}
-\end{cent\idx{scent}er}
+\end{center}
 \restorecorps
 
 These were the rules for the script of Atlan. It might sound\idx{sound} a bit cryptic, so let's discuss some examples. If you still feel uncertain whether you understand the rules, read through them again. Personal experience tells that, after some time, recognizing letters gets more intuitive. 
@@ -196,7 +196,7 @@ These were the rules for the script of Atlan. It might sound\idx{sound} a bit cr
 \end{wrapfigure}
 
 \vspace{0.2cm}
-Now let's look at another one. See if you can determine the syllable\idx{syllable} yourself first. The main line is obvious: it's the big curve. This big curve is a {\it j\footnotemark} ([/j/]). The smaller dot is a {\it p} ([/p/]). The dot is found\idx{sound} inside the quadrant \lq\lq UL\rq\rq of figure one. Hence, the dot comes first. The dot is found\idx{sound} a bit to the left of the cent\idx{scent}re of our imaginary box. Hence, the vowel here, is the {\it a} ([/a/]). The full syllable\idx{syllable} is {\it jap} ([/jap/]). 
+Now let's look at another one. See if you can determine the syllable\idx{syllable} yourself first. The main line is obvious: it's the big curve. This big curve is a {\it j\footnotemark} ([/j/]). The smaller dot is a {\it p} ([/p/]). The dot is found\idx{sound} inside the quadrant \lq\lq UL\rq\rq of figure one. Hence, the dot comes first. The dot is found\idx{sound} a bit to the left of the centre of our imaginary box. Hence, the vowel here, is the {\it a} ([/a/]). The full syllable\idx{syllable} is {\it jap} ([/jap/]). 
 
 \footnotetext{Quick tip: the curve for {\it j} looks alot like the {\it j} itself, doesn't it? Look for more of these similarities in our writing system; they help!}
 
@@ -212,7 +212,7 @@ Do you feel if you got the hang of it? If you don't, then we'll do a few more. T
 
 %Do you feel if you got the hang of it? Let's do a few more. To spice things up a bit, we'll have a syllable\idx{syllable} with the vowel {\it e}.
 
-Remember that this vowel had smaller lines be placed in the cent\idx{scent}re. Alternatively, the smaller line could intersect the cent\idx{scent}re, or be split up by it. In this example, the smaller line is split up by the bigger line. The bigger line, the {\it l} ([/l/]) splits up the line for {\it j} ([/j/]). Because it does, the vowel is {\it e} ([/e/]), and the syllable\idx{syllable} is {\it lej} ([/lej/]). 
+Remember that this vowel had smaller lines be placed in the centre. Alternatively, the smaller line could intersect the centre, or be split up by it. In this example, the smaller line is split up by the bigger line. The bigger line, the {\it l} ([/l/]) splits up the line for {\it j} ([/j/]). Because it does, the vowel is {\it e} ([/e/]), and the syllable\idx{syllable} is {\it lej} ([/lej/]). 
 
 
 \begin{wrapfigure}[7]{l}{0.4\textwidth}
@@ -414,11 +414,11 @@ Just as with punctuation\idx{punctuation}, mathematical symbols can be approxima
 \noindent Since Atlan’s writing system is comprised of a set of basic lines, a great degree of artistic freedom is possible in creating different fonts and calligraphy styles to write the language. Atlan typography should make sure to remain faithful to the specific orientations of the different lines as to not cause confusion between them. Since any glyph contains a minimal amount of lines, usually two, typographic ornamentation can be added to glyphs without causing much confusion. Here we provide four examples of typographic variations on the word ‘Atlan’: a Times New Roman font, a {\it Comic Sans}-style font, Asian-style calligraphy and Arabic-style calligraphy.
 
 
-\begin{cent\idx{scent}er}
+\begin{center}
 \includegraphics[scale=0.15]{./Images/Atlogos.jpeg}
 
 {\footnotesize \it Figure 1: Atlan in different typographic styles.}
-\end{cent\idx{scent}er}
+\end{center}
 \section{Names, loanword\idx{loanword}s, and cartouche\idx{cartouche}s}
 
 Words that denote certain names, such as personal names, placenames, names for institutions, as well as loanword\idx{loanword}s denoting certain culture-specific objects or concepts, like certain meals, for example, are incorporated into Atlan as phonetic approximations of these words in their source language. Because every possible syllable\idx{syllable} in Atlan already has its own designated semantic value, this could cause confusion, if the syllable\idx{syllable}s are interpreted as Atlan words instead of loanword\idx{loanword}s. For this reason, names and loanword\idx{loanword}s always follow the following structure: 
@@ -436,7 +436,7 @@ Words that denote certain names, such as personal names, placenames, names for i
 
 \end{itemize}
 
-Using this formula, ‘Paris’ would become: ‘TOS.NA. PA.LI’ \cartouche\idx{cartouche}{\tos \na \pa \li}, and ‘curry’ would become ‘MAJ.KOS. NA.KA.LI’ \cartouche\idx{cartouche}{\maj \kos \na \ka \li}. If the conversational context makes it explicit enough that the subject matter concerns a loanword\idx{loanword}, and not a literal Atlan word, the markers denoting category + NA may be omitted for the sake of fluent speech.  
+Using this formula, ‘Paris’ would become: ‘TOS.NA. PA.LI’ \cartouche{\tos \na \pa \li}, and ‘curry’ would become ‘MAJ.KOS. NA.KA.LI’ \cartouche{\maj \kos \na \ka \li}. If the conversational context makes it explicit enough that the subject matter concerns a loanword\idx{loanword}, and not a literal Atlan word, the markers denoting category + NA may be omitted for the sake of fluent speech.  
 
 In (formal) typography, a cartouche\idx{cartouche} may be employed to encircle the phonetic approximation in order to enhance intelligibility. Cartouche\idx{cartouche}s originate from Ancient Egyptian hieroglyphic orthography, where they were used to encircle the names of pharaohs (see Fig. 1) (Chrisholm, 1911).  
 
@@ -452,7 +452,7 @@ The cartouche\idx{cartouche} originates from the hieroglyphic ‘shen’, a styl
 
 The 2001 conlang {\it Toki\idx{Toki Pona} Pona} by the Canadian linguist Sonja Lang also employs cartouche\idx{cartouche}s in these contexts, for the same reason that Atlan does so (Lang, 2016). Just like in Toki\idx{Toki Pona} Pona, Atlan’s cartouche\idx{cartouche} shall be a simple oval circumscribing the name or loanword\idx{loanword}, without the additional straight line as used in Egyptian cartouche\idx{cartouche}s. One could object that employing a typographic element that derives from a specific cultural tradition, namely that of ancient Egypt, is in conflict with Atlan’s constraint of cultural neutrality\idx{orthography}. To this we object with the following justifications: the cartouche\idx{cartouche} serves a practical function in preventing orthographic ambiguity; the Ancient Egyptian culture is currently extinct and thus does not advantage current day Egyptians over any other culture; the historical origin adds an extra layer of symbolism and cultural depth which in no way interferes with practical use; and frankly, we are of the opinion that it looks quite cool. 
 
-As we will see in the next part, the glyphs can be made on the computer using \TeX\idx{TeX}\footnote{We will talk more of \TeX\idx{TeX}\ shortly.}. This also is true of cartouche\idx{cartouche}s. A cartouche\idx{cartouche} can be made by simply saying \cartouche\idx{cartouche}{name}. For example, the \TeX\idx{TeX}\ code  {\tt \symbol{92}cartouche\idx{cartouche}\{Utrecht\}} produces \cartouche\idx{cartouche}{Utrecht}\footnotemark.
+As we will see in the next part, the glyphs can be made on the computer using \TeX\idx{TeX}\footnote{We will talk more of \TeX\idx{TeX}\ shortly.}. This also is true of cartouche\idx{cartouche}s. A cartouche\idx{cartouche} can be made by simply saying \cartouche{name}. For example, the \TeX\idx{TeX}\ code  {\tt \symbol{92}cartouche\idx{cartouche}\{Utrecht\}} produces \cartouche{Utrecht}\footnotemark.
 
 \footnotetext{Utrecht = UT-LEK-T }
 
@@ -477,6 +477,7 @@ The Inuktitu\idx{Inuktitut}t language of the Inuit people employs a writing syst
 
 The Amharic\idx{Amharic} language of Ethiopia uses an abugida named ‘Fidel’. This writing system requires speakers to memorise many different basic shapes, some of which are very similar to one another, which are then systematically modified with small grapheme variations to indicate different vowels\idx{vowels}. E.g.: \isy{21} = ts’\"{a}, \isy{22} = ts’a, \isy{23} = ts’o, \isy{24} = d\"{a}, \isy{25} = da, \isy{26} = do, \isy{27} = d. Again, research is limited, but indicates that because of the nature of the writing system, glyph-naming is crucial for all other indicators of literacy (Mekonnen, 2023). When this type of writing system maximises legibility, this creates a positive feedback loop, but when it limits reading, it does the opposite, making overall legibility harder.  
 
+\vfill
 \def\Lua{\setbox2=\hbox{L\kern-.1667em\lower.3ex\hbox{U}\kern-.125em A}\box2}
 \def\LuaLaTeX{{\fontfamily{cmr}\selectfont \Lua\kern-.1667em\LaTeX}}
 \section{\TeX\idx{TeX}\ and Atlan -- {\small Jarno Smets}}
