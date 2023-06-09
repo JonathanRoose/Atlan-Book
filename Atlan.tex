@@ -42,6 +42,13 @@
 \newfontfamily{\fallbackfont}{EBGaramond}[Scale=MatchLowercase]
 \DeclareTextFontCommand{\textfallback}{\fallbackfont}
 
+%%%
+%\def\idx#1{#1\lowercase{\index{#1}}}
+\def\idx#1{{\index{#1}}}
+
+
+%%%
+
 \usepackage{xpatch}
 \let\cleardoublepage=\clearpage
 

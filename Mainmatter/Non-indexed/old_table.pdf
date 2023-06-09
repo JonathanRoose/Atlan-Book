@@ -1,0 +1,822 @@
+
+\begin{longtable}{c c | c c c c c || c c | c c c c c}
+\multicolumn{2}{c}{Base lines} & u & i & a & o & i \\
+\hline
+
+\emty & 
+\emty &
+\Atlanu &
+\Atlani &
+\Atlana &
+\Atlano &
+\Atlane & 
+	&  & & & &  \\
+
+\emty &
+\DeclareStroke{\CenterVertical} &
+\ut &
+\Atlanit &
+\at &
+\ot &
+\et &
+
+\DeclareStroke{\CenterVertical} &
+\emty &
+\tu &
+\ti &
+\ta &
+\Atlanto &
+\te \\
+
+\DeclareStroke{\CenterVertical} &
+\DeclareStroke{\CenterVertical} &
+\tut &
+\tit &
+\tat &
+\tot &
+\tet &
+  & & & & & \\
+
+\DeclareStroke{\CenterVertical} &
+\DeclareStroke{\CenterHorizontal} &
+\tuk &
+\tik &
+\tak &
+\tok &
+\tek &
+
+\DeclareStroke{\CenterHorizontal} &
+\DeclareStroke{\CenterVertical} &
+\kut &
+\kit &
+\kat &
+\kot &
+\ket \\
+ 
+\DeclareStroke{\CenterVertical} &
+\DeclareStroke{\RightDiagonal} &
+\tun &
+\tin &
+\Atlantan &
+\ton &
+\ten &
+
+\DeclareStroke{\RightDiagonal} &
+\DeclareStroke{\CenterVertical} &
+\nut &
+\nit &
+\nat &
+\Atlannot &
+\net  \\
+
+
+
+\DeclareStroke{\CenterVertical} &
+\DeclareStroke{\LeftDiagonal} &
+\tum &
+\tim &
+\tam &
+\tom &
+\tem &
+
+\DeclareStroke{\LeftDiagonal} &
+\DeclareStroke{\CenterVertical} &
+\mut &
+\Atlanmit &
+\mat &
+\mot &
+\met \\
+
+\DeclareStroke{\CenterVertical} &
+\DeclareStroke{\BigSE} &
+\tuf &
+\tif &
+\taf &
+\tof &
+\tef &
+
+\DeclareStroke{\BigSE} &
+\DeclareStroke{\CenterVertical} &
+\fut &
+\fit &
+\fat &
+\fot &
+\fet \\
+
+\DeclareStroke{\CenterVertical} &
+\DeclareStroke{\BigSW} &
+\tus &
+\tis &
+\tas &
+\tos &
+\tes &
+
+\DeclareStroke{\BigSW} &
+\DeclareStroke{\CenterVertical} &
+\sut &
+\sit &
+\sat &
+\sot &
+\set \\
+
+\DeclareStroke{\CenterVertical} &
+\DeclareStroke{\BigNE} &
+\tul &
+\til &
+\tal &
+\tol &
+\tel &
+
+\DeclareStroke{\BigNE} &
+\DeclareStroke{\CenterVertical} &
+\lut &
+\lit &
+\lat &
+\lot &
+\Atlanlet \\
+
+\DeclareStroke{\CenterVertical} &
+\DeclareStroke{\BigNW} &
+\tuj &
+\tij &
+\taj &
+\toj &
+\tej &
+
+\DeclareStroke{\BigNW} &
+\DeclareStroke{\CenterVertical} &
+\jut &
+\jit &
+\jat &
+\Atlanjot &
+\jet \\
+
+\DeclareStroke{\CenterVertical} &
+$\bullet$ &
+\tup &
+\tip &
+\tap &
+\Atlantop &
+\tep &
+
+$\bullet$ &
+\DeclareStroke{\CenterVertical} &
+\Atlanput &
+\pit &
+\pat &
+\pot &
+\pet \\
+
+
+\emty
+\DeclareStroke{\CenterHorizontal} &
+\uk &
+\ik &
+\ak &
+\ok &
+\ek &
+
+\DeclareStroke{\CenterHorizontal} &
+\emty
+\ku &
+\ki &
+\ka &
+\ko &
+\ke \\
+
+\DeclareStroke{\CenterHorizontal} &
+\DeclareStroke{\CenterHorizontal} &
+\kuk &
+\kik &
+\kak &
+\kok &
+\kek &
+ & & & & & \\
+
+
+\DeclareStroke{\CenterHorizontal} &
+\DeclareStroke{\RightDiagonal} &
+\kun &
+\kin &
+\kan &
+\kon &
+\ken &
+
+\DeclareStroke{\RightDiagonal} &
+\DeclareStroke{\CenterHorizontal} &
+\nuk &
+\nik &
+\nak &
+\nok &
+\nek \\
+
+
+\DeclareStroke{\CenterHorizontal} &
+\DeclareStroke{\LeftDiagonal} &
+\kum &
+\kim &
+\kam &
+\kom &
+\kem &
+
+\DeclareStroke{\LeftDiagonal} &
+\DeclareStroke{\CenterHorizontal} &
+\muk &
+\mik &
+\mak &
+\mok &
+\mek \\
+
+\DeclareStroke{\CenterHorizontal} &
+\DeclareStroke{\BigSE} &
+\kuf &
+\kif &
+\kaf &
+\kof &
+\kef &
+
+\DeclareStroke{\BigSE} &
+\DeclareStroke{\CenterHorizontal} &
+\fuk &
+\fik &
+\fak &
+\fok &
+\fek \\
+
+\DeclareStroke{\CenterHorizontal} &
+\DeclareStroke{\BigSW} &
+\kus &
+\kis &
+\kas &
+\kos &
+\kes &
+
+\DeclareStroke{\BigSW} &
+\DeclareStroke{\CenterHorizontal} &
+\suk &
+\sik &
+\sak &
+\sok &
+\sek \\
+
+\DeclareStroke{\CenterHorizontal} &
+\DeclareStroke{\BigNE} &
+\kul &
+\kil &
+\kal &
+\kol &
+\kel &
+
+\DeclareStroke{\BigNE} &
+\DeclareStroke{\CenterHorizontal} &
+\luk &
+\lik &
+\lak &
+\lok &
+\lek \\
+
+\DeclareStroke{\CenterHorizontal} &
+\DeclareStroke{\BigNW} &
+\kuj &
+\kij &
+\kaj &
+\koj &
+\kej &
+
+\DeclareStroke{\CenterHorizontal} &
+\DeclareStroke{\BigNW} &
+\juk &
+\jik &
+\jak &
+\jok &
+\jek \\
+
+\DeclareStroke{\CenterHorizontal} &
+$\bullet$ &
+\kup &
+\kip &
+\kap &
+\kop &
+\kep &
+
+$\bullet$ &
+\DeclareStroke{\CenterHorizontal} &
+\puk &
+\pik &
+\pak &
+\pok &
+\pek \\
+
+\emty
+\DeclareStroke{\RightDiagonal} &
+\un &
+\Atlanin &
+\an &
+\on &
+\en &
+
+\DeclareStroke{\RightDiagonal} &
+\emty
+\Atlannu &
+\Atlanni &
+\na &
+\no &
+\Atlanne \\
+
+\DeclareStroke{\RightDiagonal} &
+\DeclareStroke{\RightDiagonal} &
+\nun &
+\nin &
+\nan &
+\non &
+\nen \\
+
+\DeclareStroke{\RightDiagonal} &
+\DeclareStroke{\LeftDiagonal} &
+\num &
+\nim &
+\nam &
+\nom &
+\nem &
+
+\DeclareStroke{\LeftDiagonal} &
+\DeclareStroke{\RightDiagonal} &
+\mun &
+\Atlanmin &
+\man &
+\mon &
+\men \\
+
+\DeclareStroke{\RightDiagonal} &
+\DeclareStroke{\BigSE} &
+\nuf &
+\nif &
+\naf &
+\nof &
+\nef &
+
+\DeclareStroke{\BigSE} &
+\DeclareStroke{\RightDiagonal} &
+\fun &
+\fin &
+\fan &
+\fon &
+\fen \\
+
+\DeclareStroke{\RightDiagonal} &
+\DeclareStroke{\BigSW} &
+\nus &
+\nis &
+\nas &
+\nos &
+\nes &
+
+\DeclareStroke{\RightDiagonal} &
+\DeclareStroke{\BigSW} &
+\sun &
+\Atlansin &
+\san &
+\son &
+\sen \\
+
+\DeclareStroke{\RightDiagonal} &
+\DeclareStroke{\BigNE} &
+\nul &
+\nil &
+\nal &
+\nol &
+\nel &
+
+\DeclareStroke{\BigNE} &
+\DeclareStroke{\RightDiagonal} &
+\lun &
+\lin &
+\lan &
+\lon &
+\len \\
+
+\DeclareStroke{\RightDiagonal} &
+\DeclareStroke{\BigNW} &
+\nuj &
+\nij &
+\naj &
+\noj &
+\nej &
+
+\DeclareStroke{\BigNW} &
+\DeclareStroke{\RightDiagonal} &
+\jun &
+\jin &
+\jan &
+\jon &
+\jen \\
+
+\DeclareStroke{\RightDiagonal} &
+$\bullet$ &
+\nup &
+\nip &
+\nap &
+\nop &
+\nep &
+
+$\bullet$ &
+\DeclareStroke{\RightDiagonal} &
+\pun &
+\pin &
+\pan &
+\pon &
+\pen \\
+
+\emty
+\DeclareStroke{\LeftDiagonal} &
+\um &
+\im &
+\am &
+\om &
+\Atlanem &
+
+\DeclareStroke{\LeftDiagonal} &
+\emty
+\Atlanmu &
+\mi &
+\ma &
+\mo &
+\me \\
+
+\DeclareStroke{\LeftDiagonal} &
+\DeclareStroke{\LeftDiagonal} &
+\mum &
+\mim &
+\mam &
+\mom &
+\mem &
+ & & & & & & \\
+
+\DeclareStroke{\LeftDiagonal} &
+\DeclareStroke{\BigSE} &
+\muf &
+\mif &
+\maf &
+\mof &
+\mef &
+
+\DeclareStroke{\BigSE} &
+\DeclareStroke{\LeftDiagonal} &
+\fum &
+\fim &
+\Atlanfam &
+\fom &
+\fem \\
+
+\DeclareStroke{\LeftDiagonal} &
+\DeclareStroke{\BigSW} &
+\mus &
+\mis &
+\mas &
+\mos &
+\mes &
+
+\DeclareStroke{\BigSW} &
+\DeclareStroke{\LeftDiagonal} &
+\Atlansum &
+\Atlansim &
+\sam &
+\som &
+\sem \\
+
+\DeclareStroke{\LeftDiagonal} &
+\DeclareStroke{\BigNE} &
+\mul &
+\mil &
+\mal &
+\mol &
+\mel &
+\DeclareStroke{\BigNE} &
+\DeclareStroke{\LeftDiagonal} &
+\lum &
+\Atlanlim &
+\lam &
+\lom &
+\lem \\
+
+\DeclareStroke{\LeftDiagonal} &
+\DeclareStroke{\BigNW} &
+\muj &
+\mij &
+\maj &
+\moj &
+\mej &
+
+\DeclareStroke{\BigNW} &
+\DeclareStroke{\LeftDiagonal} &
+\jum &
+\jim &
+\jam &
+\jom &
+\jem \\
+
+\DeclareStroke{\LeftDiagonal} &
+$\bullet$ &
+\mup &
+\mip &
+\map &
+\mop &
+\mep &
+
+$\bullet$ &
+\DeclareStroke{\LeftDiagonal} &
+\pum &
+\pim &
+\pam &
+\pom &
+\pem \\
+
+\emty
+\DeclareStroke{\BigSE} &
+\uf &
+\Atlanif &
+\af &
+\of &
+\ef &
+
+\DeclareStroke{\BigSE} &
+\emty
+\fu &
+\Atlanfi &
+\fa &
+\fo &
+\fe \\
+
+\DeclareStroke{\BigSE} &
+\DeclareStroke{\BigSE} &
+\fuf &
+\fif &
+\faf &
+\fof &
+\fef &
+  & & & & & \\
+
+\DeclareStroke{\BigSE} &
+\DeclareStroke{\BigSW} &
+\fus &
+\fis &
+\fas &
+\fos &
+\fes &
+
+\DeclareStroke{\BigSW} &
+\DeclareStroke{\BigSE} &
+\suf &
+\sif &
+\saf &
+\sof &
+\sef \\
+
+\DeclareStroke{\BigSE} &
+\DeclareStroke{\BigNE} &
+\ful &
+\fil &
+\fal &
+\fol &
+\fel &
+
+\DeclareStroke{\BigNE} &
+\DeclareStroke{\BigSE} &
+\luf &
+\lif &
+\laf &
+\lof &
+\lef \\
+
+\DeclareStroke{\BigSE} &
+\DeclareStroke{\BigNW} &
+\fuj &
+\fij &
+\faj &
+\foj &
+\fej &
+
+\DeclareStroke{\BigNW} &
+\DeclareStroke{\BigSE} &
+\juf &
+\jif &
+\jaf &
+\jof &
+\jef \\
+
+\DeclareStroke{\BigSE} &
+$\bullet$ &
+\fup &
+\fip &
+\fap &
+\fop &
+\fep &
+
+$\bullet$ &
+\DeclareStroke{\BigSE} &
+\puf &
+\pif &
+\paf &
+\pof &
+\pef \\
+
+\DeclareStroke{\BigSW} &
+\emty
+\us &
+\is &
+\as &
+\os &
+\es &
+
+\emty
+\DeclareStroke{\BigSW} &
+\su &
+\sa &
+\si &
+\so &
+\se \\
+
+\DeclareStroke{\BigSW} &
+\DeclareStroke{\BigSW} &
+\sus &
+\sis &
+\sas &
+\sos &
+\ses &
+  & & & & & \\
+
+\DeclareStroke{\BigSW} &
+\DeclareStroke{\BigNE} &
+\sul &
+\sil &
+\sal &
+\sol &
+\sel &
+
+\DeclareStroke{\BigNE} &
+\DeclareStroke{\BigSW} &
+\lus &
+\lis &
+\las &
+\los &
+\les \\
+
+\DeclareStroke{\BigSW} &
+\DeclareStroke{\BigNW} &
+\suj &
+\sij &
+\saj &
+\soj &
+\sej &
+
+\DeclareStroke{\BigSW} &
+\DeclareStroke{\BigNW} &
+\jus &
+\jis &
+\jas &
+\jos &
+\jes \\
+
+\DeclareStroke{\BigSW} &
+$\bullet$ &
+\Atlansup &
+\sip &
+\sap &
+\sop &
+\sep &
+
+$\bullet$ &
+\DeclareStroke{\BigSW} &
+\pus &
+\pis &
+\pas &
+\pos &
+\pes \\
+
+\emty
+\DeclareStroke{\BigNE} &
+\ul &
+\il &
+\al &
+\ol &
+\el &
+
+\DeclareStroke{\BigNE} &
+\emty
+\lu &
+\li &
+\la &
+\lo &
+\Atlanle \\
+
+\DeclareStroke{\BigNE} &
+\DeclareStroke{\BigNE} &
+\lul &
+\lil &
+\lal &
+\lol &
+\lel &
+ & & & & & \\
+
+\DeclareStroke{\BigNE} &
+\DeclareStroke{\BigNW} &
+\luj &
+\lij &
+\laj &
+\loj &
+\lej &
+
+\DeclareStroke{\BigNW} &
+\DeclareStroke{\BigNE} &
+\jul &
+\jil &
+\jal &
+\jol &
+\jel \\
+
+\DeclareStroke{\BigNE} &
+$\bullet$ &
+\lup &
+\lip &
+\lap &
+\lop &
+\lep &
+
+$\bullet$ &
+\DeclareStroke{\BigNE} &
+\pul &
+\pil &
+\pal &
+\pol &
+\pel \\
+
+\emty
+\DeclareStroke{\BigNW} &
+\uj &
+\Atlanij &
+\aj &
+\oj &
+\ej &
+
+\DeclareStroke{\BigNW} &
+\emty
+\ju &
+\ji &
+\ja &
+\jo &
+\je \\
+
+\DeclareStroke{\BigNW} &
+\DeclareStroke{\BigNW} &
+\juj &
+\jij &
+\jaj &
+\joj &
+\jej &
+ & & & & & \\
+
+\DeclareStroke{\BigNW} &
+$\bullet$ & 
+\jup &
+\jip &
+\jap &
+\jop &
+\jep &
+
+$\bullet$ & 
+\DeclareStroke{\BigNW} &
+\puj &
+\pij &
+\paj &
+\poj &
+\pej \\
+
+\emty
+$\bullet$ &
+\up &
+\ip &
+\ap &
+\op &
+\ep &
+
+$\bullet$ &
+\emty
+\pu &
+\Atlanpi &
+\pa &
+\po &
+\pe \\
+
+$\bullet$ &
+$\bullet$ &
+\pup &
+\pip &
+\pap &
+\pop &
+\pep &
+ & & & & & \\
+
+\end{longtable}
+
+
+
