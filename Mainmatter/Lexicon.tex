@@ -36,13 +36,13 @@ To achieve this, it is first key to create some understandings of what methods a
 
 {\it \footnotesize Table 6.1: Word-appearance in \lq\lq Merry" and \lq\lq Merry christmas".}
 \end{center}
-\vspace{0.3cm}
 
  \noindent This table can be visualized in a two-dimensional array, where on each axis the count of a word is represented. Now both texts can be placed as a dot on this grid accordingly. Drawing two lines from each point to the origin of the grid creates an angle between those lines. This angle at the origin can be calculated, in this case it would be 45$^{\circ}$ . To finish the cosine similarity, all that is needed now is to take the cosine of this angle, in this example \textit{cos (45)} = 0.71. 
 
 
 \begin{center}
-	\includegraphics[scale=0.9]{./Images/graphs.jpg}
+	\includegraphics[scale=0.6]{./Images/graphs.jpg}
+
 	{\it \footnotesize Figure 6.1: Graph depicting word-appearance}
 \end{center}
 
@@ -125,7 +125,7 @@ The choice made by the developers of Lojban to use the six largest languages was
 
 Also, if the desired distribution should resemble the distribution of the real world, we need to know what the distributions in the real world \textit{are}. The frequency of each language family in the 100 most spoken languages according to Ethnologue (2022) can provide a target percentage of how big the part of each language family should be in our program.  
 
-Now we will create a \textit{language set} or \textit{data set}, with in it all the languages we want to find cognates in. It is important that the cognate and the Atlan word has the same meaning in all these languages: otherwise, it might find similar looking words, but with different meanings in different languages, which are known as \textit{false cognates}. These cognates are not a sign of a common ancestor but rather a display of randomness and luck. Also, these false cognates are the most difficult words to learn in a new language, even more difficult than non-cognate words (Otwinowska et al., 2018). Hence,we should avoid creating those in Atlan if we can. To do so, we must be able to control the meaning of the words in other languages. 
+Now we will create a \textit{language set} or \textit{data set}, with in it all the languages we want to find cognates in. It is important that the cognate and the Atlan word has the same meaning in all these languages: otherwise, it might find similar looking words, but with different meanings in different languages, which are known as \textit{false cognates}. These cognates are not a sign of a common ancestor but rather a display of randomness and luck. Also, these false cognates are the most difficult words to learn in a new language, even more difficult than non-cognate words (Otwinowska et al., 2018). Hence,we should avoid creating those in Atlan. To do so, we must be able to control the meaning of the words in other languages. 
 
 Translation software can get us this control. We will use the public available library called Googletrans (3.0.0). This software supports translation into 107 different languages. Since we desire the same significance the language set of Lojban had, we can analyze which of these languages are present in the list of the 100 most spoken languages. The result can be viewed in these tables: 
 
@@ -851,7 +851,7 @@ Uralic \\
 
 \noindent Assume that this entire set of 57 possible languages becomes the dataset, called set \alpha. Then it is possible to find the frequencies of each family in the \alpha set. Since we want to compare these numbers relative to the total amount of languages, we need to convert these frequencies to percentages by dividing them by the total number of languages in set \alpha, which is 57. Now it is possible to compute the distance between the current percentage and the target percentage by taking the absolute of the target number minus the current percentage. This is called the error rate. So, for Indo-European, the error rate would be |42 – 43.9| = |-1.9| = 1.9, meaning that is almost 2\% away from the target percentage. We can do this calculation for every language family, and the result can be viewed in the fourth column of table 6.5. The error values average to an average error rate of 2.76. Meaning that on average each language family is either 1.58 languages too large or too little. This is not a bad score, but it is possible to make this error figure smaller by adding and removing some languages to counterbalance. 
 
-The Indo-European language family is quite well-represented, with almost a language from each branch or otherwise a very similar language present. Thus, we leave those 25 languages untouched. We want those 25 languages to make up for 42 percent of the set, thus we need 100\% of the dataset to be around (24/42 $\times$ 100) $\approx$ 60 languages. With the current 57, we should be able to add three more languages. 
+The Indo-European language family is quite very much represented, with almost a language from each branch or otherwise a very similar language present. Thus, we leave those 25 languages untouched. We want those 25 languages to make up for 42 percent of the set, thus we need 100\% of the dataset to be around (24/42 $\times$ 100) $\approx$ 60 languages. With the current 57, we should be able to add three more languages. 
 
 However, there is one language family that is far too overrepresented. Almost all the languages in the top 100 from the Austronesian family made it into the  database, while they should be less frequent than Afro-asiatic and Niger-Congo. Therefore, we remove one language from this language family: Malay. Even though there are several less spoken Austronesian languages, the older common ancestor between these languages (Tryon, 1995) entails that these may contain more vital information about a group of languages not seen in the data. The only exception is Filipino, which is a language that is derived from the already present in  language Tagalog, meaning they are also very similar. The choice to let Filipino stay is due to the interesting fact that it has much more speakers than a lot of languages, even though it has a relative low number of native speakers. This aspect of the language might be a good contribution to the desired ‘easy-to-learn-aspect.’ This reduces the number of present languages to 56, so we can add four new languages. 
 
@@ -930,6 +930,7 @@ Niger-Congo \\
 
 \noindent With this modification to set $\alpha$, we have a new set of languages, we can call language set . By calculating the errors again for each language family, we can see that the error measure now averages to an amazing 1.83. Meaning that on average a family is 1.1 language off from the real distribution. These are distributions that are very realistic to the real world. 
 
+\vspace{-0.1cm}
 \begin{center}
 %	\begin{adjustbox}{angle=90}
 \resizebox{1\textwidth}{!}{
@@ -1212,11 +1213,12 @@ Kra-Dai &
 	
 
 0.3\\ 
-
+\hline
 \end{tabular}
 }
 %\end{adjustbox}
 \vspace{0.1cm}
+
 {\it \footnotesize Table 6.5: Frequencies of languages families in different language sets}
 \end{center}
 

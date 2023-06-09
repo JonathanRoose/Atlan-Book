@@ -22,7 +22,6 @@
  
 \nocite{Theevolutionofthelanguagefaculty:Clarificationsandimplications}
  
-\nocite{RedefiningtheroleofBrocasareainspeech}
  
 \nocite{Languageandthebrain}
  
@@ -52,13 +51,11 @@
  
 \nocite{TheCorpusofEnglishasLinguaFrancainAcademicSettings}
  
-\nocite{Pattern}
  
 \nocite{Patternsofsounds}
  
 \nocite{PhonemeRepresentationandclassificationinprimaryauditorycortex}
  
-\nocite{p}
  
 \nocite{LanguageChange:ProgressorDecay?}
  
@@ -94,7 +91,7 @@
  
 \nocite{}
  
-\nocite{WhoarethespeakersofEsperanto}
+\nocite{WSE}
  
 \nocite{VariationinEsperanto}
  
@@ -128,8 +125,6 @@
 \nocite{LanguageUniversalsandLinguisticTypology:SyntaxandMorphology}
  
 \nocite{JournaloftheInternationalPhoneticAssociation}
- 
-\nocite{Tamil}
  
 \nocite{Tamil}
  
@@ -177,7 +172,6 @@
  
 \nocite{AfricanLanguages:AnIntroduction}
  
-\nocite{Proto-AustronesianandthemajorAustronesiansubgroups}
 
 \nocite{Tryon}
 \nocite{Howmanylanguagefamiliesarethereintheworld?}
@@ -209,6 +203,7 @@
 
 \nocite{Boucon2019-BOUTPO-37}
 \nocite{sep-reduction-biology}
+\nocite{sep-qualia-knowledge}
 \nocite{Cartouche}
 
 \nocite{Goddard2012SemanticPS}
@@ -255,11 +250,7 @@
  
 \nocite{ilingualMinds:EmotionalExperienceExpressionandRepresentation}
  
-\nocite{Taxonomy{-}definitionclassificationexample}
- 
-\nocite{test}
- 
-\nocite{test}
+\nocite{Taxonomydefinitionclassificationexample}
  
 \nocite{TheAnalyticalLanguageofJohnWilkins}
  
@@ -342,8 +333,6 @@
  
 \nocite{PhilosophicalInvestigations}
  
-\nocite{EEEEE}
- 
 \nocite{AnAccountofSomeRecentDiscoveriesinHieroglyphicalLiteratureandEgyptianAntiquities}
  
 \nocite{HowtoDoThingsWithWords:TheWilliamJamesLecturesdeliveredatHarvardUniversityin1955}
@@ -382,7 +371,6 @@
  
 \nocite{LinguisticRelativities:languagediversityandmodernthought}
  
-\nocite{Thestatusoflinguisticsasscience}
  
 \nocite{Thestatusoflinguisticsasascience}
  
@@ -406,7 +394,7 @@
  
 \nocite{Metaphorsweliveby}
  
-\nocite{CriticalEssaysTheMeaningandImportanceofI"inAnthem"}
+\nocite{CriticalEssaysTheMeaningandImportanceofIinAnthem}
  
 \nocite{1988[1836]}
  
