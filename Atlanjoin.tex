@@ -2,7 +2,7 @@
 \usepackage{tikz}
 \usepackage{amsmath}
 \usepackage{Atlan}
-\usepackage{tocbibind}
+\usepackage[nottoc]{tocbibind}
 \usepackage{imakeidx}
 \makeindex[intoc]
 \usepackage{amssymb}
@@ -118,7 +118,7 @@
 
 \chapter{Phonology -- {\small Niek Elsinga}}\input{./Mainmatter/Phonology.tex}
 
-\chapter{Writing Atlan {\small Stijn Janssens}}\input{./Mainmatter/WritingSystem.tex}
+\chapter{Writing Atlan -- {\small Stijn Janssens}}\input{./Mainmatter/WritingSystem.tex}
 
 \chapter{Morphosyntax}\input{./Mainmatter/Morphosyntax.tex}
 
@@ -131,6 +131,7 @@
 
 \chapter{Further suggestions}\input{./Mainmatter/Suggestions.tex}
 
+\addtocontents{toc}{\protect\pagebreak}
 \chapter{Example texts}\input{./Mainmatter/Texts.tex}
 
 \chapter{Exercises -- {\small Max Geraedts}} \input{./Mainmatter/Exercises.tex}

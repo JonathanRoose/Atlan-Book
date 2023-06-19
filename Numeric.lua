@@ -165,3 +165,4 @@ if ddfirstdigit == 1 then firstargument ="\\quadrupleone"
 end
 
 
+print(Cisteriandd(1584))
